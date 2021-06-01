@@ -1,1 +1,1 @@
-# brain_genomics
+# Brain Genomics
