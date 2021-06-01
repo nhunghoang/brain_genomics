@@ -1,8 +1,8 @@
 function preprocessing_hcp(path_output, parc, typ)
 
 % nhung path modification
-path_output = '/data1/rubinov_lab/brain_genomics/data_HCP/ts_missed2';
-log_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/prepro_logs2';
+path_output = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_seq';
+log_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/prepro_logs_seq';
 
 % number of parcels
 parc = parc(:);
@@ -32,19 +32,18 @@ dsubj = dsubj(cellfun(@(n) ~isempty(regexp(n, '[0-9]*')), dsubj)); %#ok<RGXP1>
 %%
 
 % nhung: only loop over subjects with missing ts 
-mfile = '/data1/rubinov_lab/brain_genomics/data_HCP/subjs_missing_ts.txt';
-fid = fopen(mfile);
-data = textscan(fid, '%s');
-fclose(fid);
-subj_list = string(data{:});
+% mfile = '/data1/rubinov_lab/brain_genomics/data_HCP/subjs_missing_ts.txt';
+% fid = fopen(mfile);
+% data = textscan(fid, '%s');
+% fclose(fid);
+% subj_list = string(data{:});
 
 % loop over subjects
-% parfor i = 1:length(dsubj)
-parfor i = 1:length(subj_list)
+% for i = 1:length(subj_list)
+for i = 1:length(dsubj)
     % get subject name and index
-    %subj_i = dsubj{i};
-    subj_i = subj_list{i};
-    % disp([i,subj_i]);
+    subj_i = dsubj{i};
+    %subj_i = subj_list{i};
     disp([num2str(i), ': ', subj_i]);
     
     % open file for writing
@@ -52,10 +51,12 @@ parfor i = 1:length(subj_list)
     filename = fullfile(path_output, [subj_i '.mat']);
     
     % nhung 
-    logID = fopen(fullfile(log_dir, [subj_i '.log']), 'w');
     %if isfile(filename)
+    %    disp([num2str(i), ': ', subj_i, '(done)']);
     %    continue 
     %end 
+    %disp([num2str(i), ': ', subj_i]);
+    logID = fopen(fullfile(log_dir, [subj_i '.log']), 'w');
     
     delete(filename)
     hdl = matfile(filename);
@@ -124,7 +125,7 @@ parfor i = 1:length(subj_list)
                 t = size(V, 2);
             case 'volume'
                 name_scan = [scan_h '_hp2000_clean.nii.gz'];
-                for j = 1:5                                 % 5 attempts to get the data
+                for j = 1:5 % 5 attempts to get the data
                     try
                         V = niftiread(fullfile(path_scan, name_scan));
                         hdl.errors(h, 1) = {'no error'};
@@ -137,7 +138,7 @@ parfor i = 1:length(subj_list)
                         continue
                     end
                 end
-                if strcmp(hdl.errors{h, 1}, 'no data')
+                if strcmp(hdl.errors(h, 1), 'no data')
                     continue;
                 end
                 t = size(V, 4);
