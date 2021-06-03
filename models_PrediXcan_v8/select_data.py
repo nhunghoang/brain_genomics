@@ -1,6 +1,7 @@
 '''
-From the PrediXcan v8 brain models, gather all unique variants and sort into chrom-specific vcf files. 
-Also write tissue-specific lists of all gene-snp pairs.   
+Sort all variants from the PrediXcan v8 brain models
+into chrom-specific vcf files. Also write tissue-specific 
+lists of all gene-snp pairs. 
 
 -Nhung, updated May 2021 
 '''
