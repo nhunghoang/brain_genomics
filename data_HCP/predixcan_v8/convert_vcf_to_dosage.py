@@ -1,4 +1,7 @@
 '''
+Script for converting HCP vcf files to the PrediXcan dosage format. 
+
+- Nhung, May 2021 
 '''
 
 vcf_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/predixcan_v8/vcf_format'

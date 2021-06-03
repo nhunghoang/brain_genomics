@@ -1,5 +1,12 @@
+'''
+Script for checking the rs-fMRI preprocessing, including 
+the number of processed timeseries compared to the number 
+of available scans. 
+
+- Nhung, May 2021 
+'''
+
 import numpy as np 
-from scipy.stats import pearsonr
 import h5py 
 import os 
 
@@ -13,8 +20,9 @@ for s in subjs:
         if os.path.exists(dpath): n_exists[s] += 1 
 
 ## count the number of timeseries (regions x timepoints) per subject 
-mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries' 
-#mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/ts_missed' 
+mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_seq' 
+#mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries' 
+#mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/ts_missed2' 
 mat_files = os.listdir(mat_dir) 
 counts = [] # best ts shape and num of available scans 
 
@@ -45,6 +53,9 @@ for i,mat_file in enumerate(mat_files):
         
         if (n_exists[subj] > 0) and (best_ts.size == 2): 
             has_scans_but_no_ts.append(subj) 
+
+        #if best_ts.size <= 2: 
+        #    print(mat_file.split('.')[0])
     
         ## regressors 
         '''
