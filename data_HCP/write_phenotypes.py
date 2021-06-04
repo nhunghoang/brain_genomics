@@ -19,6 +19,7 @@ PHEN_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes'
 MATS_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_seq'
 TS_ORDER = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_order.hdf5'
 COACT_MX = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/coactivity_matrices.hdf5'
+PARC_MAT = '/data1/rubinov_lab/brain_genomics/data_HCP/parc-121.mat'
 
 ##########################################################################
 
@@ -122,9 +123,6 @@ def write_conn_mean_var(subjs, reg_idx):
 ## add citations, couldn't get library to run 
 ## git: https://github.com/aestrivex/bctpy 
 def participation_coefficient(W, ci): 
-
-    #W = np.where(W<0, W, 0)
-
     _, ci = np.unique(ci, return_inverse=True)
     ci += 1
     n = len(W)  # number of vertices
@@ -147,7 +145,11 @@ def write_part_coef(subjs, ci, reg_idx):
         n_mats = cmat.shape[0]
         pcs = np.zeros((n_mats, 121), dtype=float)
         for i in range(n_mats): 
-            pc = participation_coefficient(cmat[i], ci)
+            Wd = cmat[i] 
+            ## remove diagonal and zero out negatives
+            W = Wd[~np.eye(Wd.shape[0],dtype=bool)].reshape(Wd.shape[0],-1)
+            W = np.where(W<0, W, 0)
+            pc = participation_coefficient(W, ci)
             pcs[i] = pc 
         ## represent subj by their avg PC array 
         avg_pc = np.mean(pcs, axis=0)
@@ -158,9 +160,9 @@ def write_part_coef(subjs, ci, reg_idx):
         for reg,idx in reg_idx.items(): 
             p[reg] = subj_pcs[:,idx]      
 
-            #m0 = subj_pcs[:,idx].min()
-            #m1 = subj_pcs[:,idx].max()
-            #print('{:>25s}: {:.3f} - {:.3f}'.format(reg, m0, m1))
+            m0 = subj_pcs[:,idx].min()
+            m1 = subj_pcs[:,idx].max()
+            print('{:>25s}: {:.3f} - {:.3f}'.format(reg, m0, m1))
 
     print('- finished computing participation coefficient')
          
