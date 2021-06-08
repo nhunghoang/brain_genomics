@@ -145,9 +145,8 @@ def write_part_coef(subjs, ci, reg_idx):
         n_mats = cmat.shape[0]
         pcs = np.zeros((n_mats, 121), dtype=float)
         for i in range(n_mats): 
-            Wd = cmat[i] 
-            ## remove diagonal and zero out negatives
-            W = Wd[~np.eye(Wd.shape[0],dtype=bool)].reshape(Wd.shape[0],-1)
+            W = cmat[i] 
+            ## zero out negatives
             W = np.where(W<0, W, 0)
             pc = participation_coefficient(W, ci)
             pcs[i] = pc 
