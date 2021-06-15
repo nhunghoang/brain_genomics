@@ -20,9 +20,7 @@ for s in subjs:
         if os.path.exists(dpath): n_exists[s] += 1 
 
 ## count the number of timeseries (regions x timepoints) per subject 
-mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_seq' 
-#mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries' 
-#mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/ts_missed2' 
+mat_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries' 
 mat_files = os.listdir(mat_dir) 
 counts = [] # best ts shape and num of available scans 
 

@@ -36,11 +36,13 @@ with h5py.File(subj_file, 'r') as f:
 regions = np.array(list(phens.keys()))
 
 ## expression 
-expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered'
+#expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered'
+expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression'
 samp_file = '/data1/rubinov_lab/brain_genomics/data_HCP/predixcan_v8/sample_ids.txt' 
 
 genes = {}; exprs = {} 
 for expr_file in os.listdir(expr_dir): 
+    if expr_file[-5:] != '.hdf5': continue 
     with h5py.File('{}/{}'.format(expr_dir, expr_file), 'r') as f: 
         reg = expr_file.split('.')[0]
         genes[reg] = np.array([g.decode("utf-8") for g in np.array(f['genes'])])
@@ -72,33 +74,34 @@ for i in range(samp_order_all.shape[0]): ## samp is smaller list
 subj_order = subj_order_all[subj_idx]
 samp_order = samp_order_all[samp_idx] 
 for reg in regions: 
-    if (reg!='hypothalamus') and (reg!='substantia-nigra'): 
-        expr_reg = reg[:-3]
-    else: 
-        expr_reg = reg 
-
     phens[reg] = phens[reg][subj_idx]
-    try:
-        exprs[expr_reg] = exprs[expr_reg][:,samp_idx]
-    except: 
-        continue ## i.e. was already taken care of in the other hemisphere 
+    exprs[reg] = exprs[reg][:,samp_idx]
+
+## read genes per region that HCP doesn't have all SNPs for
+unkept_file = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/all_genes_not_kept.txt'
+with open(unkept_file, 'r') as f: lines = f.readlines()
+unkept_models = {} ## k: region, v: list of genes
+for line in lines:
+    data = line.split('\t')
+    reg = data[0]
+    mod = data[1]
+    try: unkept_models[reg].append(mod)
+    except KeyError: unkept_models[reg] = [mod]
 
 ## single gene associations
 for reg in regions: 
 
-    if (reg!='hypothalamus') and (reg!='substantia-nigra'): 
-        expr_reg = reg[:-3]
-    else: 
-        expr_reg = reg 
-
     phen_array = phens[reg]
-    gene_array = genes[expr_reg]
-    expr_matrx = exprs[expr_reg]
+    gene_array = genes[reg]
+    expr_matrx = exprs[reg]
+
+    n_incomp = 0 
+    n_plot = 0 
 
     ## gene loop starts here 
     data = np.zeros((gene_array.shape[0], 3))
     for g,gene in enumerate(gene_array): 
-        gene_expr = expr_matrx[g].T
+        gene_expr = expr_matrx[g]
         
         ## return nan for genes with no expression variance  
         if np.var(gene_expr) == 0: 
@@ -136,18 +139,61 @@ for reg in regions:
         for gf in genes_fsig: 
             f_sel.write(gf + '\n')
 
+    ## count number of significant genes with missing SNPs 
+    p_incomp = np.intersect1d(genes_psig, unkept_models[reg])
+    f_incomp = np.intersect1d(genes_fsig, unkept_models[reg])
+
+    with open('{}/{}.log'.format(expr_dir, reg), 'r') as df:
+        data_header = df.readline()
+        lines = df.readlines() 
+    data_lines = {} 
+    for line in lines: 
+        data_lines[line.split('\t')[0]] = line 
+    with open('{}/incomp_{}.txt'.format(assoc_dir, reg), 'w') as cf: 
+        cf.write(data_header)
+        for c in p_incomp:
+            cf.write(data_lines[c])
+
+    ## plot some FDR genes 
+    for gf in genes_fsig: 
+        if n_plot > 5: break 
+        if gf in unkept_models[reg]: continue  
+        n_plot += 1 
+        gf_idx = np.argwhere(genes[reg] == gf)[0][0]
+        gf_expr = expr_matrx[gf_idx] 
+        rho, pval = pearsonr(gf_expr, phen_array) 
+        b, m = np.polynomial.polynomial.polyfit(gf_expr, phen_array, 1) 
+
+        fig, ax = plt.subplots(1,1,figsize=(15,15))
+        ax.scatter(gf_expr, phen_array, c='k')
+        ax.plot(gf_expr, b+(m*gf_expr), '-', c='y') 
+        ax.set_xlabel('expression', fontsize=30)
+        ax.set_ylabel(phenotype, fontsize=30) 
+        ax.tick_params(labelsize=30)
+        
+        xleft, xright = ax.get_xlim()
+        ybottom, ytop = ax.get_ylim()
+        ax.set_aspect(abs((xright-xleft)/(ybottom-ytop)))
+    
+        title = '{}, {}\nr={:.3f} (p ≤ {:.3f})'.format(gf, reg, rho, pval)
+        ax.set_title(title, size=30)
+        fname = '{}/{}_{}_{:.3f}.png'.format(assoc_dir, reg, gf, rho) 
+        plt.savefig(fname)  
+        plt.close('all') 
+
     ## print summary 
-    print('- {} -'.format(reg))
+    print('\n- {} -'.format(reg))
     no_vars = np.count_nonzero(np.isnan(data[:,0]))
     p_sig = np.count_nonzero(data[:,1] <= 0.05)
     f_sig = np.count_nonzero(data[:,2] <= 0.05) 
-    print('TOTAL: {}'.format(gene_array.shape[0]))
-    print('NO VAR: {}'.format(no_vars))
-    print('P SIG: {}'.format(p_sig))
-    print('FDR SIG: {}'.format(f_sig))
+    print('TOTAL  : {}'.format(gene_array.shape[0]))
+    print('NO VAR : {}'.format(no_vars))
+    print('P SIG  : {} ({} incomp)'.format(p_sig, p_incomp.shape[0]))
+    print('FDR SIG: {} ({} incomp)'.format(f_sig, f_incomp.shape[0]))
 
     ## save summary 
     with open(summary_file, 'a') as sf: 
-        info = [reg, str(gene_array.shape[0]), str(no_vars), str(p_sig), str(f_sig)]
+        info = [reg, str(gene_array.shape[0]), str(no_vars), str(p_sig), \
+                str(p_incomp.shape[0]), str(f_sig), str(f_incomp.shape[0])]
         line = '\t'.join(info)
         sf.write(line + '\n') 

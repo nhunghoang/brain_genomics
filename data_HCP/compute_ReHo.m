@@ -1,7 +1,7 @@
 % paths  
 path_input = '/data1/datasets/hcp';
-path_output = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/regional_homogeneity.mat';
-subj_output = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/ReHo_by_subj.mat';
+path_output = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/regional_homogeneity2.mat';
+subj_output = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/ReHo_by_subj2.mat';
 
 % load parcellation
 parc_file = load('/data1/rubinov_lab/brain_genomics/data_HCP/parc-121.mat');
@@ -62,9 +62,9 @@ for s = 1:length(subjs)
             
             % ReHo := avg correlation between voxels 
             % nb: NaN is caused by voxels with constant signals 
-            vox_corrs = corr(reg_sigs.');
-            low_tri = tril(vox_corrs, -1);
-            this_reho = mean(nonzeros(low_tri), 'omitnan');
+            vox_corrs = corr(reg_sigs.'); 
+            this_idx = tril(true(size(vox_corrs)), -1);
+            this_reho = mean(vox_corrs(this_idx), 'omitnan');
             subj_rehos(ss,r) = this_reho;
         end
     end

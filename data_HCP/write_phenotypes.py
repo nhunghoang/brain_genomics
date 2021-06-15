@@ -14,9 +14,10 @@ Phenotype List:
 import numpy as np 
 import h5py 
 import os 
+from scipy.stats import pearsonr 
 
 PHEN_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes'
-MATS_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_seq'
+MATS_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries'
 TS_ORDER = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_order.hdf5'
 COACT_MX = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/coactivity_matrices.hdf5'
 PARC_MAT = '/data1/rubinov_lab/brain_genomics/data_HCP/parc-121.mat'
@@ -91,15 +92,19 @@ def write_coactivity_matrices(subjects, ts_map):
 ##########################################################################
 
 ## Compute and write connectivity mean and variance for regions of interest 
+## Check phenotype correlation between LH & RH, save average 
 ## hdf5 keys: regions // val: value in subject-scan order 
 def write_conn_mean_var(subjs, reg_idx): 
+
     ## load all subject coact matrices 
     with h5py.File(COACT_MX, 'r') as f: 
         all_coacts = {s:np.array(f[s]) for s in subjs}
+
     ## set up arrays for subj means and variances 
     nsubjs = len(subjs) 
     all_means = {r:np.zeros(nsubjs, dtype=float) for r in reg_idx} 
     all_varis = {r:np.zeros(nsubjs, dtype=float) for r in reg_idx} 
+
     ## compute mean/var for each scan across regions THEN average scans together 
     for s,subj in enumerate(subjs): 
         coacts = all_coacts[subj]
@@ -108,12 +113,43 @@ def write_conn_mean_var(subjs, reg_idx):
         for reg,idx in reg_idx.items(): 
             all_means[reg][s] = means[idx]
             all_varis[reg][s] = varis[idx]     
+
+    ## check correlation between LH & RH values, store average     
+    print('MEANS') 
+    h_means = {} 
+    for reg,arr in all_means.items(): 
+        if (reg=='hypothalamus') or (reg=='substantia-nigra'): 
+            h_means[reg] = arr 
+        else: 
+            reg_full = reg[:-3]
+            if reg_full not in h_means.keys(): 
+                h_means[reg_full] = arr 
+            else: 
+                h0 = h_means[reg_full] 
+                rho, pval = pearsonr(h0, arr) 
+                print('{}: {:.3f}'.format(reg_full, rho))
+                h_means[reg_full] = (h0 + arr)/2 
+    print('VARS') 
+    h_varis = {} 
+    for reg,arr in all_varis.items(): 
+        if (reg=='hypothalamus') or (reg=='substantia-nigra'): 
+            h_varis[reg] = arr 
+        else: 
+            reg_full = reg[:-3]
+            if reg_full not in h_varis.keys(): 
+                h_varis[reg_full] = arr 
+            else: 
+                h0 = h_varis[reg_full] 
+                rho, pval = pearsonr(h0, arr) 
+                print('{}: {:.3f}'.format(reg_full, rho))
+                h_varis[reg_full] = (h0 + arr)/2 
+
     ## save regional means and variances as subject arrays 
     with h5py.File(PHEN_DIR + '/connectivity_mean.hdf5', 'w') as m: 
-        for reg,arr in all_means.items(): 
+        for reg,arr in h_means.items(): 
             m[reg] = arr  
     with h5py.File(PHEN_DIR + '/connectivity_variance.hdf5', 'w') as v: 
-        for reg,arr in all_varis.items(): 
+        for reg,arr in h_varis.items(): 
             v[reg] = arr  
     print('- finished computing connectivity mean and variance') 
 
@@ -136,42 +172,57 @@ def participation_coefficient(W, ci):
     return P
 
 def write_part_coef(subjs, ci, reg_idx): 
+
     ## load all subject coact matrices 
     with h5py.File(COACT_MX, 'r') as f: 
         all_coacts = {s:np.array(f[s]) for s in subjs} 
     subj_pcs = []  
+
     ## compute PC per subject, for all their coact matrices 
     for subj,cmat in all_coacts.items(): 
         n_mats = cmat.shape[0]
         pcs = np.zeros((n_mats, 121), dtype=float)
         for i in range(n_mats): 
             W = cmat[i] 
+
             ## zero out negatives
             W = np.where(W<0, W, 0)
             pc = participation_coefficient(W, ci)
             pcs[i] = pc 
+
         ## represent subj by their avg PC array 
         avg_pc = np.mean(pcs, axis=0)
         subj_pcs.append(avg_pc) 
-    ## save subject array of PCs per region 
-    subj_pcs = np.array(subj_pcs) ## (n_subjs, n_regs)  
-    with h5py.File(PHEN_DIR + '/participation_coefficient.hdf5', 'w') as p:
-        for reg,idx in reg_idx.items(): 
-            p[reg] = subj_pcs[:,idx]      
 
-            m0 = subj_pcs[:,idx].min()
-            m1 = subj_pcs[:,idx].max()
+    subj_pcs = np.array(subj_pcs) ## (n_subjs, n_regs)  
+
+    ## check correlation between LH & RH, store average 
+    h_pcs = {} 
+    for reg,idx in reg_idx.items(): 
+        reg_pcs = subj_pcs[:,idx] 
+        if (reg=='hypothalamus') or (reg=='substantia-nigra'): 
+            h_pcs[reg] = reg_pcs 
+        else: 
+            reg_full = reg[:-3] 
+            if reg_full not in h_pcs.keys(): 
+                h_pcs[reg_full] = reg_pcs 
+            else: 
+                h0 = h_pcs[reg_full] 
+                rho, pval = pearsonr(h0, reg_pcs) 
+                print('{}: {:.3f}'.format(reg_full, rho))
+                h_pcs[reg_full] = (h0 + reg_pcs)/2 
+
+    ## save subject array of PCs per region 
+    with h5py.File(PHEN_DIR + '/participation_coefficient.hdf5', 'w') as p:
+        for reg,vals in h_pcs.items(): 
+            p[reg] = vals      
+
+            m0 = vals.min()
+            m1 = vals.max()
             print('{:>25s}: {:.3f} - {:.3f}'.format(reg, m0, m1))
 
     print('- finished computing participation coefficient')
          
-##########################################################################
-
-## Regional Homogeneity 
-def write_reg_homogeneity(): 
-    pass 
-    print('- finished computing regional homogeneity') 
-
 ##########################################################################
 ##########################################################################
 
@@ -192,13 +243,12 @@ def main():
 
     #write_coactivity_matrices(subjects, ts_map) 
 
-    #write_conn_mean_var(subjects, region_idx) 
-    #write_reg_homogeneity() 
+    write_conn_mean_var(subjects, region_idx) 
 
-    clusters_file = '/data1/rubinov_lab/brain_genomics/data_HCP/clusters-subcort-yeo.txt'
-    with open(clusters_file, 'r') as f:
-        clusters = np.array([int(i.strip()) for i in f.readlines()])
-    write_part_coef(subjects, clusters, region_idx)
+    #clusters_file = '/data1/rubinov_lab/brain_genomics/data_HCP/clusters-subcort-yeo.txt'
+    #with open(clusters_file, 'r') as f:
+    #    clusters = np.array([int(i.strip()) for i in f.readlines()])
+    #write_part_coef(subjects, clusters, region_idx)
 
 main() 
 
