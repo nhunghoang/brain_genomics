@@ -2,6 +2,9 @@
 For a given phenotype, identify the genes that independently and 
 significantly correlate with the phenotype across individuals. 
 
+NOTE: the gene models that are being considered have already been 
+filtered based on completeness or quality thresholds. 
+
 - Nhung, updated June 2021 
 '''
 
@@ -36,8 +39,7 @@ with h5py.File(subj_file, 'r') as f:
 regions = np.array(list(phens.keys()))
 
 ## expression 
-#expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered'
-expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression'
+expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_quality_r0.3_p0.01'
 samp_file = '/data1/rubinov_lab/brain_genomics/data_HCP/predixcan_v8/sample_ids.txt' 
 
 genes = {}; exprs = {} 
@@ -78,6 +80,7 @@ for reg in regions:
     exprs[reg] = exprs[reg][:,samp_idx]
 
 ## read genes per region that HCP doesn't have all SNPs for
+'''
 unkept_file = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/all_genes_not_kept.txt'
 with open(unkept_file, 'r') as f: lines = f.readlines()
 unkept_models = {} ## k: region, v: list of genes
@@ -87,6 +90,7 @@ for line in lines:
     mod = data[1]
     try: unkept_models[reg].append(mod)
     except KeyError: unkept_models[reg] = [mod]
+'''
 
 ## single gene associations
 for reg in regions: 
@@ -132,14 +136,17 @@ for reg in regions:
     with open('{}/p-selected_{}.txt'.format(assoc_dir, reg), 'w') as p_sel: 
         genes_psig = gene_array[data[:,1] <= 0.05]
         for gp in genes_psig: 
+            gp = gp.split('.')[0]
             p_sel.write(gp + '\n')
 
     with open('{}/fdr-selected_{}.txt'.format(assoc_dir, reg), 'w') as f_sel: 
         genes_fsig = gene_array[data[:,2] <= 0.05]
         for gf in genes_fsig: 
+            gf = gf.split('.')[0]
             f_sel.write(gf + '\n')
 
     ## count number of significant genes with missing SNPs 
+    '''
     p_incomp = np.intersect1d(genes_psig, unkept_models[reg])
     f_incomp = np.intersect1d(genes_fsig, unkept_models[reg])
 
@@ -153,11 +160,12 @@ for reg in regions:
         cf.write(data_header)
         for c in p_incomp:
             cf.write(data_lines[c])
+    '''
 
     ## plot some FDR genes 
     for gf in genes_fsig: 
         if n_plot > 5: break 
-        if gf in unkept_models[reg]: continue  
+        #if gf in unkept_models[reg]: continue  
         n_plot += 1 
         gf_idx = np.argwhere(genes[reg] == gf)[0][0]
         gf_expr = expr_matrx[gf_idx] 
@@ -187,13 +195,16 @@ for reg in regions:
     p_sig = np.count_nonzero(data[:,1] <= 0.05)
     f_sig = np.count_nonzero(data[:,2] <= 0.05) 
     print('TOTAL  : {}'.format(gene_array.shape[0]))
-    print('NO VAR : {}'.format(no_vars))
-    print('P SIG  : {} ({} incomp)'.format(p_sig, p_incomp.shape[0]))
-    print('FDR SIG: {} ({} incomp)'.format(f_sig, f_incomp.shape[0]))
+    #print('NO VAR : {}'.format(no_vars))
+    print('P SIG  : {}'.format(p_sig))
+    print('FDR SIG: {}'.format(f_sig))
+    #print('P SIG  : {} ({} incomp)'.format(p_sig, p_incomp.shape[0]))
+    #print('FDR SIG: {} ({} incomp)'.format(f_sig, f_incomp.shape[0]))
 
     ## save summary 
     with open(summary_file, 'a') as sf: 
-        info = [reg, str(gene_array.shape[0]), str(no_vars), str(p_sig), \
-                str(p_incomp.shape[0]), str(f_sig), str(f_incomp.shape[0])]
+        info = [reg, str(gene_array.shape[0]), str(no_vars), str(p_sig), str(f_sig)]
+        #info = [reg, str(gene_array.shape[0]), str(no_vars), str(p_sig), \
+        #        str(p_incomp.shape[0]), str(f_sig), str(f_incomp.shape[0])]
         line = '\t'.join(info)
         sf.write(line + '\n') 

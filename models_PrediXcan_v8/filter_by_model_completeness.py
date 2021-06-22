@@ -10,20 +10,20 @@ import os
 import numpy as np 
 import h5py 
 
-output_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression'
-filter_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered'
-gmodel_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/predixcan_v8/gene_models'
+predix_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression'
+filter_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_completeness'
+gmodel_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/predixcan_v8/gene_models_completeness'
 
-no_keep_file = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/all_genes_not_kept.txt'
+no_keep_file = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/not_kept_model_complete.txt'
 no_keep = open(no_keep_file, 'w') 
 
-for log in os.listdir(output_dir): 
+for log in os.listdir(predix_dir): 
     if log[-4:] != '.log': continue 
     tissue = log.split('.')[0] 
 
     genes_to_keep = [] 
     index_to_keep = [] 
-    with open('{}/{}'.format(output_dir, log), 'r') as f: 
+    with open('{}/{}'.format(predix_dir, log), 'r') as f: 
         f.readline() ## header 
         lines = f.readlines() 
 
@@ -47,7 +47,7 @@ for log in os.listdir(output_dir):
 
     ## write new expression hdf5 files with just the valid genes 
     expr_data = {} 
-    with h5py.File('{}/{}.hdf5'.format(output_dir, tissue), 'r') as f2: 
+    with h5py.File('{}/{}.hdf5'.format(predix_dir, tissue), 'r') as f2: 
         for key in f2.keys(): 
             expr_data[key] = np.array(f2[key])
     with h5py.File('{}/{}.hdf5'.format(filter_dir, tissue), 'w') as f3: 

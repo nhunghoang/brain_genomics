@@ -26,7 +26,7 @@ data_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression'
 outs_dir = '/data1/rubinov_lab/brain_genomics/models_PrediXcan_v8/plots_model_quality'
 
 ## read genes per region that HCP doesn't have all SNPs for 
-unkept_file = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/all_genes_not_kept.txt'
+unkept_file = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_completeness/all_genes_not_kept.txt'
 with open(unkept_file, 'r') as f: lines = f.readlines() 
 unkept_models = {} ## k: region, v: list of genes
 for line in lines: 
