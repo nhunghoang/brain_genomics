@@ -17,7 +17,8 @@ from random import shuffle
 import os
 
 ## output path 
-out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/results_ccc_obs'
+out_path = '/data/rubinov_lab/brain_genomics_project/platypus/results_ccc_obs'
+#out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/results_ccc_obs'
 
 ## job array params 
 FID = sys.argv[1]
@@ -33,7 +34,8 @@ STEP_LIMIT = 1e9 ## converge or max out on this number of steps
 print('PARAMS: temp = {}, decay = {}'.format(TEMP, DECAY))
 
 ## gather data
-ccc_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/ccc_variables.hdf5' 
+ccc_file = '/data/rubinov_lab/brain_genomics_project/platypus/ccc_variables.hdf5' 
+#ccc_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/ccc_variables.hdf5' 
 data = {c:{} for c in ['Gi', 'Gj', 'Fs', 'GiGj', 'Gi2', 'Gj2']}
 with h5py.File(ccc_file, 'r') as f: 
     for key in f.keys(): 
@@ -92,11 +94,13 @@ def simulated_annealing(reg_pair):
         if step%(decay_rate) == 0:
             temp *= DECAY
 
+        '''
         if step%(10*decay_rate) == 0:
             ccc_ = round(CCC,5)
             tmp_ = round(temp,5)
             wgt_ = np.sum(W)
             print('[STEP {:6d}] CCC: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, ccc_, tmp_, wgt_))
+        '''
 
         ## randomly select one weight to flip    
         w_idx = np.random.choice(n_genes) 
@@ -153,6 +157,10 @@ for reg_pair in region_pairs:
     [reg1, reg2] = reg_pair.split('_')
     n_genes = data['Gi'][reg_pair].shape[1]
     print('> {}, {} ({} genes)'.format(reg1, reg2, n_genes))
+
+    wgt = '{}/weights_{}_{}/{}.hdf5'.format(out_path, reg1, reg2, FID)
+    log = '{}/logs_{}_{}/{}.log'.format(out_path, reg1, reg2, FID)
+    if os.path.exists(wgt) and os.path.exists(log): continue 
 
     ## original correlation, non-weighted
     GiGj = data['GiGj'][reg_pair]
