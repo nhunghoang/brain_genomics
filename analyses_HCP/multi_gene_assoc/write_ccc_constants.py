@@ -1,4 +1,18 @@
 '''
+Compute and save the constants that are needed for the 
+CCC Simulated Annealing scripts. These are values that 
+do not change during the gene selection/search. 
+
+Constants: 
+- ordered lists of pairwise common genes 
+- Gi: region i expression matrix of shape (subjects, genes)  
+- Gj: region j expression matrix of shape (subjects, genes)  
+- GiGj: element-wise multiplication of Gi and Gj AFTER subtracting SUBJECT means from both 
+- Gi2: element-wise squaring of mean-centered Gi 
+- Gi2: element-wise squaring of mean-centered Gj 
+- Fs: co-activity(reg1,reg2) array of shape (subjects, 1)
+
+Nhung, June 2021 
 '''
 
 import h5py
@@ -6,7 +20,9 @@ import numpy as np
 import os 
 
 ## output file 
-ccc_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/ccc_variables.hdf5'
+ccc_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/ccc_constants.hdf5'
+cgenes_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/pairwise_common_genes.txt' 
+if os.path.exists(cgenes_file): os.remove(cgenes_file) 
 
 ## coactivity 
 coact_file = '/data1/rubinov_lab/brain_genomics/data_HCP/phenotypes/coactivity.hdf5'
@@ -84,6 +100,10 @@ for reg_pair in region_pairs:
     Gj = r2_exprs[:, r2_idx] 
 
     print('{:>21s} & {:>21s}: {:3d} common genes'.format(reg1, reg2, common_genes.shape[0]))
+    with open(cgenes_file, 'a') as cgf: 
+        line = '{}_{}:'.format(reg1, reg2) 
+        line += (','.join(common_genes))
+        cgf.write(line + '\n')
 
     ## expression mean PER SUBJECT > (s,1) vectors 
     Mi = np.mean(Gi, axis=1)[:,None]
@@ -102,7 +122,14 @@ for reg_pair in region_pairs:
     ccc_constants[reg_pair] = (GiGj,Gi2,Gj2)
 
 ## save CCC constants: coactivity(F), Gi, Gj, GiGj, Gi2, Gj2 
+## also save 2D array of corresponding sample & subject IDs
+id_array = np.zeros((2, samp_order.size), dtype=int) 
+for s,samp in enumerate(samp_order): 
+    id_array[0,s] = samp[3:] ## remove 'MH0' to save in hdf5 format
+    id_array[1,s] = subj_order[s] 
+
 with h5py.File(ccc_file, 'w') as f: 
+    f['IDs'] = id_array 
     for reg_pair in region_pairs: 
         (Gi, Gj) = pairwise_genes[reg_pair]
         (GiGj, Gi2, Gj2) = ccc_constants[reg_pair] 

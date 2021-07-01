@@ -8,10 +8,7 @@ Phenotype List:
 - Structural: Thickness, Volume  
 - Networks: e.g., DMN, Salience, etc.  
 
-- Nhung, May 2021 
-
-Note: ReHo was computed in 
-    /data1/rubinov_lab/brain_genomics/data_HCP/compute_ReHo.m
+Nhung, May 2021 (updated June 2021)  
 '''
 
 import numpy as np 
@@ -301,6 +298,7 @@ def write_part_coef(subjs, ci, reg_idx):
 
 ## Read ReHo values (computed in matlab, per regional hemisphere)
 ## Check phenotype correlation between LH & RH, save average 
+## script: /data1/rubinov_lab/brain_genomics/data_HCP/compute_ReHo.m
 def write_regional_homogeneity(): 
     print('{:>25s}  {:7s} {:7s} {:7s}'.format('REGION', 'CORRRH', 'MINRH', 'MAXRH'))
     rehos = {} ## k: region, v: subject array  
@@ -330,6 +328,61 @@ def write_regional_homogeneity():
     print('- finished saving regional homogeneity')
 
 ##########################################################################
+
+## Read ALFF and FALFF values (computed by Neda, script path below)
+## Check phenotype correlation between LH & LR, save average 
+## script: /data1/rubinov_lab/Neda/ALFF_fALFF_updated.m
+def write_alff_falff(subjs, reg_idx): 
+    alff_path = '/data1/rubinov_lab/brain_genomics/neuro_phenotypes/HCP_phenotypes/ALFF_121regions.mat'
+    falff_path = '/data1/rubinov_lab/brain_genomics/neuro_phenotypes/HCP_phenotypes/fALFF_121regions.mat'
+    subj_path = '/data1/rubinov_lab/brain_genomics/neuro_phenotypes/HCP_phenotypes/subjs_list2.mat' 
+
+    ## read subject order of phenotype files 
+    with h5py.File(subj_path, 'r') as f: 
+        phen_subjs = np.array(f['list'])[0].astype(int).astype('str')
+
+    ## get indices of relevant subjects in phen array 
+    subj_idx = [np.where(phen_subjs==s)[0][0] for s in subjs]
+
+    ## read data - shape (1206, 121)  
+    with h5py.File(alff_path, 'r') as f: all_alff = np.array(f['ALFF_subjcs'])  
+    with h5py.File(falff_path, 'r') as f: all_falff = np.array(f['fALFF_subjcs']) 
+
+    ## slice the parts of interest, compute hemisphere averages   
+    print('{:>25s}  {:7s} {:7s} {:7s} {:7s} {:7s} {:7s}'.\
+        format('REGION', 'CORR-a', 'MIN-a', 'MAX-a', 'CORR-f', 'MIN-f', 'MAX-f'))
+    alff = {}; falff = {} 
+    for reg0, idx in reg_idx.items(): 
+        aval = all_alff[subj_idx][:,idx] 
+        fval = all_falff[subj_idx][:,idx]  
+        if (reg0=='hypothalamus') or (reg0=='substantia-nigra'): 
+            alff[reg0] = aval; falff[reg0] = fval 
+        else: 
+            reg = reg0[:-3]
+            try: 
+                h_alff = alff[reg] 
+                h_falff = falff[reg] 
+                alff[reg] = (h_alff + aval) / 2
+                falff[reg] = (h_falff + fval) / 2
+                arho, apval = spearmanr(h_alff, aval) 
+                frho, fpval = spearmanr(h_falff, fval) 
+                print('{:>25s}   {:.3f}  {:.3f}   {:.3f}   {:.3f}   {:.3f}   {:.3f}'.\
+                    format(reg, arho, alff[reg].min(), alff[reg].max(),\
+                    frho, falff[reg].min(), falff[reg].max()))
+            except KeyError: 
+                alff[reg] = aval; falff[reg] = fval 
+
+    ## save subject array of ALFF/FALFF per region 
+    with h5py.File(PHEN_DIR + '/alff.hdf5', 'w') as aa:
+        for reg,val in alff.items(): 
+            aa[reg] = val 
+    with h5py.File(PHEN_DIR + '/falff.hdf5', 'w') as ff:
+        for reg,val in falff.items(): 
+            ff[reg] = val 
+
+    print('- finished saving ALFF/FALFF')
+
+##########################################################################
 ##########################################################################
 
 ## Main 
@@ -349,7 +402,7 @@ def main():
 
     #write_coactivity_matrices(subjects, ts_map) 
 
-    write_coactivity(subjects, region_idx)
+    #write_coactivity(subjects, region_idx)
 
     #write_conn_mean_var(subjects, region_idx) 
 
@@ -359,6 +412,8 @@ def main():
     #write_part_coef(subjects, clusters, region_idx)
 
     #write_regional_homogeneity() 
+
+    write_alff_falff(subjects, region_idx) 
 
 main() 
 

@@ -5,6 +5,8 @@ This version does not constrain the number of genes to be
 selected. The initial weights are randomly decided. At every 
 step, the weight of one random gene is considered.  
 
+[06.29.21] CHANGE: Constrain the number of selected genes to be 32. 
+
 - Nhung, updated June 2021 
 '''
 
@@ -17,7 +19,7 @@ from random import shuffle
 import os
 
 ## output path 
-out_path = '/data/rubinov_lab/brain_genomics_project/platypus/results_ccc_obs1'
+out_path = '/data/rubinov_lab/brain_genomics_project/platypus/results_ccc_obs32'
 #out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/results_ccc_obs'
 
 ## job array params 
@@ -44,7 +46,7 @@ with h5py.File(ccc_file, 'r') as f:
 region_pairs = list(data['Fs'].keys())
 
 ## create directories on first iteration 
-if FID == '0': 
+if (FID == '0') and (not os.path.exists(out_path)): 
     os.mkdir(out_path)  
     for reg_pair in region_pairs: 
         [reg1, reg2] = reg_pair.split('_')
@@ -72,8 +74,13 @@ def simulated_annealing(reg_pair):
     decay_rate = DECAY_RATE
     if DECAY_RATE == -1: decay_rate = n_genes 
     
-    ## initialize weights 
-    W = np.random.choice([0,1], n_genes)
+    ## initialize weights (constrain number of genes to 32)  
+    selected_idx = np.random.choice(n_genes, 32, replace=False) 
+    mask = np.ones(n_genes, dtype=bool) 
+    mask[selected_idx] = False 
+    unselected_idx = np.arange(n_genes)[mask] 
+    W = np.zeros(n_genes, dtype=int) 
+    W[selected_idx] = 1
 
     ## initial correlation 
     wGiGj = np.sum(GiGj*W, axis=1)
@@ -102,17 +109,17 @@ def simulated_annealing(reg_pair):
             print('[STEP {:6d}] CCC: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, ccc_, tmp_, wgt_))
         '''
 
-        ## randomly select one weight to flip    
-        w_idx = np.random.choice(n_genes) 
+        ## randomly select two weights to switch     
+        sel2unsel = np.random.choice(selected_idx) 
+        unsel2sel = np.random.choice(unselected_idx) 
 
         ## delta calcs
-        def delta_op(w_val, val, idx): 
-            if W[idx] == 0: return w_val + np.squeeze(val[:,idx])
-            if W[idx] == 1: return w_val - np.squeeze(val[:,idx])
+        def delta_op(w_val, val, sel2unsel_idx, unsel2sel_idx): 
+            return w_val - np.squeeze(val[:,sel2unsel_idx]) + np.squeeze(val[:,unsel2sel_idx])
 
-        d_wGiGj = delta_op(wGiGj, GiGj, w_idx)
-        d_wGi2 = delta_op(wGi2, Gi2, w_idx)
-        d_wGj2 = delta_op(wGj2, Gj2, w_idx)
+        d_wGiGj = delta_op(wGiGj, GiGj, sel2unsel, unsel2sel)
+        d_wGi2 = delta_op(wGi2, Gi2, sel2unsel, unsel2sel)
+        d_wGj2 = delta_op(wGj2, Gj2, sel2unsel, unsel2sel)
         d_Gs = d_wGiGj / (np.sqrt(d_wGi2) * np.sqrt(d_wGj2))
         new_ccc, new_pval = pearsonr(Fs, d_Gs)
 
@@ -120,7 +127,11 @@ def simulated_annealing(reg_pair):
         old_ccc = CCC
         ccc_diff = CCC - new_ccc
         if (CCC < new_ccc) or (np.exp(-ccc_diff/temp) > np.random.rand()):
-            W[w_idx] = 1 - W[w_idx] 
+            W[sel2unsel] = 0 
+            W[unsel2sel] = 1 
+            tmp = sel2unsel
+            selected_idx[selected_idx==sel2unsel] = unsel2sel
+            unselected_idx[unselected_idx==unsel2sel] = tmp
             CCC = new_ccc
             pval = new_pval
             wGiGj = d_wGiGj
@@ -142,7 +153,7 @@ def simulated_annealing(reg_pair):
             print('NONC - {}\n'.format(tpass))
             return CCC, pval, W, tpass, 'NONC'
 
-    ## print details of final step before convergence  
+    ## print details of final step before convergence 
     ccc_ = round(CCC,5)
     tmp_ = round(temp,5)
     wgt_ = np.sum(W)
