@@ -5,7 +5,9 @@ significantly correlate with the phenotype across individuals.
 NOTE: the gene models that are being considered have already been 
 filtered based on completeness or quality thresholds. 
 
-- Nhung, updated June 2021 
+[07.01.21] Update: Record the r^2 value for each gene (i.e., rho^2)  
+
+- Nhung, updated July 2021 
 '''
 
 import matplotlib 
@@ -127,23 +129,31 @@ for reg in regions:
 
     ## save data 
     with open('{}/pearsonr_{}.txt'.format(assoc_dir, reg), 'w') as all_gene_corrs:
-        header = '\t'.join(['GENE', 'RHO', 'PVAL', 'FDR', '\n'])
+        header = '\t'.join(['GENE', 'R^2', 'RHO', 'PVAL', 'FDR', '\n'])
         all_gene_corrs.write(header) 
         for g,d in zip(gene_array,data): 
-            line = '{}\t{:.5f}\t{:.5f}\t{:.5f}\n'.format(g, d[0], d[1], d[2])
+            line = '{}\t{:.5f}\t{:.5f}\t{:.5f}\t{:.5f}\n'.format(g, d[0], d[0]**2, d[1], d[2])
             all_gene_corrs.write(line) 
 
     with open('{}/p-selected_{}.txt'.format(assoc_dir, reg), 'w') as p_sel: 
         genes_psig = gene_array[data[:,1] <= 0.05]
-        for gp in genes_psig: 
+        r2_values = data[:,1][data[:,1] <= 0.05]
+        for gp, r2 in zip(genes_psig, r2_values): 
             gp = gp.split('.')[0]
-            p_sel.write(gp + '\n')
+            p_sel.write('{}: {:.3f}\n'.format(gp, r2))
+            #p_sel.write(gp + '\n')
+        print('{:>25s} (p): ({:.3f}, {:.3f})'.format(reg, r2_values.min(), r2_values.max()))
 
     with open('{}/fdr-selected_{}.txt'.format(assoc_dir, reg), 'w') as f_sel: 
         genes_fsig = gene_array[data[:,2] <= 0.05]
-        for gf in genes_fsig: 
+        r2_values = data[:,2][data[:,2] <= 0.05]
+        for gf, r2 in zip(genes_fsig, r2_values): 
             gf = gf.split('.')[0]
-            f_sel.write(gf + '\n')
+            f_sel.write('{}: {:.3f}\n'.format(gf, r2))
+            #f_sel.write(gf + '\n')
+        if genes_fsig.size != 0: 
+            print('{:>25s} (f): ({:.3f}, {:.3f})'.format(reg, r2_values.min(), r2_values.max()))
+    continue 
 
     ## count number of significant genes with missing SNPs 
     '''

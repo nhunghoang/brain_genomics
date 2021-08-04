@@ -8,6 +8,11 @@ samples.
 import h5py 
 import numpy as np 
 from time import time 
+import sys 
+from multiprocessing import Pool 
+
+A = int(sys.argv[1])
+B = int(sys.argv[2])
 
 ## pretty-print time
 def pretty_time(tpass):
@@ -44,42 +49,55 @@ samp_subset, all_idx, samp_idx = np.intersect1d(all_samples, samples, \
 new_cat_names = non_samp_cats + '\t'.join(samp_subset) + '\n' 
 
 ## write new vcf files containing just the samples being used 
-for ch in range(22, 0, -1): 
+#for ch in range(22, 0, -1): 
+def one_run(ch):
     tstart = time() 
+
+    log = open('chr{}.log'.format(ch), 'w') 
 
     ## all snps 
     all_vcf = '{}/chr{}.vcf'.format(all_dir, ch)
     with open(all_vcf, 'r') as f: all_lines = f.readlines() 
-    print('[{:>2}] read ALL variants'.format(ch))
+    log.write('[{:>2}] read ALL variants\n'.format(ch))
 
     f_samp_all = '{}/chr{}.vcf'.format(samp_all_dir, ch) 
     with open(f_samp_all, 'w') as f: 
         f.write(header)
         f.write(new_cat_names) 
-        for line in all_lines[5:]:
+        clen = len(all_lines[5:])
+        for c, line in enumerate(all_lines[5:]):
             line_list = line.strip().split('\t')
             samp_values = np.array(line_list[9:])[all_idx]  
             othr_values = line_list[:9]
             new_line = '\t'.join(othr_values) + '\t' + '\t'.join(samp_values) + '\n'
             f.write(new_line) 
-    print('{:>4} wrote ALL variants'.format(''))
+            if (c%100000 == 0): log.write('[{:>2}] {:.2f}% (all)\n'.format(ch, (c/clen)*100)); log.flush()
+    log.write('{:>4} wrote ALL variants\n'.format(''))
 
     ## pdx snps 
     pdx_vcf = '{}/chr{}.vcf'.format(pdx_dir, ch)
     with open(pdx_vcf, 'r') as f: pdx_lines = f.readlines() 
-    print('{:>4} read PDX variants'.format(''))
+    log.write('{:>4} read PDX variants\n'.format(''))
 
     f_samp_pdx = '{}/chr{}.vcf'.format(samp_pdx_dir, ch) 
     with open(f_samp_pdx, 'w') as f: 
         f.write(header)
         f.write(new_cat_names) 
-        for line in pdx_lines[5:]:
+        clen = len(all_lines[5:])
+        for c, line in enumerate(all_lines[5:]):
             line_list = line.strip().split('\t')
             samp_values = np.array(line_list[9:])[all_idx]  
             othr_values = line_list[:9]
             new_line = '\t'.join(othr_values) + '\t' + '\t'.join(samp_values) + '\n'
             f.write(new_line) 
-    print('{:>4} wrote PDX variants'.format(''))
+            if (c%100000 == 0): log.write('[{:>2}] {:.2f}% (pdx)\n'.format(ch, (c/clen)*100)); log.flush() 
+    log.write('{:>4} wrote PDX variants\n'.format(''))
 
     tpass = pretty_time(time()-tstart)
-    print('{:>4} finished in {}'.format('', tpass))
+    log.write('{:>4} finished in {}\n'.format('', tpass))
+    log.close()
+
+## implement parallel computing 
+chrs = [c for c in range(A, B+1)]
+pool = Pool()
+pool.map(one_run, chrs) 

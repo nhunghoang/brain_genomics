@@ -36,11 +36,16 @@ with open(samp_file, 'r') as f:
     samp_order_all = np.array([s.split('\t')[0] for s in f.readlines()])
 
 ## only keep individuals with valid subject & sample IDs (n = 891) 
+subjects = []; samples = [] 
 subj_idx = []; samp_idx = []
-for i in range(samp_order_all.shape[0]): 
+for i,samp in enumerate(samp_order_all): 
     try:
         subj_of_samp = samp_to_subj[samp_order_all[i]]
         idx_of_subj = np.argwhere(subj_order_all == subj_of_samp)[0][0]
+
+        subjects.append(subj_of_samp)
+        samples.append(samp[3:]) ## ignore 'MH0' for hdf5 write  
+
         samp_idx.append(i)
         subj_idx.append(idx_of_subj)
     except:
@@ -49,6 +54,8 @@ for i in range(samp_order_all.shape[0]):
 ## save the index sets 
 idx_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/subj_samp_assoc_order.hdf5'
 with h5py.File(idx_file, 'w') as f: 
-    f['subject_idx'] = subj_idx 
-    f['sample_idx'] = samp_idx  
+    f['subjects'] = np.array(subjects, dtype=int) 
+    f['samples'] = np.array(samples, dtype=int)
+    f['subject_idx_939'] = subj_idx 
+    f['sample_idx_1142'] = samp_idx  
 

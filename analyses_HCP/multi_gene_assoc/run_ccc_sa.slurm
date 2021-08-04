@@ -12,9 +12,9 @@
 #SBATCH --time=6:00:00
 #SBATCH --mem=2GB
 #SBATCH --array=0-99
-#SBATCH --output=/data/rubinov_lab/brain_genomics_project/platypus/%a.out
+#SBATCH --output=/data/rubinov_lab/brain_genomics_project/platypus/outs_ccc32/%a.out
 
 ml GCC/8.2.0 OpenMPI/3.1.4 Python/3.7.2
 source /data/rubinov_lab/brain_genomics_project/platypus/venv_analyses/bin/activate
-python -u /data/rubinov_lab/brain_genomics_project/platypus/run_ccc_sa.py ${SLURM_ARRAY_TASK_ID} 
+python -u /data/rubinov_lab/brain_genomics_project/platypus/run_ccc_sa_32.py ${SLURM_ARRAY_TASK_ID} 
 deactivate 

@@ -23,8 +23,8 @@ from random import shuffle
 import os
 
 ## output path 
-out_path = '/data/rubinov_lab/brain_genomics_project/platypus/results_ccc_null32'
-#out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/results_ccc_null'
+#out_path = '/data/rubinov_lab/brain_genomics_project/platypus/results_ccc_null32'
+out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/results_ccc_null32'
 
 ## job array params 
 shuffle_run = int(sys.argv[1])
