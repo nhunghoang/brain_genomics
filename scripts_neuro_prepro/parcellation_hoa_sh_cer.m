@@ -140,4 +140,4 @@ name = [hoa_cort_name(:, 1); hoa_subc_name; rfl_name; cer_name];
 % run preprocesing
 mkdir(path_output)
 save(fullfile(path_output, "parcellation"), "parc", "name");
-preprocess_hcp_volume(parc, fullfile(path_output, "timeseries"))
+% preprocess_hcp_volume(parc, fullfile(path_output, "timeseries"), clean_flag)

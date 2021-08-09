@@ -1,4 +1,4 @@
-function preprocess_hcp_volume(parc, path_output)
+function preprocess_hcp_volume(parc, path_output, clean_flag)
 % preprocess_hcp(parc, path_output, path_input)
 %   function inputs:
 %     parc:         parcellation volume
@@ -8,6 +8,10 @@ function preprocess_hcp_volume(parc, path_output)
 %     1. Load preprocessed volumetric RS-fMRI scans from HCP datasets
 %     2. Parcellate brain voxel timeseries using input parcellation
 %     2. Regress out movement, WM and CSF confounds, and filter
+
+if ~exist('clean_flag', 'var')
+    clean_flag = 1;
+end
 
 % set default paths
 path_input = '/data1/datasets/hcp'; %default input directory
@@ -32,89 +36,92 @@ pmax = max(parc, [], 'all');
 
 % loop over hcp subjects
 parfor i = 1:length(subj_list)
-    try
-        warning off MATLAB:DELETE:FileNotFound
-        
-        % get subject name and index
-        subj = string(subj_list(i));
-        disp(subj)
-        ix_subj = find(metadata.Subject == subj);
-        
-        % make directory for each subj and open file for writing
-        filename = fullfile(path_output, subj+".mat");
-        
-        if isfile(filename)
-            continue
-        end
-        delete(filename)
+    
+    % get subject name and index
+    subj = string(subj_list(i));
+    disp(subj)
+    ix_subj = find(metadata.Subject == subj);
+    
+    % make directory for each subj and open file for writing
+    filename = fullfile(path_output, subj+".mat");
+    
+    if isfile(filename)
+        continue
+    else
         handle = matfile(filename, 'writable', true);
         handle.scans = scans;
         handle.qc = metadata.QC_Issue(ix_subj);
+    end
+    
+    regressors = cell(height(scans), 1);
+    Vp_clean = cell(height(scans), 1);
+    for h = 1:height(scans)
+        % check for quality control
+        if ~isundefined(handle.qc)
+            handle.errors(h, 1) = {'qc issue'};
+            continue
+        end
         
-        regressors = cell(height(scans), 1);
-        Vp_clean = cell(height(scans), 1);
-        for h = 1:height(scans)
-            % check for quality control
-            if ~isundefined(handle.qc)
-                handle.errors(h, 1) = {'qc issue'};
-                continue
-            end
-            
-            scan_name = scans.Name{h};
-            path_scan = fullfile(path_input, subj, 'MNINonLinear', 'Results', scan_name);
-            
-            % get regression data names
-            rnams = [
-                "Movement_Regressors", "Movement";
-                scan_name+"_CSF", "CSF";
-                scan_name+"_WM", "WM";
-                "Movement_RelativeRMS", "Movt_RRMS"];
-            
-            % load and store regression data
-            rdata = struct();
-            for r = 1:size(rnams, 1)
-                rdata.(rnams(r, 2)) = tryload(@load, fullfile(path_scan, rnams(r, 1)+".txt"));
-            end
-            regressors{h} = rdata;
-            
-            % make sure all regressors exist
-            if any(structfun(@isempty, rdata))
-                handle.errors(h, 1) = {'empty regressors'};
-                continue
-            end
-            
-            % get timeseries and brain mask
-            V = tryload(@niftiread, fullfile(path_scan, scan_name+"_hp2000_clean.nii.gz"));
-            
-            % make sure data exists
-            if isempty(V)
-                handle.errors(h, 1) = {'empty data'};
-                continue
-            end
-            tmax = size(V, 4);
-            V = double(reshape(V, [], tmax));
-            
-            %#ok<*AGROW> make regressors for model
-            regr = rdata.Movement(:, 1:6);                      % motion
-            regr = [regr [zeros(1, 6); regr(1:end-1,:)]];       % shifted
-            regr = [regr rdata.CSF rdata.WM];                   % CSF, WM
-            
-            % make filter
-            nyquist = (1 / scans.TR(h)) / 2;
-            filt_kernel = fir1(ceil(tmax/6)*2-1, [0.01 nyquist-eps]/nyquist);
-            
-            % loop over parcels and apply regressors
-            Vp_clean{h} = nan(pmax, tmax);
-            for u = 1:pmax
-                vp1 = mean(V(parc==u, :), 1, 'omitnan');
+        scan_name = scans.Name{h};
+        path_scan = fullfile(path_input, subj, 'MNINonLinear', 'Results', scan_name);
+        
+        % get regression data names
+        rnams = [
+            "Movement_Regressors", "Movement";
+            scan_name+"_CSF", "CSF";
+            scan_name+"_WM", "WM";
+            "Movement_RelativeRMS", "Movt_RRMS"];
+        
+        % load and store regression data
+        rdata = struct();
+        for r = 1:size(rnams, 1)
+            rdata.(rnams(r, 2)) = tryload(@load, fullfile(path_scan, rnams(r, 1)+".txt"));
+        end
+        regressors{h} = rdata;
+        
+        % make sure all regressors exist
+        if any(structfun(@isempty, rdata))
+            handle.errors(h, 1) = {'empty regressors'};
+            continue
+        end
+        
+        % get timeseries and brain mask
+        V = tryload(@niftiread, fullfile(path_scan, scan_name+"_hp2000_clean.nii.gz"));
+        
+        % make sure data exists
+        if isempty(V)
+            handle.errors(h, 1) = {'empty data'};
+            continue
+        end
+        tmax = size(V, 4);
+        if tmax < 1200
+            handle.errors(h, 1) = {'truncated data'};
+            continue
+        end
+        V = double(reshape(V, [], tmax));
+        
+        %#ok<*AGROW> make regressors for model
+        regr = rdata.Movement(:, 1:6);                      % motion
+        regr = [regr [zeros(1, 6); regr(1:end-1,:)]];       % shifted
+        regr = [regr rdata.CSF rdata.WM];                   % CSF, WM
+        
+        % make filter
+        nyquist = (1 / scans.TR(h)) / 2;
+        filt_kernel = fir1(ceil(tmax/6)*2-1, [0.01 nyquist-eps]/nyquist);
+        
+        % loop over parcels and apply regressors
+        Vp_clean{h} = nan(pmax, tmax);
+        for u = 1:pmax
+            vp1 = mean(V(parc==u, :), 1, 'omitnan');
+            if clean_flag
                 Vp_clean{h}(u, :) = clean(vp1, regr, filt_kernel);
+            else
+                Vp_clean{h}(u, :) = vp1;
             end
         end
-        handle.Vp_clean = Vp_clean;
-        handle.regressors = regressors;
-    catch ME
-        disp([i ME.identifier])
     end
+    handle.Vp_clean = Vp_clean;
+    handle.regressors = regressors;
 end
 
 end
@@ -132,16 +139,21 @@ end
 
 end
 
-function data = tryload(load_function, filename)
+function data = tryload(load_function, full_filename)
+
+[~, filename, ext] = fileparts(full_filename);
 
 data = [];
-if isfile(filename)
+if isfile(full_filename)
     for i = 1:10
         try
-            data = load_function(filename);
+            temp_full_filename = tempname+"_"+filename+ext;     % generate random filename
+            copyfile(full_filename, temp_full_filename);        % make a temporary copy of file
+            data = load_function(temp_full_filename);           % load from a temporary copy
+            delete(temp_full_filename)                          % delete temporary copy
             break
         catch
-            pause(10)
+            disp("failed to load "+temp_full_filename+" on attempt "+i);
         end
     end
 end
