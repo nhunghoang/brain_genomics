@@ -34,6 +34,10 @@ scans = table(scan_name, scan_tr, 'VariableNames', {'Name', 'TR'});
 parc = parc(:);
 pmax = max(parc, [], 'all');
 
+% get mask indices
+idx_parc = find(parc);
+nmax = nnz(parc);
+
 % loop over hcp subjects
 parfor i = 1:length(subj_list)
     
@@ -109,14 +113,27 @@ parfor i = 1:length(subj_list)
         nyquist = (1 / scans.TR(h)) / 2;
         filt_kernel = fir1(ceil(tmax/6)*2-1, [0.01 nyquist-eps]/nyquist);
         
-        % loop over parcels and apply regressors
-        Vp_clean{h} = nan(pmax, tmax);
-        for u = 1:pmax
-            vp1 = mean(V(parc==u, :), 1, 'omitnan');
+        % loop over parcels and clean
+        if pmax > 1
+            Vp_clean{h} = nan(pmax, tmax);
+            for u = 1:pmax
+                vp1 = mean(V(parc==u, :), 1, 'omitnan');
+                if clean_flag
+                    Vp_clean{h}(u, :) = clean(vp1, regr, filt_kernel);
+                else
+                    Vp_clean{h}(u, :) = vp1;
+                end
+            end
+        else
+            % loop over parcels and clean
             if clean_flag
-                Vp_clean{h}(u, :) = clean(vp1, regr, filt_kernel);
+                Vp_clean{h} = nan(nmax, tmax);
+                for u = 1:nmax
+                    vp1 = V(idx_parc(u), :);
+                    Vp_clean{h}(u, :) = clean(vp1, regr, filt_kernel);
+                end
             else
-                Vp_clean{h}(u, :) = vp1;
+                Vp_clean{h} = V(idx_parc, :);
             end
         end
     end
