@@ -33,5 +33,13 @@ GRM_PDX='/data1/rubinov_lab/brain_genomics/analyses_HCP/heritability/grm_chrs_pd
 #done
 
 ## merge chr files
-./gcta64 --mgrm ${GRM_ALL} --make-grm --out ${PLK_ALL}/chr_all/chr_all
-./gcta64 --mgrm ${GRM_PDX} --make-grm --out ${PLK_PDX}/chr_all/chr_all
+#./gcta64 --mgrm ${GRM_ALL} --make-grm --out ${PLK_ALL}/chr_all/chr_all
+#./gcta64 --mgrm ${GRM_PDX} --make-grm --out ${PLK_PDX}/chr_all/chr_all
+
+## merge chr files -- with cryptic relatedness flag 
+#REL_ALL='/data1/rubinov_lab/brain_genomics/analyses_HCP/heritability/plink_files_full_relate/all'
+REL_PDX='/data1/rubinov_lab/brain_genomics/analyses_HCP/heritability/plink_files_full_relate/pdx'
+#./gcta64 --mgrm ${GRM_ALL} --grm-cutoff 0.025 --make-grm --out ${REL_ALL}/chr_all/chr_all
+#./gcta64 --mgrm ${GRM_PDX} --make-grm --out ${REL_PDX}/chr_all/chr_all
+#./gcta64 --grm ${PLK_PDX}/chr_all/chr_all --grm-cutoff 0.05 --make-grm --out ${REL_PDX}/chr_all/chr_all
+./gcta64 --grm ${PLK_PDX}/chr_all/chr_all --make-bK 0.05 --make-grm --out ${REL_PDX}/chr_all/chr_all

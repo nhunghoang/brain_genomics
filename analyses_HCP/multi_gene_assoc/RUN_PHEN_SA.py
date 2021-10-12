@@ -28,8 +28,9 @@ FID = sys.argv[4] ## independent run
 
 ## output path 
 #out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/obsv_{}'.format(PHN)
-out_path = '/data/rubinov_lab/brain_genomics_project/platypus2/obsv_{}'.format(PHN)
-out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/single_obsv_{}'.format(PHN) 
+#out_path = '/data/rubinov_lab/brain_genomics_project/platypus2/obsv_{}'.format(PHN)
+#out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/single_obsv_{}'.format(PHN) 
+out_path = '/data/rubinov_lab/brain_genomics_project/platypus2/single_obsv_{}'.format(PHN)
 if not os.path.exists(out_path): os.mkdir(out_path) 
 
 ## simulated annealing params
@@ -40,27 +41,6 @@ SAME_RHO = 1e5 ## converges after rho has stayed the same for this number of ste
 TOLERANCE = 1e-7 ## rho is considered the same if difference is within this range
 STEP_LIMIT = 1e9 ## converge or max out on this number of steps
 
-## input data: order multi_gene_assoc/ 
-#order_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/subj_samp_assoc_order.hdf5'
-order_file = '/data/rubinov_lab/brain_genomics_project/platypus2/subj_samp_assoc_order.hdf5'
-with h5py.File(order_file, 'r') as f:
-    samp_order = np.array(f['sample_idx_1142'])
-
-## input data: expression 
-#expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_quality_r0.3_p0.01'
-#samp_file = '/data1/rubinov_lab/brain_genomics/data_HCP/predixcan_v8/sample_ids.txt'
-expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus2/filtered_quality_r0.3_p0.01'
-samp_file = '/data/rubinov_lab/brain_genomics_project/platypus2/sample_ids.txt'
-
-genes = {} ## k: reg, v: (genes,)
-exprs = {} ## k: reg, v: (subjects * genes)
-for expr_file in os.listdir(expr_dir):
-    if expr_file[-5:] != '.hdf5': continue
-    with h5py.File('{}/{}'.format(expr_dir, expr_file), 'r') as f:
-        reg = expr_file.split('.')[0]
-        genes[reg] = np.array([g.decode("utf-8") for g in np.array(f['genes'])])
-        exprs[reg] = np.array(f['pred_expr']).T[samp_order] 
-
 ## input data: phenotypes 
 #phen_file = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/phenotypes/{}.hdf5'.format(ATL, PHN)
 phen_file = '/data/rubinov_lab/brain_genomics_project/platypus2/{}/phenotypes/{}.hdf5'.format(ATL, PHN)
@@ -68,6 +48,19 @@ with h5py.File(phen_file, 'r') as f:
     phens = {reg: np.array(f[reg]) for reg in f.keys()} ## k: reg, v: (subjects,)
 
 regions = np.array(list(phens.keys()))
+
+## input data: expression 
+#expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_quality_r0.3_p0.01'
+#expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus2/filtered_quality_r0.3_p0.01'
+#expr_dir = '/data1/rubinov_lab/brain_genomics/analyses_HCP/genes_single'
+expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus2/genes_single'
+
+genes = {} ## k: reg, v: (genes,)
+exprs = {} ## k: reg, v: (subjects * genes)
+for reg in regions: 
+    with h5py.File('{}/{}_{}.hdf5'.format(expr_dir, PHN, reg), 'r') as f:
+        genes[reg] = np.array([g.decode("utf-8") for g in np.array(f['genes'])])
+        exprs[reg] = np.array(f['expr']).T 
 
 ## train/test split 
 #split_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/train_test_assoc_split.hdf5'
@@ -131,7 +124,7 @@ def simulated_annealing(reg):
             tmp_ = round(temp,5)
             wgt_ = np.sum(W)
             print('[STEP {:6d}] RHO: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, rho_, tmp_, wgt_))
-        '''
+        ''' 
 
         ## randomly select two weights to switch 
         sel2unsel = np.random.choice(selected_idx)

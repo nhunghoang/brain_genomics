@@ -11,6 +11,17 @@ These index sets should be used to reorder data in the
 association scripts. 
 
 Nhung, July 2021
+
+** UPDATE ** 
+In subsequent neuroimage preprocessing (with different atlases), 
+only the 890 subjects with corresponding genotype data (and 1200
+timepoints) were processed. So, this script now saves: 
+
+- sample_idx_1142: ordered indices relative to expression data (n = 890)  
+- samples: corresponding sample IDs, without the 'MH0' prefix 
+- subjects: corresponding subject IDs  
+
+Nhung, Aug 2021
 '''
 
 import numpy as np 
@@ -25,8 +36,8 @@ with open(id_file, 'r') as f:
         [subj, samp] = line.strip().split('\t')
         samp_to_subj[samp] = subj
 
-## read subject order in which phenotypes are saved in (n = 939)   
-subj_file = '/data1/rubinov_lab/brain_genomics/data_HCP/timeseries_order.hdf5'
+## read subject order in which phenotypes are saved in (n = 890)   
+subj_file = '/data1/rubinov_lab/brain_genomics/data_HCP/hoacer_sn_hth/timeseries_order.hdf5'
 with h5py.File(subj_file, 'r') as f:
     subj_order_all = np.array([str(s) for s in np.array(f['subjects'])])
 
@@ -56,6 +67,6 @@ idx_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/subj_samp_assoc_order
 with h5py.File(idx_file, 'w') as f: 
     f['subjects'] = np.array(subjects, dtype=int) 
     f['samples'] = np.array(samples, dtype=int)
-    f['subject_idx_939'] = subj_idx 
+    #f['subject_idx_939'] = subj_idx 
     f['sample_idx_1142'] = samp_idx  
 
