@@ -2,7 +2,7 @@
 Regional Phenotype Simulated Annealing (binary gene selection) 
 
 This version searches for genes using the training cohort, 
-and then applies the solution to the train cohort. The number 
+and then applies the solution to the test cohort. The number 
 of genes is unconstrained. 
 
 This script uses Pool to run in parallel. 
@@ -20,21 +20,19 @@ import os
 from multiprocessing import Pool
 
 ## job array params
-#ATL = sys.argv[1] ## atlas used in calculating phenotype 
-#SEL = int(sys.argv[2]) ## number of genes to select (-1 means unrestrained) 
-#PHN = sys.argv[3] ## phenotype 
-#FID = sys.argv[4] ## independent run
-ATL = 'hoacer_sn_hth'
-SEL = -1 
-PHN = sys.argv[1]
+ATL = 'hoacer_sn_hth' ## atlas used in calculating phenotype 
+SEL = -1 ## number of genes to select (-1 means unrestrained) 
+PHN = sys.argv[1] ## phenotype 
+##FID - indepdent runs (now an argument in the pool function) 
 
 ## output path 
-#out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/obsv_{}'.format(PHN)
-#out_path = '/data/rubinov_lab/brain_genomics_project/platypus2/obsv_{}'.format(PHN)
-#out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/multi_gene_assoc/single_obsv_{}'.format(PHN) 
-#out_path = '/data/rubinov_lab/brain_genomics_project/platypus2/free_train_obsv_{}'.format(PHN)
 out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/new_multi/results_{}'.format(PHN)
 if not os.path.exists(out_path): os.mkdir(out_path) 
+
+## input paths 
+phen_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT/phen_regress/{}.hdf5'.format(PHN)
+expr_dir = '/data1/rubinov_lab/brain_genomics/analyses_HCP/new_single/expr_{}'.format(PHN) 
+split_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT/train_test_assoc_split.hdf5'
 
 ## simulated annealing params
 TEMP = 0.01
@@ -45,50 +43,23 @@ TOLERANCE = 1e-7 ## rho is considered the same if difference is within this rang
 STEP_LIMIT = 1e9 ## converge or max out on this number of steps
 
 ## input data: phenotypes 
-phen_file = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/phenotypes/{}.hdf5'.format(ATL, PHN)
-#phen_file = '/data/rubinov_lab/brain_genomics_project/platypus2/{}/phenotypes/{}.hdf5'.format(ATL, PHN)
 with h5py.File(phen_file, 'r') as f:
     phens = {reg: np.array(f[reg]) for reg in f.keys()} ## k: reg, v: (subjects,)
 
 regions = np.array(list(phens.keys()))
 
 ## input data: expression 
-#expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_quality_r0.3_p0.01'
-#expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus2/filtered_quality_r0.3_p0.01'
-#expr_dir = '/data1/rubinov_lab/brain_genomics/analyses_HCP/genes_single'
-#expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus2/genes_single'
-expr_dir = '/data1/rubinov_lab/brain_genomics/data_HCP/expression/filtered_quality_r0.3_p0.01/cohort890_single-assoc'
-
-#gidx_path = '/data/rubinov_lab/brain_genomics_project/platypus2/idx_genes_train.hdf5'
-#with h5py.File(gidx_path, 'r') as f: 
-#    gene_idx = {} ## k: reg, v: gene idx (relative to filtered set) 
-#    for reg in regions: 
-#        gene_idx[reg] = np.array(f[reg + '_' + PHN])
-#
-#genes = {} ## k: reg, v: (genes,)
-#exprs = {} ## k: reg, v: (subjects * genes)
-#for reg in regions: 
-#    gidx = np.squeeze(gene_idx[reg]) 
-#    #with h5py.File('{}/{}_{}.hdf5'.format(expr_dir, PHN, reg), 'r') as f:
-#    with h5py.File('{}/{}.hdf5'.format(expr_dir, reg), 'r') as f: 
-#        genes[reg] = np.array([g.decode("utf-8") for g in np.array(f['genes'])])[gidx]
-#        exprs[reg] = np.array(f['pred_expr'])[gidx].T 
-
 genes = {} ## k: reg, v: (genes,)
 exprs = {} ## k: reg, v: (subjects * genes)
 for reg in regions: 
-    with h5py.File('{}/{}_{}.hdf5'.format(expr_dir, PHN, reg), 'r') as f: 
+    with h5py.File('{}/{}.hdf5'.format(expr_dir, reg), 'r') as f: 
         genes[reg] = np.array([g.decode('utf-8') for g in np.array(f['genes'])])
-        exprs[reg] = np.array(f['expr']).T
+        exprs[reg] = np.array(f['pred_expr']).T
 
 ## train/test split 
-split_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/train_test_assoc_split.hdf5'
-#split_file = '/data/rubinov_lab/brain_genomics_project/platypus2/train_test_assoc_split.hdf5'
 with h5py.File(split_file, 'r') as f: 
     train_idx = np.array(f['train_idx_890'])
     test_idx = np.array(f['test_idx_890'])
-#train_idx = np.random.choice(890, 712, replace=False)
-#test_idx = np.setdiff1d(np.arange(890), train_idx)
 
 ## function: pretty-print time
 def pretty_time(tpass):
@@ -110,13 +81,6 @@ def simulated_annealing(reg):
     
     ## initialize weights 
     W = np.random.choice([0,1], n_genes) 
-    #selected_idx = np.random.choice(n_genes, SEL, replace=False)
-    #mask = np.ones(n_genes, dtype=bool)
-    #mask[selected_idx] = False
-    #unselected_idx = np.arange(n_genes)[mask]
-
-    #W = np.zeros(n_genes, dtype=int) ## (M genes * 1)
-    #W[selected_idx] = 1
 
     ## initial correlation 
     expr_array = np.matmul(expr_matrx, W) ## (N subjects * 1)  
@@ -138,26 +102,12 @@ def simulated_annealing(reg):
         if step%(decay_rate) == 0:
             temp *= DECAY 
 
-        '''
-        if step%(10*decay_rate) == 0: 
-            rho_ = round(rho,5)
-            tmp_ = round(temp,5)
-            wgt_ = np.sum(W)
-            print('[STEP {:6d}] RHO: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, rho_, tmp_, wgt_))
-        '''
-
-        '''
-        ## randomly select two weights to switch 
-        sel2unsel = np.random.choice(selected_idx)
-        unsel2sel = np.random.choice(unselected_idx)
-
-        ## delta calcs 
-        d_expr_array = expr_array \
-            - np.squeeze(expr_matrx[:,sel2unsel]) \
-            + np.squeeze(expr_matrx[:,unsel2sel])
-
-        new_rho, new_pval = pearsonr(d_expr_array, phen_array)
-        ''' 
+        ## print search status 
+        #if step%(10*decay_rate) == 0: 
+        #    rho_ = round(rho,5)
+        #    tmp_ = round(temp,5)
+        #    wgt_ = np.sum(W)
+        #    print('[STEP {:6d}] RHO: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, rho_, tmp_, wgt_))
 
         ## randomly select one weight to flip 
         w_idx = np.random.choice(n_genes) 
@@ -173,11 +123,6 @@ def simulated_annealing(reg):
         rho_diff = rho - new_rho
         if (rho < new_rho) or (np.exp(-rho_diff/temp) > np.random.rand()):
             W[w_idx] = 1 - W[w_idx] 
-            #W[sel2unsel] = 0
-            #W[unsel2sel] = 1 
-            #tmp = sel2unsel 
-            #selected_idx[selected_idx==sel2unsel] = unsel2sel
-            #unselected_idx[unselected_idx==unsel2sel] = tmp
             rho = new_rho
             pval = new_pval
             expr_array = d_expr_array
@@ -193,15 +138,15 @@ def simulated_annealing(reg):
             tmp_ = round(temp,5)
             wgt_ = np.sum(W)
             tpass = pretty_time(time()-tstart)
-            print('[STEP {:6d}] RHO: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, rho_, tmp_, wgt_))
-            print('NONC - {}\n'.format(tpass))
+            #print('[STEP {:6d}] RHO: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, rho_, tmp_, wgt_))
+            #print('NONC - {}\n'.format(tpass))
             return rho, pval, W, tpass, 'NONC'
 
     ## print details of final step before convergence
-    rho_ = round(rho,5)
-    tmp_ = round(temp,5)
-    wgt_ = np.sum(W)
-    tpass = pretty_time(time()-tstart)
+    #rho_ = round(rho,5)
+    #tmp_ = round(temp,5)
+    #wgt_ = np.sum(W)
+    #tpass = pretty_time(time()-tstart)
     #print('[STEP {:6d}] RHO: {:.5f} / TEMP: {:.5f} / NSEL: {:3d}'.format(step, rho_, tmp_, wgt_))
     #print('CONV ({} / {} genes) - {}'.format(wgt_, n_genes, tpass))
 
@@ -212,7 +157,7 @@ def simulated_annealing(reg):
 ## one run: one phenotype, all regions 
 def gene_search(FID):
     for rdx, reg in enumerate(regions):
-    
+
         ## train/test split 
         n_genes = genes[reg].shape[0]
         expr_matrx = exprs[reg] ## (N subjects * M genes) 
@@ -265,5 +210,5 @@ def gene_search(FID):
 ########################################################################################
 
 fids = [f for f in range(10)] 
-pool = Pool(processes=16)
+pool = Pool(processes=20)
 pool.map(gene_search, fids)
