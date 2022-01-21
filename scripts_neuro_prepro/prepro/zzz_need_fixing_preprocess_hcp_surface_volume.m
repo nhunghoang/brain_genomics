@@ -1,4 +1,8 @@
-function fx = preprocess_hcp_mmpmel(Parc, Parc_label)
+function fx = zzz_need_fixing_preprocess_hcp_surface_volume(Parc, Parc_label)
+
+% Warning: This code includes code for preprocessing surface data.
+% However, before use it should be checked (and debugged if needed)
+% to make sure it aligns more closely with code in the main prepro_script
 
 %>>>>>>>>>>**********************************************<<<<<<<<<<<<<<<<
 %   function inputs:
@@ -11,8 +15,8 @@ function fx = preprocess_hcp_mmpmel(Parc, Parc_label)
 
 
 % get paths to input and output
-path_input = '/data1/datasets/hcp';                                                %read directory
-path_accre = '/data1/rubinov_lab/brain_genomics/data_HCP/mmpmel/timeseries'; %write directory
+path_input = '/data1/datasets/hcp';                                             % read directory
+path_accre = '/data1/rubinov_lab/brain_genomics/data_HCP/mmpmel/timeseries';    % write directory
 mkdir(path_accre);
 
 % get subject metadata
@@ -35,11 +39,12 @@ Ix_parc = cellfun(@(x) find(x > 0), Parc, 'uniformoutput', false);
 N_voxels = cellfun(@nnz, Ix_parc);
 Pmax = cellfun(@(x) max(x(:)), Parc);
 label = Parc_label;
+
 %%
 % offset = 60; % set an offset for data (remove first 60 timepoints in voxel timeseries) and regressors 
 
 % loop over hcp subjects
-parfor i = 1:length(subj_list)
+for i = 1:length(subj_list)
     
     % get subject name and index
     subj = string(subj_list(i));
@@ -144,7 +149,7 @@ parfor i = 1:length(subj_list)
                         cift.dtseries(cift.brainstructure==2, :)];
             end
             
-            % V = V(:, offset+1:end);  %remove first 6o timepoints
+            % V = V(:, offset+1:end);  %remove first 60 timepoints
             tmax = size(V, 2);
             
             % make filter
@@ -192,11 +197,8 @@ parfor i = 1:length(subj_list)
                 [vo, ~] = clean(v0, regr, filt_kernel); 
                 V_clean{h, g}(j, :) = vo; 
             end
-            
-            
         end
     end
-    
     
     handle.V_clean = V_clean;   %clean data for voxels (voxels of our parcellation)
     handle.Vp_clean = Vp_clean; %parcellated clean data
@@ -204,22 +206,4 @@ parfor i = 1:length(subj_list)
     handle.Vp_falff = Vp_falff;
     handle.regressors = regressors;
 end
-end
-
-
-            
-
-function [vo,v] = clean(v, regr, filt_kernel)
-% 1. Regressing out the confounds (Movement, CSF, WM)--> out : v signal
-% 2. Filtering --> out : vo signal
-
-if all(isfinite(v))
-    %v = v(:);
-    m = mean(v);
-    v = v - regr * (regr \ v); % regressing out the confounds same as glmfit(regr, v) --> use v signal for ALFF calculation (non-filted data)
-    vo = v;
-    vo = filtfilt(filt_kernel, 1, vo);
-    vo = vo - mean(vo) + m;
-end
- 
 end

@@ -122,7 +122,7 @@ Parc_label = [zal_name; rfl_name; cer_name; MMP_name];
 
 %% run preprocesing_hcp_mmpmel
 
-preprocessing_hcp_mmpmel(Parc, Parc_label);
+preprocess_hcp_surface_volume(Parc, Parc_label);
 
 
 

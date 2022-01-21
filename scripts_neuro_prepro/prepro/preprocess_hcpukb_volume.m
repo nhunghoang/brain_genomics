@@ -1,4 +1,4 @@
-function preprocess_hcp_volume_hcpukb(project, path_output)
+function preprocess_hcpukb_volume(project, path_output)
 % preprocess_hcp(parc, path_output, path_input)
 %   function inputs:
 %     parc:         parcellation volume
@@ -28,7 +28,7 @@ switch project
         % set default paths
         path_input = '/data1/datasets/hcp'; %default input directory
         path_metadata = '/data1/rubinov_lab/datasets/hcp/hcp_prepro/fetch/metadata/';
-        path_subj = '/data1/rubinov_lab/brain_genomics/analyses_HCP/';
+        path_subj = '/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT/';
         
         % get list of subjects and metadata
         subj_list = h5read(fullfile(path_subj, 'subj_samp_assoc_order.hdf5'), '/subjects');
@@ -40,14 +40,8 @@ switch project
         scan_name = "rfMRI_REST" + ["1_LR"; "1_RL"; "2_LR"; "2_RL"];
         scan_filename = scan_name+"_hp2000_clean.nii.gz";
         scan_tr = 0.72 * ones(size(scan_name));
-        scan_tmax = 1200;
+        scan_tmax = 1200 * ones(size(scan_name));
         
-        % get regression data names
-        rnams = [
-            "Movement_Regressors.txt", "Movement";
-            scan_name+"_CSF.txt", "CSF";
-            scan_name+"_WM.txt", "WM";
-            "Movement_RelativeRMS.txt", "Movt_RRMS"];
     case "ukb"
         path_input = '/data1/datasets/ukbiobank/data/fMRI'; %default input directory
         
@@ -59,11 +53,8 @@ switch project
         %get scan of interest
         scan_name = "rfMRI";
         scan_filename = "func_data_std.nii.gz";
-        scan_tr = 0.735 * ones(size(scan_name));
+        scan_tr = 0.735;
         scan_tmax = 490;
-        
-        % get regression data names
-        rnams = ["mc"+filesep+"prefiltered_func_data_mcf.par", "Movement"];
         
         % metadata
         metadata = [];
@@ -117,14 +108,26 @@ parfor i = 1:length(subj_list)
         switch project
             case "hcp"
                 path_scan = fullfile(path_input, subj, 'MNINonLinear', 'Results', scans.name{h});
+                
+                % get regression data names
+                rnams = [
+                    "Movement_Regressors.txt", "Movement";
+                    scans.name{h}+"_CSF.txt", "CSF";
+                    scans.name{h}+"_WM.txt", "WM";
+                    "Movement_RelativeRMS.txt", "Movt_RRMS"];
+                
             case "ukb"
                 path_scan = fullfile(path_input, subj, 'fMRI','rfMRI.ica');
+                
+                % get regression data names
+                rnams = ["mc"+filesep+"prefiltered_func_data_mcf.par", "Movement"];
+                
         end
         
         % load and store regression data
         rdata = struct();
         for r = 1:size(rnams, 1)
-            rdata.(rnams(r, 2)) = tryload(@load, fullfile(path_scan, rnams(r, 1)));
+            rdata.(rnams(r, 2)) = load_data(@load, fullfile(path_scan, rnams(r, 1)));
         end
         regressors{h} = rdata;
         
@@ -135,7 +138,7 @@ parfor i = 1:length(subj_list)
         end
         
         % get timeseries and brain mask
-        V = tryload(@niftiread, fullfile(path_scan, scans.filename{h}));
+        V = load_data(@niftiread, fullfile(path_scan, scans.filename{h}));
         
         % make sure data exists
         if isempty(V)
@@ -163,53 +166,19 @@ parfor i = 1:length(subj_list)
             Vp_clean{h} = nan(pmax, tmax);
             for u = 1:pmax
                 vp1 = mean(V(parc==u, :), 1, 'omitnan');
-                Vp_clean{h}(u, :) = clean(vp1, regr, filt_kernel);
+                Vp_clean{h}(u, :) = clean_timeseries(vp1, regr, filt_kernel);
             end
         else
             % loop over parcels and clean
             Vp_clean{h} = nan(nmax, tmax);
             for u = 1:nmax
                 vp1 = V(idx_parc(u), :);
-                Vp_clean{h}(u, :) = clean(vp1, regr, filt_kernel);
+                Vp_clean{h}(u, :) = clean_timeseries(vp1, regr, filt_kernel);
             end
         end
     end
     handle.Vp_clean = Vp_clean;
     handle.regressors = regressors;
-end
-
-end
-
-function v = clean(v, regr, filt_kernel)
-
-if ~isempty(v) && all(isfinite(v)) && isequal(size(regr, 1), numel(v))
-    v = v(:);                               % reshape to column form
-    m = mean(v);                            % get mean
-    regr(:, end+1) = 1;                     % add intercept term
-    v = v - regr * (regr \ v);              % remove regressors
-    v = filtfilt(filt_kernel, 1, v);        % filter
-    v = v - mean(v) + m;                    % restore mean
-end
-
-end
-
-function data = tryload(load_function, full_filename)
-
-[~, filename, ext] = fileparts(full_filename);
-
-data = [];
-if isfile(full_filename)
-    for i = 1:10
-        try
-            temp_full_filename = tempname+"_"+filename+ext;     % generate random filename
-            copyfile(full_filename, temp_full_filename);        % make a temporary copy of file
-            data = load_function(temp_full_filename);           % load from a temporary copy
-            delete(temp_full_filename)                          % delete temporary copy
-            break
-        catch
-            disp("failed to load "+temp_full_filename+" on attempt "+i);
-        end
-    end
 end
 
 end
