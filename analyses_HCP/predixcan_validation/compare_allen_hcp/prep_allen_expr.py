@@ -55,60 +55,63 @@ for subj_dir in abi_subjs:
     abi_reg_idx[subj_dir] = subj_reg_idx  
 
 ## gather Allen regional expression per subject, averaging probes per gene 
-abi_expr = {} ## k: subj, v: {reg: expr}  
-for subj_dir in abi_subjs: 
+dims = (len(abi_subjs), len(abi_genes))
+abi_expr = {r:np.zeros(dims) for r in regions} ## k: reg, v: (subjs * genes) 
+for s,subj_dir in enumerate(abi_subjs): 
     expr_path = '{}/{}/MicroarrayExpression.csv'.format(abi_path, subj_dir)
-    expr_all = np.loadtxt(expr_path, delimiter=',') ## (all probes, all regions) 
+    expr_all = np.loadtxt(expr_path, delimiter=',') ## (all probes * all regions) 
     
     ## average probe expression per gene 
     dims = (len(abi_genes), expr_all.shape[1])
-    expr_gene = np.zeros(dims) ## (genes, all regions) 
+    expr_gene = np.zeros(dims) ## (genes * all regions) 
     for i,gene in enumerate(abi_genes):
         g_idx = abi_gene_idx[gene] 
         expr_gene[i] = np.mean(expr_all[g_idx], axis=0)
 
     ## then average expression per region 
     reg_idx = abi_reg_idx[subj_dir] ## k: reg-hemi, v: indices  
-    subj_expr = {} ## k: reg, v: expr 
     for reg in regions: 
         
         ## case 1: no hemis 
         if reg in ['hypothalamus', 'substantia-nigra']:
-            expr_reg = expr_gene[:,reg_idx[reg]] ## (genes, this region)  
-            subj_expr[reg] = np.mean(expr_reg, axis=1)
+            expr_reg = expr_gene[:,reg_idx[reg]] ## (genes * this region)  
+            abi_expr[reg][s] = np.mean(expr_reg, axis=1)
 
         ## case 2: hemis 
         else: 
             ## left hemi average  
-            expr_reg_L = expr_gene[:,reg_idx[reg+'-LH']] ## (genes, this region left)
+            expr_reg_L = expr_gene[:,reg_idx[reg+'-LH']] ## (genes * this region left)
             avg_L = np.mean(expr_reg_L, axis=1)
 
             ## case 2A: no right hemi 
             if reg_idx[reg+'-RH'].size == 0: 
-                subj_expr[reg] = avg_L  
+                abi_expr[reg][s] = avg_L
 
             ## case 2B: right hemi 
             else: 
                 ## right hemi average 
-                expr_reg_R = expr_gene[:,reg_idx[reg+'-RH']] ## (genes, this region right)
+                expr_reg_R = expr_gene[:,reg_idx[reg+'-RH']] ## (genes * this region right)
                 avg_R = np.mean(expr_reg_R, axis=1)
                 ## overall average 
-                subj_expr[reg] = (avg_L + avg_R)/2 ## (genes, this region) 
+                abi_expr[reg][s] = (avg_L + avg_R)/2 ## (genes * this region) 
 
-    abi_expr[subj_dir] = subj_expr 
     print(subj_dir)
 
 ## write expression and genes to file 
+## hdf5 key: subjects, val: ordered list of subjects in expr data 
 ## hdf5 key: genes, val: ordered list of genes (applicable to all Allen expr data) 
-## hdf5 key: [donor#]-[reg], val: expr array 
+## hdf5 key: [reg], val: expr matrix (subjects * genes) 
 ## hdf5 key: [donor#]-[reg]-sites, val: total number of sites from both hemispheres 
 with h5py.File(out_path, 'w') as f: 
+    f['subjects'] = [s.split('_')[-1].encode() for s in abi_subjs] 
     f['genes'] = [g.encode() for g in abi_genes]
+    
+    for reg in regions: 
+        f[reg] = abi_expr[reg]
+
     for subj_dir in abi_subjs: 
         subj = subj_dir.split('_')[-1]
         for reg in regions: 
-            f['{}-{}'.format(subj,reg)] = abi_expr[subj_dir][reg] 
-
             if reg in ['hypothalamus', 'substantia-nigra']:
                 f['{}-{}-sites'.format(subj,reg)] = reg_idx[reg].size  
             else:
