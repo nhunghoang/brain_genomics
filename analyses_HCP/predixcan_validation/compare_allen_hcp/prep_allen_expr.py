@@ -1,10 +1,12 @@
 '''
 Prep Allen expression for co-expression analysis against HCP. 
 Per subject, reduce (probes * regional sites) expression matrix 
-into (genes * regions) expression matrix for genes with Ensembl 
-IDs and regions with PrediXcan models.  
+into (probes-as-genes * regions) expression matrix for genes with 
+Ensembl IDs and regions with PrediXcan models. Normalize the expression 
+of each probe across all sampling sites per subject prior to reducing.  
+Also, only consider the left-hemisphere. 
 
-- Nhung, Feb 2022
+- Nhung, updated March 2022
 '''
 
 import os 
@@ -16,7 +18,7 @@ abi_path = '/data1/rubinov_lab/brain_genomics/data_Allen'
 out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/predixcan_validation/compare_allen_hcp/allen_expr.hdf5' 
 
 rand_regs_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/assoc/null_pvals_alff'
-parc_regs_file = '/data1/rubinov_lab/brain_genomics/data_HCP/2021_hoacer_sn_hth/naming-115.txt'
+parc_regs_file = '/data1/rubinov_lab/brain_genomics/data_HCP/hoacer_sn_hth/naming-115.txt'
 
 gene_ids_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/predixcan_validation/compare_allen_hcp/2022_ensembl_entrez.txt' 
 abi_genes_file = '/data1/rubinov_lab/brain_genomics/data_Allen/probes_as_entrez.txt'
@@ -34,14 +36,15 @@ with open(gene_ids_file, 'r') as f:
     lines = [i.strip().split(',') for i in f.readlines()]
 gene_dict = {j[0]:j[1] for j in lines if j[0] != ''} ## k: Entrez, v: Ensembl 
 
-## convert Allen genes from Entrez IDs to Ensembl IDs, and record probe indices per valid gene  
+## convert Allen genes from Entrez IDs to Ensembl IDs, and record probe indices of valid genes  
 abi_entrez_all = np.loadtxt(abi_genes_file, dtype=str)
-abi_gene_idx = {} ## k: ensembl, v: indices 
-for entrez in np.unique(abi_entrez_all): 
+abi_probe_genes = [] 
+abi_probe_idx = [] 
+for p,entrez in enumerate(abi_entrez_all): 
     try: ensembl = gene_dict[entrez]
     except: continue 
-    abi_gene_idx[ensembl] = np.where(abi_entrez_all == entrez)[0]
-abi_genes = list(abi_gene_idx.keys())
+    abi_probe_genes.append(ensembl) 
+    abi_probe_idx.append(p) 
 
 ## gather indices of Allen regions (incl. hemi) per subject 
 abi_subjs = [i for i in os.listdir(abi_path) if i.split('_')[0] == 'normalized']
@@ -54,57 +57,49 @@ for subj_dir in abi_subjs:
         subj_reg_idx[reg_hemi] = np.where(abi_parcels==parc_hemi)[0]
     abi_reg_idx[subj_dir] = subj_reg_idx  
 
-## gather Allen regional expression per subject, averaging probes per gene 
-dims = (len(abi_subjs), len(abi_genes))
-abi_expr = {r:np.zeros(dims) for r in regions} ## k: reg, v: (subjs * genes) 
+## gather Allen regional expression per subject  
+dims = (len(abi_subjs), len(abi_probe_idx))
+abi_expr = {r:np.zeros(dims) for r in regions} ## k: reg, v: (subjs * probes-as-genes) 
 for s,subj_dir in enumerate(abi_subjs): 
     expr_path = '{}/{}/MicroarrayExpression.csv'.format(abi_path, subj_dir)
     expr_all = np.loadtxt(expr_path, delimiter=',') ## (all probes * all regions) 
+    expr_all = expr_all[:,1:] ## first column is probe ID 
     
-    ## average probe expression per gene 
-    dims = (len(abi_genes), expr_all.shape[1])
-    expr_gene = np.zeros(dims) ## (genes * all regions) 
-    for i,gene in enumerate(abi_genes):
-        g_idx = abi_gene_idx[gene] 
-        expr_gene[i] = np.mean(expr_all[g_idx], axis=0)
+    ## normalize expression matrix 
+    #expr_mean = expr_all.mean(axis=1)[:,None] ## probe means 
+    #expr_stdv = expr_all.std(axis=1)[:,None] 
+    #expr_all = (expr_all - expr_mean) / expr_stdv
+    #expr_all = expr_all / expr_mean
+    
+    ## slice valid probes  
+    expr_gene = expr_all[abi_probe_idx] ## (valid probes * all regions) 
 
-    ## then average expression per region 
+    ## then average expression per region -- only consider left hemisphere  
     reg_idx = abi_reg_idx[subj_dir] ## k: reg-hemi, v: indices  
     for reg in regions: 
         
         ## case 1: no hemis 
         if reg in ['hypothalamus', 'substantia-nigra']:
-            expr_reg = expr_gene[:,reg_idx[reg]] ## (genes * this region)  
+            expr_reg = expr_gene[:,reg_idx[reg]] ## (valid probes * this region)  
             abi_expr[reg][s] = np.mean(expr_reg, axis=1)
 
         ## case 2: hemis 
         else: 
             ## left hemi average  
-            expr_reg_L = expr_gene[:,reg_idx[reg+'-LH']] ## (genes * this region left)
+            expr_reg_L = expr_gene[:,reg_idx[reg+'-LH']] ## (valid probes * this region left)
             avg_L = np.mean(expr_reg_L, axis=1)
-
-            ## case 2A: no right hemi 
-            if reg_idx[reg+'-RH'].size == 0: 
-                abi_expr[reg][s] = avg_L
-
-            ## case 2B: right hemi 
-            else: 
-                ## right hemi average 
-                expr_reg_R = expr_gene[:,reg_idx[reg+'-RH']] ## (genes * this region right)
-                avg_R = np.mean(expr_reg_R, axis=1)
-                ## overall average 
-                abi_expr[reg][s] = (avg_L + avg_R)/2 ## (genes * this region) 
+            abi_expr[reg][s] = avg_L
 
     print(subj_dir)
 
 ## write expression and genes to file 
 ## hdf5 key: subjects, val: ordered list of subjects in expr data 
-## hdf5 key: genes, val: ordered list of genes (applicable to all Allen expr data) 
-## hdf5 key: [reg], val: expr matrix (subjects * genes) 
-## hdf5 key: [donor#]-[reg]-sites, val: total number of sites from both hemispheres 
+## hdf5 key: probes-as-genes, val: ordered list of probes by their gene names (applicable to all Allen expr data) 
+## hdf5 key: [reg], val: expr matrix (subjects * probes) 
+## hdf5 key: [donor#]-[reg]-sites, val: number of sites in left hemisphere 
 with h5py.File(out_path, 'w') as f: 
     f['subjects'] = [s.split('_')[-1].encode() for s in abi_subjs] 
-    f['genes'] = [g.encode() for g in abi_genes]
+    f['genes'] = [g.encode() for g in abi_probe_genes]
     
     for reg in regions: 
         f[reg] = abi_expr[reg]
@@ -113,9 +108,7 @@ with h5py.File(out_path, 'w') as f:
         subj = subj_dir.split('_')[-1]
         for reg in regions: 
             if reg in ['hypothalamus', 'substantia-nigra']:
-                f['{}-{}-sites'.format(subj,reg)] = reg_idx[reg].size  
+                nsites = abi_reg_idx[subj_dir][reg].size  
             else:
-                nsites = reg_idx[reg+'-LH'].size + reg_idx[reg+'-RH'].size
-                f['{}-{}-sites'.format(subj,reg)] = nsites  
-             
-
+                nsites = abi_reg_idx[subj_dir][reg+'-LH'].size
+            f['{}-{}-sites'.format(subj,reg)] = nsites  
