@@ -21,7 +21,7 @@ import sys
 data_dir = sys.argv[1]
 
 ## input data 
-SUBJ_ORD = '/data1/rubinov_lab/brain_genomics/analyses_HCP/subj_samp_assoc_order.hdf5'
+SUBJ_ORD = '/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT/subj_samp_assoc_order.hdf5'
 PHEN_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/phenotypes'.format(data_dir)
 MATS_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/timeseries'.format(data_dir) 
 TS_ORDER = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/timeseries_order.hdf5'.format(data_dir)
@@ -29,15 +29,15 @@ REG_NAME = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/naming-115.txt'.format
 #PARC_MAT = '/data1/rubinov_lab/brain_genomics/data_HCP/parc-121.mat'
 
 ## phenotypes precomputed by Nhung
-COACT_MX = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/coactivity_matrices.hdf5'.format(data_dir)
-REHO_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/phenotypes/reho_by_subj'.format(data_dir)  
+#COACT_MX = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/coactivity_matrices.hdf5'.format(data_dir)
+#REHO_DIR = '/data1/rubinov_lab/brain_genomics/data_HCP/{}/phenotypes/reho_by_subj'.format(data_dir)  
 
 ## phenotypes precomputed by Neda 
-FAMD_MAT = '/data1/rubinov_lab/Neda/Diffusion/Diffusion_FA_MD_hoacer_sn_hth.mat'
-GMVL_MAT = '/data1/rubinov_lab/Neda/GM/GM_vol_hoacer_sn_hth.mat'
+#FAMD_MAT = '/data1/rubinov_lab/Neda/Diffusion/Diffusion_FA_MD_hoacer_sn_hth.mat'
+#GMVL_MAT = '/data1/rubinov_lab/Neda/GM/GM_vol_hoacer_sn_hth.mat'
 MYEL_MAT = '/data1/rubinov_lab/Neda/Myelin/Myelination_hoacer_sn_hth.mat' 
-ALFF_MAT = '/data1/rubinov_lab/Neda/ALFF/ALFF_hoacer_sn_hth_vox_parcelled.mat'
-FALF_MAT = '/data1/rubinov_lab/Neda/ALFF/fALFF_hoacer_sn_hth_vox_parcelled.mat'
+#ALFF_MAT = '/data1/rubinov_lab/Neda/ALFF/ALFF_hoacer_sn_hth_vox_parcelled.mat'
+#FALF_MAT = '/data1/rubinov_lab/Neda/ALFF/fALFF_hoacer_sn_hth_vox_parcelled.mat'
 
 ##########################################################################
 
@@ -511,9 +511,9 @@ def NEDA_write_alff_falff(reg_idx):
     with h5py.File(FALF_MAT, 'r') as f: f_data = np.array(f['fALFF_115parc'])
 
     ## BANDAID - remove subject 173233 for having < 1200 timepoints 
-    bad_index = 446 ## index relative to 891 subject order 
-    a_data = np.delete(a_data, bad_index, axis=0) 
-    f_data = np.delete(f_data, bad_index, axis=0)  
+    #bad_index = 446 ## index relative to 891 subject order 
+    #a_data = np.delete(a_data, bad_index, axis=0) 
+    #f_data = np.delete(f_data, bad_index, axis=0)  
 
     ## gather values from relevant hemispheric regions  
     a_hem = {}; f_hem = {} ## k: reg hem, v: subj array  
@@ -736,7 +736,7 @@ def main():
     #NEDA_write_diffusion_fa_md(region_idx) 
     #NEDA_write_gm_volume(region_idx) 
     #NEDA_write_myelination(region_idx)
-    NEDA_write_alff_falff(region_idx)
+    #NEDA_write_alff_falff(region_idx)
 
 main() 
 
