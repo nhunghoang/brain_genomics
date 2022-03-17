@@ -150,8 +150,8 @@ def main():
     #plot_gene_counts(counts, out_path) 
 
     ## all PrediXcan genes - single assoc
-    expr_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/single_gene_unions_FDR'
-    out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/num_common_genes-single-FDR.png'
+    expr_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/single_gene_unions_p01'
+    out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/num_common_genes-single-p01.png'
     genes = {} ## k: reg, v: gene list 
     for reg in regs:
        with h5py.File('{}/{}.hdf5'.format(expr_path, reg), 'r') as f:

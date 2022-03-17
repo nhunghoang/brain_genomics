@@ -17,7 +17,7 @@ regs = os.listdir('/data1/rubinov_lab/brain_genomics/analyses_HCP/lofo_assoc/tra
 regs = np.array(sorted(regs)) ## abc order 
 
 ## gather observed data 
-expr_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/single_gene_unions_FDR'
+expr_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/single_gene_unions_p01'
 genes = {} ## k: reg, v: gene list
 for reg in regs:
    with h5py.File('{}/{}.hdf5'.format(expr_path, reg), 'r') as f:
@@ -35,14 +35,14 @@ for i, reg1 in enumerate(regs):
         count_obsv[i][j] = intersect; count_obsv[j][i] = intersect
 
 ## gather permutation data - regional gene counts   
-perm_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/null_single_gene_unions_FDR.hdf5'
+perm_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/null_single_gene_unions_p01.hdf5'
 perm_reg_counts = {} ## k: reg, v: (100 counts) 
 with h5py.File(perm_path, 'r') as f: 
     for reg in regs: 
         perm_reg_counts[reg] = np.array([np.array(f['{}-{}'.format(reg,p)]).size for p in range(100)]) 
 
 ## gather permutation genes in pvalue-sorted order
-perm_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/null_single_gene_sorted-by-pvals-FDR.hdf5'
+perm_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/null_single_gene_sorted-by-pvals.hdf5'
 perm_genes_sorted = {} ## k: reg, v: sorted gene names (perms * genes) 
 with h5py.File(perm_path, 'r') as f:
     for reg in regs: 
@@ -147,6 +147,6 @@ for ax in axes:
     ax.set_aspect(abs((xright-xleft)/(ybottom-ytop)))
 
 plt.tight_layout()
-plt.savefig('num_common_genes_pvals_FDR.png')
+plt.savefig('num_common_genes_pvals_p01.png')
 plt.close('all')     
 

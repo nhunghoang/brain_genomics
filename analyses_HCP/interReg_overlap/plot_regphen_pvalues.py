@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 
 out_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/data_matrices'
-png_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/num_common_genes_pvals-single-regphen-FDR.png'
+png_path = '/data1/rubinov_lab/brain_genomics/analyses_HCP/interReg_overlap/num_common_genes_pvals-single-regphen-p01.png'
 
 phens = ['alff', 'regional_homogeneity', 'gm_volume'] 
 phens_short = ['ALFF', 'ReHo', 'GMVol']
@@ -31,9 +31,9 @@ for (phen,reg) in phen_regs:
     pval_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/assoc/pvals_{}/{}.txt'.format(phen,reg)
     genes = np.loadtxt(pval_file, delimiter='\t', skiprows=1, usecols=[0], dtype=bytes)
     if reg not in reg_genes.keys(): reg_genes[reg] = genes
-    pval_data = np.loadtxt(pval_file, delimiter='\t', skiprows=1, usecols=[3])
+    pval_data = np.loadtxt(pval_file, delimiter='\t', skiprows=1, usecols=[2])
     pval_mask = np.zeros_like(pval_data, dtype=bool)
-    pval_mask[pval_data <= 0.05] = True
+    pval_mask[pval_data <= 0.01] = True
     obsv_genes[(phen,reg)] = genes[pval_mask]
 
 ## sort genes by phenotype p-values 
@@ -45,10 +45,10 @@ for (PHN, REG) in phen_regs:
     perm_diag = np.zeros(100) 
     for PRM in range(100): 
         pval_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/assoc/null_pvals_{}/{}/{}.txt'.format(PHN, REG, PRM)
-        pval_data = np.loadtxt(pval_file, delimiter='\t', skiprows=1, usecols=[3])
+        pval_data = np.loadtxt(pval_file, delimiter='\t', skiprows=1, usecols=[2])
         pval_sort = np.argsort(pval_data) 
         sorted_genes.append(reg_genes[REG][pval_sort])
-        perm_diag[PRM] = (pval_data <= 0.05).size
+        perm_diag[PRM] = (pval_data <= 0.01).size
     perm_genes_sort[(PHN,REG)] = np.array(sorted_genes)
     perm_diag_count[(PHN,REG)] = perm_diag
 
@@ -100,7 +100,7 @@ for i, (phen1,reg1) in enumerate(phen_regs):
         pvals_bootstrap[i][j] = pval; pvals_bootstrap[j][i] = pval
 
 ## write matrices to file 
-with h5py.File('{}/regphen_pvals_FDR.hdf5'.format(out_path), 'w') as f: 
+with h5py.File('{}/regphen_pvals_p01.hdf5'.format(out_path), 'w') as f: 
     f['permutation_overlaps'] = mat_perm 
     f['observed_overlaps'] = mat_obsv
 
@@ -109,7 +109,7 @@ with h5py.File('{}/regphen_pvals_FDR.hdf5'.format(out_path), 'w') as f:
     f['pvals_bootstrap'] = pvals_bootstrap 
 
 ## load data 
-with h5py.File('{}/regphen_pvals_FDR.hdf5'.format(out_path), 'r') as f: 
+with h5py.File('{}/regphen_pvals_p01.hdf5'.format(out_path), 'r') as f: 
     effect_size = np.array(f['effect_size'])  
     pvals_raw_count = np.array(f['pvals_raw_count']) 
     pvals_bootstrap = np.array(f['pvals_bootstrap']) 
@@ -161,6 +161,6 @@ for ax in axes:
     ax.set_aspect(abs((xright-xleft)/(ybottom-ytop)))
 
 plt.tight_layout()
-plt.savefig('num_common_genes_pvals-single-regphen-FDR.png')
+plt.savefig('num_common_genes_pvals-single-regphen-p01.png')
 plt.close('all')
 
