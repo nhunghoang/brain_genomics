@@ -185,9 +185,9 @@ switch project
         %path_output = '/data1/rubinov_lab/Neda/Myelin_UKB';
 
 
-        % get file info of valid subject scans 
-        UKB_subjs_order = fullfile('/data1/rubinov_lab/Neda/UKB_subjs_list/');
-        subjs = load(fullfile(UKB_subjs_order, 'final_subjs.txt'));
+        % get list of subjects
+        UKB_subjs_order = fullfile('/data1/rubinov_lab/brain_genomics/data_UKB');
+        subjs = load(fullfile(UKB_subjs_order, 'ordered_subject_list.txt'));
                 
         Myelin_allvoxels = nan(length(parc(:)), length(subjs));
         Myelin_hoacer_sn_hth = nan(max(parc), length(subjs));
@@ -297,12 +297,13 @@ end
 % -------parcellation: caluculate parcel based Myelin values------------------
 %--------------------------------------------------------------------------------
 disp(['parcellation has started...']);
+map = load(fullfile(path_output,'Myelin_allvoxels.mat')).Myelin_allvoxels;
 
 % get mask indices
 idx_parc = find(parc);
 nmax = nnz(parc);
 mask = parc(idx_parc);
-map= map(:);
+% map= map(:);
 
 for s=1:length(subjs)
 
