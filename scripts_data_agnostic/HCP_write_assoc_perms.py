@@ -1,6 +1,7 @@
 '''
-Generate 10k shuffles (for the single-gene assocs). 
-For the multi-gene assocs, randomly sample 100 perms from this 10k set. 
+Generate 1000 shuffles for the single-gene associations. 
+Generate another 10k shuffles, to be used as the permutations 
+for these 1000 shuffles.  
 
 Maintain twin relationships (i.e. shuffle twin pairs with other pairs, 
 non-twins with other non-twins). 
@@ -9,14 +10,13 @@ Yield a subject-ID order where twin pairs are grouped at the front and
 non-twins are grouped at the end. Rearrange the sample IDs in the same 
 order before separately shuffling the twin and non-twin groups.   
 
-- Nhung, updated Dec 2021 
+- Nhung, updated April 2022  
 '''
 
 import numpy as np 
 import h5py 
 
-num_shuffles = 10000 
-shuffle_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT/null_permutations_10k.hdf5'
+shuffle_file = '/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT/null_permutations.hdf5'
 
 ## parse demographics for twin details 
 demo_file = '/data1/rubinov_lab/brain_genomics/data_HCP/subject_demographics/sampleID_race_familyID.txt'
@@ -64,24 +64,38 @@ for fid in fids:
     new_subj_order.extend(twin_idx[fid])
 new_subj_order.extend(non_twin_idx) 
 
+## function: generate a permutation 
+def get_permutation(): 
+    perm = [] 
+    
+    ## shuffle twin pairs 
+    np.random.shuffle(fids)
+    for fid in fids: 
+        perm.extend(twin_idx[fid])
+    
+    ## shuffle non-twins 
+    np.random.shuffle(non_twin_idx) 
+    perm.extend(non_twin_idx) 
+
+    return perm 
+
 ## save n shuffles of sample order, as well as the new subject order   
+num_subjects = len(new_subj_order) 
+nulls = np.zeros((1000, num_subjects), dtype=int) 
+nulls_of_nulls = np.zeros((1000, 1000, num_subjects), dtype=int) 
+
+for i in range(1000): 
+    nulls[i] = get_permutation() 
+    for ii in range(1000): 
+        nulls_of_nulls[i][ii] = get_permutation() 
+
+    if (i+1)%100 == 0: 
+        perc = int(((i+1)/1000)*100)
+        print('{:d} %'.format(perc))
+
 with h5py.File(shuffle_file, 'w') as f: 
     f['subj_idx'] = new_subj_order 
+    f['samp_idx'] = nulls 
+    f['null_idx'] = nulls_of_nulls 
 
-    for n in range(num_shuffles): 
-        new_samp_order = [] 
-        
-        ## shuffle twin pairs 
-        np.random.shuffle(fids)
-        for fid in fids: 
-            new_samp_order.extend(twin_idx[fid])
-        
-        ## shuffle non-twins 
-        np.random.shuffle(non_twin_idx) 
-        new_samp_order.extend(non_twin_idx) 
 
-        f['samp_idx_{}'.format(n)] = new_samp_order 
-
-        if (n+1)%1000 == 0: 
-            perc = int(((n+1)/num_shuffles)*100)
-            print('{:d} %'.format(perc))
