@@ -45,19 +45,19 @@ if (dataset == 'HCP') and (phenotype in ['fa', 'md']):
 ## paths 
 phn_file = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/phen_regress/{}.hdf5'.format(dataset, phenotype)
 expr_dir = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/expr_regress'.format(dataset)
-prm_file = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/null_permutations_10k.hdf5'.format(dataset)  
+prm_file = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/null_permutations.hdf5'.format(dataset)  
 if famd_flag:
     prm_file = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/null_permutations_10k_famd.hdf5'.format(dataset)  
 
-out_main = '/data1/rubinov_lab/brain_genomics/analyses_{}/assoc/pvals_{}'.format(dataset, phenotype)
+out_main = '/data1/rubinov_lab/brain_genomics/analyses_{}/assoc2/pvals_{}'.format(dataset, phenotype)
 if not os.path.exists(out_main): os.mkdir(out_main) 
 
 ## gather permutations 
 ## permutations (apply to subjects, but not samples)  
 ## because sample permutation indices are wrt the original 890 indices
 with h5py.File(prm_file, 'r') as f: 
-    subj_order = np.array(f['subj_idx']) 
-    samp_perms = {i:np.array(f['samp_idx_{}'.format(i)]) for i in range(1000)}
+    subj_order = np.array(f['subj_idx'], dtype=int) ## (890,)  
+    samp_perms = np.array(f['samp_idx'], dtype=int) ## (1000, 890) 
 
 ## phenotype  
 with h5py.File(phn_file, 'r') as f: 

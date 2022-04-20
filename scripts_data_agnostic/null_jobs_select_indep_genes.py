@@ -3,8 +3,7 @@ Permutation testing:
   Compute single-gene and regional-phenotype correlations.
 
 Usage: First argument is phenotype (all regional variations
-  of this phenotype will be computed over). The current script
-  uses pooling (rather than job arrays).
+  of this phenotype will be computed over). 
 
 Notes:
 - The gene models that are being considered have already been
@@ -15,7 +14,7 @@ Notes:
   residual form (i.e. age, gender, PC1, PC2 confounders have been
   regressed out).
 
-- Nhung, updated Jan 2022
+- Nhung, updated April 2022
 '''
 
 import sys 
@@ -24,31 +23,30 @@ import numpy as np
 import h5py 
 from scipy.stats import pearsonr, spearmanr 
 from statsmodels.stats.multitest import fdrcorrection 
-from multiprocessing import Pool 
 
-atlas = 'hoacer_sn_hth'
-regions = ['caudate', 'nucleus-accumbens', 'hippocampus', 'amygdala', 'anterior-cingulate', \
-    'putamen', 'hypothalamus', 'substantia-nigra', 'frontal-pole', 'cerebellar-hemisphere']
-phenotypes = ['alff', 'regional_homogeneity', 'gm_volume']
-
+## script arguments
 dataset = sys.argv[1] ## e.g., HCP, UKB 
 
 phen_reg_perm = int(sys.argv[2])
-aphen = int(phen_reg_perm / 1000) % 3
-areg = int((phen_reg_perm % 1000) / 100)
-aperm = int((phen_reg_perm % 1000) % 100)
+phen_idx = int(phen_reg_perm / 10000) % 4
+reg_idx = int((phen_reg_perm % 10000) / 1000)
+perm_idx = int((phen_reg_perm % 10000) % 1000)
 
-areg_name = regions[areg]
-phenotype = phenotypes[aphen] 
+## declare regional phenotype permutation  
+atlas = 'hoacer_sn_hth'
+regions = ['caudate', 'nucleus-accumbens', 'hippocampus', 'amygdala', 'anterior-cingulate', \
+    'putamen', 'hypothalamus', 'substantia-nigra', 'frontal-pole', 'cerebellar-hemisphere']
+phenotypes = ['alff', 'regional_homogeneity', 'gm_volume', 'connectivity_mean']
+
+PHN = phenotypes[phen_idx] 
+REG = regions[reg_idx] 
+PRM = perm_idx 
 
 ## paths 
-phn_file = '/data/rubinov_lab/brain_genomics_project/platypus6/phen_regress/{}.hdf5'.format(phenotype)
-expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus6/expr_regress'
-
-obsv_perm_file = '/data/rubinov_lab/brain_genomics_project/platypus6/nulls_of_multi.hdf5' 
-null_perm_file = '/data/rubinov_lab/brain_genomics_project/platypus6/nulls_of_nulls.hdf5' 
-
-out_main = '/data/rubinov_lab/brain_genomics_project/platypus6/null_pvals_{}'.format(phenotype)
+phn_file = '/data/rubinov_lab/brain_genomics_project/platypus7/phen_regress/{}.hdf5'.format(PHN)
+expr_dir = '/data/rubinov_lab/brain_genomics_project/platypus7/expr_regress'
+perm_file = '/data/rubinov_lab/brain_genomics_project/platypus7/null_permutations.hdf5' 
+out_main = '/data/rubinov_lab/brain_genomics_project/platypus7/null_pvals_{}'.format(PHN)
 
 #if phen_reg_perm == 0:
 #    for phen in phenotypes:
@@ -57,31 +55,10 @@ out_main = '/data/rubinov_lab/brain_genomics_project/platypus6/null_pvals_{}'.fo
 #        for reg in regions: 
 #            os.mkdir(path + '/' + reg)
 
-## permutations of the observed data 
-with h5py.File(obsv_perm_file, 'r') as f: 
-    obsv_subj_order = np.array(f['subj_idx'])
-    obsv_samp_perms = {i:np.array(f['samp_idx_{}'.format(i)]) for i in range(100)}
-
-## permutations of the null data 
-with h5py.File(null_perm_file, 'r') as f: 
-    null_subj_order = np.array(f['subj_idx'])
-    null_samp_perms = {i:np.array(f['samp_idx_{}'.format(i)]) for i in range(1000)}
-assert(np.array_equal(obsv_subj_order, null_subj_order))
-
-## phenotype (sorted in twin order)  
-with h5py.File(phn_file, 'r') as f:
-    phens = {areg_name: np.array(f[areg_name])[obsv_subj_order]}
-
-## expression  
-genes = {}; exprs = {} 
-with h5py.File('{}/{}.hdf5'.format(expr_dir, areg_name), 'r') as f:
-    genes[areg_name] = np.array([g.decode("utf-8") for g in np.array(f['genes'])])
-    exprs[areg_name] = np.array(f['pred_expr']) ## (genes * samps)
-
 ## function: compute p-value for specific gene association 
-def compute_pvalue(expr, full_phen, rho): 
+def compute_pvalue(gene_expr, full_phen, rho, perms): 
     N = 1000
-    null = np.array([pearsonr(expr[null_samp_perms[n]], full_phen)[0] for n in range(N)])
+    null = np.array([pearsonr(gene_expr[perms[n]], full_phen)[0] for n in range(N)]) 
     pval = np.mean(np.abs(null) >= np.abs(rho))
     return pval 
 
@@ -98,23 +75,35 @@ def save_results(gene_array, data, filename):
 ## function: single gene associations
 def find_signif_genes():
 
-    reg = areg_name
-    obsv_perm = aperm
-    obsv_perm_order = obsv_samp_perms[obsv_perm]
+    ## permutations  
+    with h5py.File(perm_file, 'r') as f: 
+        obsv_subj_order = np.array(f['subj_idx'], dtype=int) ## (890,)
+        obsv_samp_order = np.array(f['samp_idx'][PRM], dtype=int) ## (1000, 890) -> (890,) 
+        null_samp_perms = np.array(f['null_idx'][PRM], dtype=int) ## (1000, 1000, 890) -> (1000, 890)  
+
+    ## expression (original order)  
+    genes = {}; exprs = {} 
+    with h5py.File('{}/{}.hdf5'.format(expr_dir, REG), 'r') as f:
+        genes[REG] = np.array([g.decode("utf-8") for g in np.array(f['genes'])])
+        exprs[REG] = np.array(f['pred_expr']) ## (genes * samps)
+
+    ## phenotype (original order)  
+    with h5py.File(phn_file, 'r') as f:
+        phens = {REG: np.array(f[REG])}
 
     ## input data 
-    phen_array = phens[reg] ## in twin-sorted order  
-    gene_array = genes[reg]
+    phen_array = phens[REG][obsv_subj_order]## in twin-sorted order  
+    gene_array = genes[REG] ## as is 
 
-    expr_matrix = exprs[reg] ## in original order  
-    expr_sorted = expr_matrix[:,obsv_perm_order] ## in twin-sorted order (for this obsv perm)  
+    expr_matrix = exprs[REG] ## in original order (needed for this null's perms)  
+    expr_sorted = expr_matrix[:,obsv_samp_order] ## in twin-sorted order (for this null)  
 
     ngenes = gene_array.size
 
     ## gene loop starts here 
-    data = np.zeros((gene_array.shape[0], 3)) ## rho, pval, fdr
+    data = np.zeros((ngenes, 3)) ## per gene: rho, pval, fdr
     not_nan = [] 
-    print('  {:>.2f}% [{}/{}] - {}'.format(0, 0, ngenes, reg))
+    print('  {:>.2f}% [{}/{}] - {}'.format(0, 0, ngenes, REG))
     for g,gene in enumerate(gene_array): 
         
         ## return nan for genes with no expression variance  
@@ -124,15 +113,15 @@ def find_signif_genes():
 
         ## otherwise, compute correlation 
         not_nan.append(g) 
-        rho, _ = pearsonr(phen_array, expr_sorted[g])
-        pval = compute_pvalue(expr_matrix[g], phen_array, rho)  
+        rho, _ = pearsonr(expr_sorted[g], phen_array)
+        pval = compute_pvalue(expr_matrix[g], phen_array, rho, null_samp_perms)  
         data[g,0] = rho
         data[g,1] = pval 
 
         ## status 
         if (g+1)%50 == 0: 
             perc = ((g+1)/ngenes) * 100 
-            print('  {:>.2f}% [{}/{}] - {} ({})'.format(perc, g+1, ngenes, reg, obsv_perm))
+            print('  {:>.2f}% [{}/{}] - {} ({})'.format(perc, g+1, ngenes, REG, PRM))
 
     ## compute FDR-correct pvals 
     pvals = data[not_nan][:,1]
@@ -140,12 +129,12 @@ def find_signif_genes():
     np.put(data[:,2], not_nan, corrected)
 
     ## save results 
-    out_path = '{}/{}/{}.txt'.format(out_main, reg, obsv_perm) 
+    out_path = '{}/{}/{}.txt'.format(out_main, REG, PRM) 
     save_results(gene_array, data, out_path)
 
     ## print summary 
-    p_sig = np.sum(data[:,1] <= 0.05)
-    f_sig = np.sum(data[:,2] <= 0.05)
-    print('> {:>3d} p, {:>3d} f - {} ({})\n'.format(p_sig, f_sig, reg, obsv_perm))
+    #p_sig = np.sum(data[:,1] <= 0.05)
+    #f_sig = np.sum(data[:,2] <= 0.05)
+    #print('> {:>3d} p, {:>3d} f - {} ({})\n'.format(p_sig, f_sig, reg, obsv_perm))
 
 find_signif_genes()
