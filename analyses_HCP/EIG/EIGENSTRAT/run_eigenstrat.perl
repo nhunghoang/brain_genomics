@@ -5,38 +5,21 @@ $ENV{'PATH'} = "../bin:$ENV{'PATH'}";
 #
 # Nhung note: must call 'module restore eig' for this script to work
 
-$path = "/data1/rubinov_lab/brain_genomics/analyses_HCP/DATA_OUTPUT"; 
+$dset = "UKB"; # HCP or UKB
+$path = "/data1/rubinov_lab/brain_genomics/analyses_$dset/DATA_OUTPUT"; 
 
-
-## train group 
+## whole group 
 $command = "smartpca.perl";
-$command .= " -i $path/eigendata/hcp_cohort.geno ";
-$command .= " -a $path/eigendata/hcp_cohort.snp ";
-$command .= " -b $path/eigendata/hcp_split.ind ";
+$command .= " -i $path/eigendata/$dset\_cohort.geno ";
+$command .= " -a $path/eigendata/$dset\_cohort.snp ";
+$command .= " -b $path/eigendata/$dset\_cohort.ind ";
 $command .= " -k 3 ";
-$command .= " -o $path/eigen_results/train_cohort.pca ";
-$command .= " -p $path/eigen_results/train_cohort.plot ";
-$command .= " -e $path/eigen_results/train_cohort.eval ";
-$command .= " -l $path/eigen_results/train_cohort.log ";
+$command .= " -o $path/eigen_results/$dset\_cohort.pca ";
+$command .= " -p $path/eigen_results/$dset\_cohort.plot ";
+$command .= " -e $path/eigen_results/$dset\_cohort.eval ";
+$command .= " -l $path/eigen_results/$dset\_cohort.log ";
 $command .= " -m 0 ";
 $command .= " -t 3 ";
 $command .= " -s 6.0 ";
-$command .= " -w $path/eigendata/train_pop.txt ";
-system("$command");
-
-## test group 
-$command = "smartpca.perl";
-$command .= " -i $path/eigendata/hcp_cohort.geno ";
-$command .= " -a $path/eigendata/hcp_cohort.snp ";
-$command .= " -b $path/eigendata/hcp_split.ind ";
-$command .= " -k 3 ";
-$command .= " -o $path/eigen_results/test_cohort.pca ";
-$command .= " -p $path/eigen_results/test_cohort.plot ";
-$command .= " -e $path/eigen_results/test_cohort.eval ";
-$command .= " -l $path/eigen_results/test_cohort.log ";
-$command .= " -m 0 ";
-$command .= " -t 3 ";
-$command .= " -s 6.0 ";
-$command .= " -w $path/eigendata/test_pop.txt ";
 system("$command");
 
