@@ -1,23 +1,15 @@
 '''
+Script for running permutations of single-gene associations. 
+Each regional phenotype has 10k permutations, where the p-value 
+of each permutation is based on 1M permutations.  
 
-
-null version of single gene assoc 
-
-multithreading to update (perms * 3) array 
-
-each reg phen has 10k permutations, whose sig is 
-computed using another 10k permutations 
-
-each phen has a dir in nulls/ and each reg has a file 
-
-array is in regional loop (big reg phen loop) 
+- Nhung, updated Sept 2022
 '''
 
 import sys 
 import os 
 import numpy as np  
 import h5py 
-from scipy.stats import pearsonr, spearmanr 
 from statsmodels.stats.multitest import fdrcorrection 
 from multiprocessing import Pool  
 from time import time 
@@ -26,8 +18,9 @@ import warnings
 warnings.filterwarnings('ignore', 'invalid value encountered in true_divide')
 
 dset = sys.argv[1] ## HCP or UKB   
-assoc_perms = 750 * 1000
-set_perms = 10 * 1000
+assoc_perms = int(1e6) 
+set_perms = int(1e4) 
+rng = np.random.default_rng() ## random number generator used for nontwin permutations 
 
 regions = ['hippocampus', 'amygdala', 'hypothalamus', 'substantia-nigra',\
         'caudate', 'putamen', 'nucleus-accumbens', 'anterior-cingulate',\
@@ -39,7 +32,7 @@ phen_dir = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/phen_regre
 expr_dir = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/r0.3_p0.01/expr_regress'.format(dset)
 prm_file = '/data1/rubinov_lab/brain_genomics/analyses_{}/DATA_OUTPUT/null_permutations_latest_100k.hdf5'.format(dset)  
 
-out_main = '/data1/rubinov_lab/brain_genomics/analyses_{}/assoc_750k/nulls'.format(dset)
+out_main = '/data1/rubinov_lab/brain_genomics/analyses_{}/assoc_1M/nulls'.format(dset)
 if not os.path.exists(out_main): 
     os.mkdir(out_main) 
     for phen in phenotypes: 
@@ -67,26 +60,27 @@ for phen in phenotypes:
 genes = {}; exprs = {} ## k: reg, v: gene array / (genes, subjs) expression matrix  
 for reg in regions:
     with h5py.File('{}/{}.hdf5'.format(expr_dir, reg), 'r') as f: 
-        genes[reg] = np.array(f['genes']).astype(str) 
+        genes[reg] = np.array([g.split('.')[0] for g in \
+                     np.array(f['genes']).astype(str)])  
         exprs[reg] = np.array(f['pred_expr'])[:,samp_order] ## (genes, subjs)
-
-## function: get permutation wrt original subj order
-def get_permutation(): 
-    if dset == 'HCP':
-        twin_perm = np.random.permutation(twin_idxs) 
-        nontwin_perm = np.random.permutation(nontwin_idxs) 
-        perm_idx = np.concatenate((twin_perm.flatten(), nontwin_perm)) 
-    elif dset == 'UKB': 
-        perm_idx = np.random.permutation(samp_order) 
-    return perm_idx 
 
 ## function: single gene associations
 def find_signif_genes(pool_data):
+
+    tstart = time()
+
+    ## load parameters 
     perm = pool_data['idx'] ## set perm 
     phen = pool_data['phen'] 
     reg = pool_data['reg']
 
+    ## check that assoc results don't already exist 
     rfile = '{}/pvals_{}/{}_{}.hdf5'.format(out_main, phen, reg, perm) 
+    #try: 
+    #    with h5py.File(rfile, 'r') as f: pass 
+    #    return 
+    #except: 
+    #    pass 
     if os.path.exists(rfile): return  
 
     ## input data     
@@ -100,9 +94,21 @@ def find_signif_genes(pool_data):
     phen_ordered = phen_array[pidx].T ## (1, subjs) 
 
     ## phenotype permutations 
-    phen_perms = np.zeros((assoc_perms, nsubjs)) ## (perms, subjs) 
-    for p in range(assoc_perms): 
-        phen_perms[p] = phen_array[get_permutation(),0]  
+    if dset == 'HCP':
+        X = np.random.random((assoc_perms, twin_idxs.shape[0])) ## generate random, unsorted numbers (perms, twin pairs)
+        X = X.argsort(axis=1) ## sort to get unique index perms (perms, twin pairs)
+
+        twin_perms = twin_idxs[X] ## yields permuted indices (perms, twin pairs, 2)
+        twin_perms = twin_perms.reshape((assoc_perms, -1)) ## flatten twin pairs (perms, twins)
+
+        nontwin_perms = np.repeat(nontwin_idxs[None,:], assoc_perms, axis=0) ## copy nontwin indices (perms, nontwins)
+        nontwin_perms = rng.permuted(nontwin_perms, axis=1) ## use RNG to permute indices per perm (perms, nontwins)
+
+        phen_perms = np.concatenate((twin_perms, nontwin_perms), axis=1) ## concatenate twins and nontwins (perms, subjs)
+
+    elif dset == 'UKB':
+        phen_perms = np.repeat(samp_order[None,:], assoc_perms, axis=0) ## copy subject indices (perms, subjs)
+        phen_perms = rng.permuted(phen_perms, axis=1) ## use RNG to permute indices per perm (perms, subjs)
 
     ## compute observed gene rhos 
     c_expr = expr_matrx - expr_matrx.mean(axis=1)[:,None] 
@@ -145,36 +151,28 @@ def find_signif_genes(pool_data):
     ## save 
     rfile = '{}/pvals_{}/{}_{}.hdf5'.format(out_main, phen, reg, perm) 
     with h5py.File(rfile, 'w') as f: 
-        f['res'] = data 
-    print(phen, reg, perm) 
+        f['pearson'] = data 
 
-    #return data 
+    ## time 
+    secs = time() - tstart
+    hr = int(secs//3600)
+    mn = int((secs%3600)//60)
+    sc = int((secs%3600)%60)
+    print('runtime: {:d} hr, {:d} mn, {:d} sc | {} {} {}'.format(hr, mn, sc, reg, phen, perm))
 
-#for phen in ['regional_homogeneity']: 
-#    for reg in regions: 
-#        ngenes = genes[reg].size  
-#        assoc_results = np.empty((nperms, ngenes, 3))
-#
-#        ## run associations  
-#        for i in range(nperms): 
-#            pdata = {'idx':i, 'reg':reg, 'phen':phen}
-#            assoc_results[i] = find_signif_genes(pdata)
-#            if (i%100)==0: print(i)
-#
-#        ## save assoc results 
-#        out_file = '{}/pvals_{}/{}.hdf5'.format(out_main, phen, reg) 
-#        with h5py.File(out_file, 'w') as f: 
-#            f['assoc_results'] = assoc_results 
-#        print('DONE: {} {}'.format(phen, reg))
-
-## pool (reg phen perm) 
+## run using Pool (reg phen perm)  
+perm_range = np.arange(2000, 5000)
+perm_range = np.arange(7540, 7549)
 pdata = [{'phen':ph, 'reg':rg, 'idx':pm} \
-    for ph in phenotypes for rg in regions for pm in np.arange(set_perms)] 
+        for pm in perm_range \
+        for rg in regions \
+        for ph in phenotypes] 
 start = time()
-pool = Pool(processes=15) 
+pool = Pool(processes=28) 
 pool.map(find_signif_genes, pdata)
-duration = time() - start 
 
-mn, sc = divmod(duration, 60) 
-hr, mn = divmod(mn, 60) 
-print('{:d} hr, {:d} mn, {:d} sc'.format(hr, mn, sc))
+secs = time() - start
+hr = int(secs//3600)
+mn = int((secs%3600)//60)
+sc = int((secs%3600)%60)
+print('total runtime: {:d} hr, {:d} mn, {:d} sc'.format(hr, mn, sc))
