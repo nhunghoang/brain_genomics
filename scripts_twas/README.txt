@@ -3,7 +3,7 @@ last update: May 8, 2023 (Nhung)
 ******************************************************
 Analyses for the 2022 paper. 
 
-Note: almost all paths have this prefix: 
+Note: all paths have this prefix: 
       '/data1/rubinov_lab/brain_genomics/scripts_twas'
 
 Note: 'x' refers to input data;
@@ -45,9 +45,10 @@ NEUROIMAGING TWAS:
 
     HCP: Compute eigenvectors as PCs   
          (x) ../data_HCP/Marchini_phg000989/snps_by_chrom_hg37/*vcf
+             ../data_HCP/subject_demographics/cohort1142_demographics.txt
          (f) 3a_hcp_write_eigen_input.py
          (xy) inputs_HCP/eigen_input/HCP_cohort.*
-         (f) ../analyses_HCP/EIG/EIGENSTRAT/run_eigenstrat.perl 
+         (f) aux_scripts/EIG/EIGENSTRAT/run_eigenstrat.perl 
          (y) inputs_HCP/eigen_output/HCP_cohort.pca
 
     Any: Format covariates of interest 
@@ -104,15 +105,11 @@ GENE-SET ANALYSES:
     (y) outputs_{cohort}/multigene_linear_sets_JTI 
 
  8) Run PrediXVU enrichment analysis. 
-    >> scripts_twas/11a_predixvu_filenames.py
-    (output) models_PrediXcan_v8/predixvu_ens_sym_map.hdf5
-    (output) models_PrediXcan_v8/predixvu_ens_sym_dne.txt
-    >> scripts_twas/11b_predixvu_assocs.py 
-    (output) models_PrediXcan_v8/predixvu_assocs.csv
-    >> scripts_twas/11c_predixvu_enrichment.py 
-    (output) scripts_twas/outputs_HCP/predixvu/cloud_results.hdf5
-    (output) scripts_twas/outputs_HCP/predixvu/set_enrichments.hdf5
+    (f) 8a_predixvu_enrichment.py 
+    (y) outputs_HCP/predixvu/cloud_results.hdf5
+    (y) outputs_HCP/predixvu/set_enrichments.hdf5
 
 
  9) Run GO/HPO enrichment analysis. 
+    (f) 8b_search_ontologies.py
 
