@@ -6,7 +6,7 @@ This repository contains analysis software that accompanies Hoang N, Sardaripour
 
 - Inference of genetically regulated gene expression (GREx)
     - Convert genotype information to dosages 
-    - Aply GREx gene models of interest 
+    - Apply GREx gene models of interest 
 - Transcriptome-wide Association Studies (TWAS) 
     - Account for population stratification using genotype principal components 
     - Regress confounding variables from GREx and phenotype data
