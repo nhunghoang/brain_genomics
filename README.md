@@ -15,3 +15,17 @@ This repository contains analysis software that accompanies Hoang N, Sardaripour
     - Construct similarity matrices based on association results
     - Compute gene-set associations using on gene-level associations 
     - Perform gene-set enrichment analyses for clinical traits and biological processes
+
+### Dependencies 
+- `bgen-reader`
+- `plink2`
+- `bcftools`
+- `liftover`
+- `gcta`
+- `eigenstrat`
+- `webgestalt` 
+- `h5py`
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `scipy` 
