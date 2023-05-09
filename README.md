@@ -4,14 +4,14 @@ This repository contains analysis software that accompanies Hoang N, Sardaripour
 
 ### Main analysis
 
-A. Inference of genetically regulated gene expression (GREx)
+- Inference of genetically regulated gene expression (GREx)
     - Convert genotype information to dosages 
     - Aply GREx gene models of interest 
-B. Transcriptome-wide Association Studies (TWAS) 
+- Transcriptome-wide Association Studies (TWAS) 
     - Account for population stratification using genotype principal components 
     - Regress confounding variables from GREx and phenotype data
     - Run TWAS, with permutation-based option 
-C. Gene-set analyses 
+- Gene-set analyses 
     - Construct similarity matrices based on association results
     - Compute gene-set associations using on gene-level associations 
     - Perform gene-set enrichment analyses for clinical traits and biological processes
