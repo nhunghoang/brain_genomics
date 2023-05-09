@@ -1,68 +1,109 @@
-last update: March 10, 2023 (Nhung) 
+last update: May 8, 2023 (Nhung) 
 
-******************************************
+******************************************************
 Analyses for the 2022 paper. 
 
-Note: all paths have this prefix: 
-      '/data1/rubinov_lab/brain_genomics/'
-******************************************
+Note: almost all paths have this prefix: 
+      '/data1/rubinov_lab/brain_genomics/scripts_twas'
 
- 0) Lift the HCP genotypes from hg37 to hg38.
-    (input) data_HCP/Marchini_phg000989/snps_by_chrom_hg37
-    >> [script??] 
-    (output) data_HCP/Marchini_phg000989/snps_by_chrom_hg38
- 
- 1) Generate dosage files for the cohort genotypes.   
-    >> scripts_twas/1_generate_dosage_files.py
-    (output) scripts_twas/inputs_HCP/predixcan_samples.txt
-    (output) scripts_twas/inputs_HCP/dosages_hg38
- 
- 2) Infer GReX in all ten brain regions.  
-    >> /data1/rubinov_lab/brain_genomics/scripts_twas/2_run_PrediXcan_v8.sh
-    (output) scripts_twas/inputs_HCP/predixcan_grex_v8
- 
- 3) Format phenotype data. 
-    >> 3_format_phenotypes.py 
-    (output) scripts_twas/inputs_HCP/phenotypes 
- 
- 4) Compute genotype PCs using EIGENSTRAT. 
-    >> 4a_write_eigen_input.py 
-    >> 4b_combine_eigendata_chr.sh
-    (output) scripts_twas/inputs_HCP/eigen_input
-    >> analyses_HCP/EIG/EIGENSTRAT/run_eigenstrat.perl
-    (output) scripts_twas/inputs_HCP/eigen_output 
- 
- 5) Regress confounders (age, gender, PC1, PC2) from every gene and phenotype.  
-    >> scripts_twas/5a_write_covariates.py 
-    (output) scripts_twas/inputs_HCP/covariates.txt  
-    >> scripts_twas/5b_write_residuals.py 
-    (output) scripts_twas/inputs_HCP/expr_regress 
-    (output) scripts_twas/inputs_HCP/phen_regress 
- 
- 6) Compute gene-phenotype associations. 
-    >> scripts_twas/6a_hcp_write_perms.py 
-    (output) scripts_twas/inputs_HCP/permutations_100k.hdf5
-    >> scripts_twas/6b_run_associations.py 
-    (output) scripts_twas/outputs_HCP/assoc_1M
- 
- 7) Compute permutation gene-phenotype associations. 
-    >> scripts_twas/7a_run_null_associations.py
-    (output) scripts_twas/outputs_HCP/assoc_1M/nulls
-    >> scripts_twas/7b_gather_nulls.py 
- 
- 8) Construct similarity matrices based on association results. 
-    >> scripts_twas/8_regphen_similarities.py
-    (output) scripts_twas/outputs_HCP/regphen_similarities/mats_inter[reg/phen].hdf5 
- 
- 9) Compute [gene set, phenotype] associations using gene rankings. 
-    >> scripts_twas/9_multigene_association.py 
-    (output) scripts_twas/outputs_HCP/multigene_ranked_sets 
+Note: 'x' refers to input data;
+      'f' refers to the script; 
+      'y' refers to output data; 
+      'cohort' refers to UKB or HCP 
+******************************************************
 
-10) Compute [gene set, phenotype] linear regressions. 
-    >> scripts_twas/10_multigene_regression.py 
-    (output) scripts_twas/outputs_HCP/multigene_linear_sets  
+GREx INFERENCE: 
 
-11) Run PrediXVU enrichment analysis. 
+ 0) Extract SNPs from the original genotype files 
+    for the JTI GREx models of interest. 
+
+    HCP: (x) ../data_HCP/Marchini_phg000989/snps_by_chrom_hg37
+         (f) 0a_hcp_extract_jti_snps.py
+
+    UKB: (x) ../data_UKB/downloads/genotypes_hg37
+         (f) 0a_ukb_extract_jti_snps.sh
+
+    (y) inputs_{cohort}/vcf_JTI/c*.vcf  
+
+ 1) Convert genotype probabilities to dosages for JTI. 
+
+    (x) inputs_{cohort}/vcf_JTI/c*.vcf  
+    (f) 1_convert_to_dosage.py 
+    (y) inputs_{cohort}/dosage_JTI/c*.dosage.txt 
+
+
+ 2) Infer GREx in all brain regions of interest. 
+
+    (x) inputs_{cohort}/dosage_JTI/c*dosage.txt 
+        inputs_{cohort}/{genotype_samples.txt OR cohort_filtered.txt}
+    (f) 2_infer_grex.sh
+    (y) outputs_{cohort}/grex_JTI/{region}.hdf5  
+
+NEUROIMAGING TWAS:
+
+ 3) Apply any necessary preprocessing. 
+
+    HCP: Compute eigenvectors as PCs   
+         (x) ../data_HCP/Marchini_phg000989/snps_by_chrom_hg37/*vcf
+         (f) 3a_hcp_write_eigen_input.py
+         (xy) inputs_HCP/eigen_input/HCP_cohort.*
+         (f) ../analyses_HCP/EIG/EIGENSTRAT/run_eigenstrat.perl 
+         (y) inputs_HCP/eigen_output/HCP_cohort.pca
+
+    Any: Format covariates of interest 
+         (x) (locations of demographic data vary) 
+         (f) 3b_format_covariates.py
+         (y) inputs_{cohort}/covariates.csv 
+
+    Any: Regress covariates from GREx and phenotypes 
+         (x) inputs_{cohort}/phenotypes.csv 
+             inputs_{cohort}/grex_JTI/*
+             inputs_{cohort}/covariates.csv 
+         (f) 3c_write_residuals.py
+         (y) inputs_{cohort}/grex_JTI_regress/*
+             inputs_{cohort}/phen_regress/*
+
+ 4) Run MetaXcan TWAS or permutation-based TWAS 
+
+    (x) inputs_{cohort}/phenotypes.csv
+        inputs_{cohort}/covariates.csv 
+        outputs_{cohort}/grex_JTI/* 
+
+    MetaXcan:
+    (f) 4a_run_metaxcan_assoc.sh 
+    (y) outputs_{cohort}/twas_metaxcan_JTI/*
+
+    Permutation-based: 
+    (f) 4b_run_1M_perms_assoc.py
+    (y) outputs_{cohort}/twas_1M_perms_JTI/*
+
+GENE-SET ANALYSES: 
+
+ 5) Generate TWAS permutations. 
+
+    (x) inputs_{cohort}/set_permutations.hdf5 
+        inputs_{cohort}/grex_JTI_regress/*
+        inputs_{cohort}/phen_regress/*
+    (f) 5a_run_twas_perms.py
+    (y) outputs_{cohort}/permutation_twas_JTI
+
+ 6) Construct similarity matrices based on TWAS results. 
+    (x) outputs_{cohort}/twas_1M_perms_JTI
+        outputs_{cohort}/permutation_twas_JTI 
+    (f) 6_count_regphen_similarities.py
+    (y) outputs_{cohort}/regphen_similarities_JTI/* 
+ 
+ 7) Compute [gene set, phenotype] associations. 
+
+    Based on gene rankings in TWAS:
+    (f) 7a_multigene_association.py 
+    (y) outputs_{cohort}/multigene_ranked_sets_JTI 
+
+    Based on linear regression: 
+    (f) 7b_multigene_regression.py
+    (y) outputs_{cohort}/multigene_linear_sets_JTI 
+
+ 8) Run PrediXVU enrichment analysis. 
     >> scripts_twas/11a_predixvu_filenames.py
     (output) models_PrediXcan_v8/predixvu_ens_sym_map.hdf5
     (output) models_PrediXcan_v8/predixvu_ens_sym_dne.txt
@@ -73,10 +114,5 @@ Note: all paths have this prefix:
     (output) scripts_twas/outputs_HCP/predixvu/set_enrichments.hdf5
 
 
-12) Run GO/HPO enrichment analysis. 
-
-13) Run UKB replication analysis (Mika's scripts). 
-
-
-### Figure Generation Scripts ### 
+ 9) Run GO/HPO enrichment analysis. 
 
