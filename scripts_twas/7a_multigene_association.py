@@ -26,7 +26,7 @@ regions = ['hippocampus', 'amygdala', 'hypothalamus', 'substantia-nigra',\
         'frontal-pole', 'cerebellar-hemisphere']
 
 ## paths 
-base_path = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean'
+base_path = '/data1/rubinov_lab/brain_genomics/scripts_twas'
 
 phen_dir = base_path + '/inputs_HCP/phen_regress'
 expr_dir = base_path + '/inputs_HCP/expr_regress'

@@ -28,11 +28,11 @@ regions = ['hippocampus', 'amygdala', 'hypothalamus', 'substantia-nigra',\
 phenotypes = ['gm_volume', 'myelination', 'alff', 'reho_noGS', 'connmean_noGS']
 
 ## paths 
-phen_dir = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean/inputs_{}/phen_regress'.format(dset)
-expr_dir = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean/inputs_{}/expr_regress'.format(dset)
-prm_file = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean/inputs_{}/permutations_100k.hdf5'.format(dset)  
+phen_dir = '/data1/rubinov_lab/brain_genomics/scriptstwas/inputs_{}/phen_regress'.format(dset)
+expr_dir = '/data1/rubinov_lab/brain_genomics/scriptstwas/inputs_{}/expr_regress'.format(dset)
+prm_file = '/data1/rubinov_lab/brain_genomics/scriptstwas/inputs_{}/permutations_100k.hdf5'.format(dset)  
 
-out_main = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean/outputs_{}/assoc_1M/nulls'.format(dset)
+out_main = '/data1/rubinov_lab/brain_genomics/scriptstwas/outputs_{}/permutation_twas_JTI'.format(dset)
 if not os.path.exists(out_main): 
     os.mkdir(out_main) 
     for phen in phenotypes: 

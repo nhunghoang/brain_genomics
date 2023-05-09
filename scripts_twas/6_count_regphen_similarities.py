@@ -19,7 +19,7 @@ from matplotlib.ticker import FormatStrFormatter
 from matplotlib.colors import ListedColormap
 
 ## paths 
-path_main = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean'
+path_main = '/data1/rubinov_lab/brain_genomics/scripts_twas'
 path_assoc = path_main + '/outputs_HCP/assoc_1M'
 path_out = path_main + '/outputs_HCP/regphen_similarities'
 

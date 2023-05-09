@@ -31,7 +31,7 @@ regns = ['frontal-pole', 'anterior-cingulate', 'caudate', 'putamen', \
 reg_phens = [(r,p) for p in phens for r in regns]
 
 ## paths 
-base_path = '/data1/rubinov_lab/brain_genomics/scripts_assoc_clean'
+base_path = '/data1/rubinov_lab/brain_genomics/scripts_twas'
 expr_path = base_path + '/inputs_HCP/expr_regress'
 phen_path = base_path + '/inputs_HCP/expr_regress'
 
