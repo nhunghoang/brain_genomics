@@ -2,27 +2,30 @@
 
 This repository contains analysis software that accompanies Hoang N, Sardaripour N, Ramey G, Chen Y, Liao E, Park JH, Benton ML, Capra JA, Rubinov M. Genetically regulated gene expression underlies the individuality of human brain organization and disease risk. doi.org/10.31219/osf.io/xefru
 
-### Main scripts
-
-The project is organized into the following directories and subdirectories:
-
-- `analyses_UKB` and `analyses_HCP`: Main data analyses.
-- `scripts_assoc`: Main association analyses.
-- `scripts_data_agnostic`: Processing of phenotypes and eigendata.
-- `scripts_neuro_prepro`: Processing of neuroimaging data.
-- `models_PrediXcan_v8`: Processing of PrediXcan v8 models.
-- `data_Allen`: Processing Allen Institute gene-expression data.
-- `data_HCP`: Processing Human Connectome Project data.
-
 ### Main analysis
 
-0. Preprocessing
-    - Impute gene expression
-    - Format phenotype data
-1. Compute genotype PCs using EIGENSTRAT
-2. Regress confounders from every gene and phenotype
-3. Compute gene-phenotype associations
-4. Compute permutation gene-phenotype associations
-5. Construct similarity matrices based on association results
-6. Compute gene-set associations, including nulls
-7. Run PrediXVU enrichment analysis
+- Inference of genetically regulated gene expression (GREx)
+    - Convert genotype information to dosages 
+    - Apply GREx gene models of interest 
+- Transcriptome-wide Association Studies (TWAS) 
+    - Account for population stratification using genotype principal components 
+    - Regress confounding variables from GREx and phenotype data
+    - Run TWAS, with permutation-based option 
+- Gene-set analyses 
+    - Construct similarity matrices based on association results
+    - Compute gene-set associations using on gene-level associations 
+    - Perform gene-set enrichment analyses for clinical traits and biological processes
+
+### Dependencies 
+- `bgen-reader`
+- `plink2`
+- `bcftools`
+- `liftover`
+- `gcta`
+- `eigenstrat`
+- `webgestalt` 
+- `h5py`
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `scipy` 
