@@ -1,0 +1,6432 @@
+23 genes for dlpfc vol_mean
+9 genes for anterior-cingulate vol_mean
+17 genes for amygdala vol_mean
+15 genes for hippocampus vol_mean
+34 genes for caudate vol_mean
+19 genes for putamen vol_mean
+18 genes for nucleus-accumbens vol_mean
+40 genes for cerebellar-hemisphere vol_mean
+8 genes for dlpfc alff_mean
+1 genes for anterior-cingulate alff_mean
+4 genes for amygdala alff_mean
+7 genes for hippocampus alff_mean
+13 genes for caudate alff_mean
+9 genes for putamen alff_mean
+30 genes for nucleus-accumbens alff_mean
+13 genes for cerebellar-hemisphere alff_mean
+18 genes for dlpfc reho_noGS_mean
+13 genes for anterior-cingulate reho_noGS_mean
+11 genes for amygdala reho_noGS_mean
+20 genes for hippocampus reho_noGS_mean
+46 genes for caudate reho_noGS_mean
+38 genes for putamen reho_noGS_mean
+27 genes for nucleus-accumbens reho_noGS_mean
+20 genes for cerebellar-hemisphere reho_noGS_mean
+13 genes for dlpfc connmean_noGS_mean
+6 genes for anterior-cingulate connmean_noGS_mean
+6 genes for amygdala connmean_noGS_mean
+7 genes for hippocampus connmean_noGS_mean
+11 genes for caudate connmean_noGS_mean
+11 genes for putamen connmean_noGS_mean
+7 genes for nucleus-accumbens connmean_noGS_mean
+16 genes for cerebellar-hemisphere connmean_noGS_mean
+alff_mean amygdala 92 
+
+alff_mean amygdala 96 
+
+alff_mean amygdala 84 
+
+alff_mean amygdala 72 
+
+alff_mean amygdala 88 
+
+alff_mean amygdala 64 
+
+alff_mean amygdala 80 
+
+alff_mean amygdala 48 
+
+alff_mean amygdala 68 
+
+alff_mean amygdala 40 
+
+alff_mean amygdala 76 
+
+alff_mean amygdala 56 
+
+alff_mean amygdala 52 
+
+alff_mean amygdala 60 
+
+alff_mean amygdala 28 
+
+alff_mean amygdala 12 
+
+alff_mean amygdala 44 
+
+alff_mean amygdala 32 
+
+alff_mean amygdala 36 
+
+alff_mean amygdala 24 
+
+alff_mean amygdala 16 
+
+alff_mean amygdala 20 
+
+alff_mean amygdala 8 
+
+alff_mean amygdala 0 
+
+alff_mean amygdala 4 
+
+alff_mean amygdala 97 
+
+vol_mean amygdala 96 
+
+alff_mean amygdala 93 
+
+alff_mean amygdala 85 
+
+vol_mean amygdala 92 
+
+vol_mean amygdala 88 
+
+alff_mean amygdala 89 
+
+vol_mean amygdala 84 
+
+vol_mean amygdala 76 
+
+alff_mean amygdala 73 
+
+alff_mean amygdala 81 
+
+vol_mean amygdala 80 
+
+vol_mean amygdala 72 
+
+vol_mean amygdala 68 
+
+alff_mean amygdala 65 
+
+vol_mean amygdala 56 
+
+alff_mean amygdala 77 
+
+vol_mean amygdala 52 
+
+vol_mean amygdala 64 
+
+alff_mean amygdala 69 
+
+vol_mean amygdala 40 
+
+connmean_noGS_mean anterior-cingulate 80 
+
+alff_mean amygdala 57 
+
+alff_mean amygdala 49 
+
+vol_mean amygdala 60 
+
+alff_mean amygdala 61 
+
+vol_mean amygdala 36 
+
+vol_mean amygdala 48 
+
+alff_mean amygdala 41 
+
+vol_mean amygdala 44 
+
+alff_mean amygdala 45 
+
+alff_mean amygdala 53 
+
+vol_mean amygdala 24 
+
+vol_mean amygdala 32 
+
+vol_mean amygdala 28 
+
+vol_mean amygdala 20 
+
+alff_mean amygdala 29 
+
+connmean_noGS_mean anterior-cingulate 92 
+
+connmean_noGS_mean anterior-cingulate 88 
+
+alff_mean amygdala 33 
+
+connmean_noGS_mean anterior-cingulate 96 
+
+connmean_noGS_mean anterior-cingulate 64 
+
+alff_mean amygdala 13 
+
+alff_mean amygdala 37 
+
+connmean_noGS_mean anterior-cingulate 84 
+
+connmean_noGS_mean anterior-cingulate 76 
+
+vol_mean amygdala 16 
+
+vol_mean amygdala 8 
+
+vol_mean amygdala 12 
+
+connmean_noGS_mean anterior-cingulate 72 
+
+alff_mean amygdala 25 
+
+connmean_noGS_mean anterior-cingulate 48 
+
+vol_mean amygdala 4 
+
+vol_mean amygdala 0 
+
+alff_mean amygdala 21 
+
+alff_mean amygdala 98 
+
+alff_mean amygdala 94 
+
+connmean_noGS_mean anterior-cingulate 60 
+
+connmean_noGS_mean anterior-cingulate 68 
+
+alff_mean amygdala 17 
+
+connmean_noGS_mean anterior-cingulate 16 
+
+connmean_noGS_mean anterior-cingulate 56 
+
+connmean_noGS_mean anterior-cingulate 44 
+
+connmean_noGS_mean anterior-cingulate 24 
+
+alff_mean amygdala 90 
+
+alff_mean amygdala 86 
+
+connmean_noGS_mean anterior-cingulate 52 
+
+alff_mean amygdala 9 
+
+connmean_noGS_mean anterior-cingulate 40 
+
+connmean_noGS_mean anterior-cingulate 28 
+
+alff_mean amygdala 74 
+
+connmean_noGS_mean anterior-cingulate 36 
+
+alff_mean amygdala 1 
+
+alff_mean amygdala 5 
+
+alff_mean amygdala 82 
+
+connmean_noGS_mean anterior-cingulate 20 
+
+connmean_noGS_mean anterior-cingulate 32 
+
+alff_mean amygdala 78 
+
+connmean_noGS_mean anterior-cingulate 12 
+
+alff_mean amygdala 66 
+
+connmean_noGS_mean anterior-cingulate 8 
+
+connmean_noGS_mean anterior-cingulate 4 
+
+alff_mean amygdala 70 
+
+alff_mean anterior-cingulate 64 
+
+alff_mean anterior-cingulate 96 
+
+connmean_noGS_mean anterior-cingulate 0 
+
+alff_mean amygdala 62 
+
+alff_mean amygdala 58 
+
+alff_mean anterior-cingulate 92 
+
+alff_mean anterior-cingulate 68 
+
+alff_mean anterior-cingulate 80 
+
+alff_mean anterior-cingulate 84 
+
+alff_mean amygdala 50 
+
+alff_mean anterior-cingulate 76 
+
+alff_mean anterior-cingulate 72 
+
+alff_mean amygdala 42 
+
+alff_mean amygdala 54 
+
+alff_mean amygdala 46 
+
+alff_mean amygdala 99 
+
+alff_mean anterior-cingulate 36 
+
+vol_mean amygdala 97 
+
+reho_noGS_mean anterior-cingulate 44 
+
+alff_mean anterior-cingulate 60 
+
+alff_mean amygdala 95 
+
+reho_noGS_mean anterior-cingulate 88 
+
+alff_mean anterior-cingulate 40 
+
+alff_mean anterior-cingulate 88 
+
+alff_mean anterior-cingulate 16 
+
+alff_mean anterior-cingulate 52 
+
+reho_noGS_mean anterior-cingulate 96 
+
+reho_noGS_mean anterior-cingulate 64 
+
+alff_mean anterior-cingulate 48 
+
+reho_noGS_mean anterior-cingulate 92 
+
+reho_noGS_mean anterior-cingulate 80 
+
+alff_mean amygdala 30 
+
+vol_mean amygdala 93 
+
+reho_noGS_mean anterior-cingulate 60 
+
+vol_mean amygdala 77 
+
+reho_noGS_mean anterior-cingulate 76 
+
+alff_mean anterior-cingulate 4 
+
+reho_noGS_mean anterior-cingulate 84 
+
+vol_mean amygdala 89 
+
+alff_mean amygdala 34 
+
+alff_mean amygdala 38 
+
+alff_mean amygdala 91 
+
+vol_mean amygdala 85 
+
+alff_mean amygdala 87 
+
+reho_noGS_mean anterior-cingulate 68 
+
+reho_noGS_mean anterior-cingulate 0 
+
+reho_noGS_mean anterior-cingulate 16 
+
+reho_noGS_mean anterior-cingulate 56 
+
+alff_mean amygdala 14 
+
+alff_mean anterior-cingulate 44 
+
+reho_noGS_mean anterior-cingulate 72 
+
+reho_noGS_mean anterior-cingulate 24 
+
+reho_noGS_mean anterior-cingulate 28 
+
+reho_noGS_mean anterior-cingulate 52 
+
+vol_mean amygdala 81 
+
+alff_mean amygdala 83 
+
+reho_noGS_mean anterior-cingulate 48 
+
+alff_mean amygdala 75 
+
+alff_mean amygdala 22 
+
+reho_noGS_mean anterior-cingulate 20 
+
+alff_mean anterior-cingulate 24 
+
+reho_noGS_mean anterior-cingulate 8 
+
+vol_mean amygdala 73 
+
+alff_mean amygdala 26 
+
+reho_noGS_mean anterior-cingulate 40 
+
+alff_mean anterior-cingulate 32 
+
+alff_mean anterior-cingulate 0 
+
+alff_mean anterior-cingulate 56 
+
+vol_mean amygdala 69 
+
+alff_mean amygdala 79 
+
+vol_mean amygdala 65 
+
+alff_mean amygdala 18 
+
+alff_mean amygdala 67 
+
+reho_noGS_mean anterior-cingulate 4 
+
+reho_noGS_mean anterior-cingulate 32 
+
+reho_noGS_mean anterior-cingulate 36 
+
+vol_mean amygdala 53 
+
+alff_mean amygdala 71 
+
+vol_mean amygdala 57 
+
+alff_mean anterior-cingulate 28 
+
+vol_mean amygdala 41 
+
+vol_mean amygdala 61 
+
+alff_mean anterior-cingulate 20 
+
+alff_mean amygdala 10 
+
+alff_mean amygdala 2 
+
+reho_noGS_mean anterior-cingulate 12 
+
+alff_mean anterior-cingulate 12 
+
+alff_mean amygdala 63 
+
+alff_mean amygdala 59 
+
+alff_mean anterior-cingulate 8 
+
+alff_mean amygdala 6 
+
+vol_mean amygdala 37 
+
+vol_mean amygdala 49 
+
+reho_noGS_mean amygdala 0 
+
+reho_noGS_mean amygdala 4 
+
+alff_mean amygdala 51 
+
+vol_mean amygdala 45 
+
+connmean_noGS_mean anterior-cingulate 81 
+
+vol_mean amygdala 29 
+
+vol_mean anterior-cingulate 88 
+
+alff_mean amygdala 43 
+
+vol_mean anterior-cingulate 80 
+
+alff_meanvol_mean amygdala  anterior-cingulate55  92
+ 
+
+
+vol_mean anterior-cingulate 72 
+
+alff_mean amygdala 47 
+
+vol_mean anterior-cingulate 48 
+
+reho_noGS_mean amygdala 8 
+
+vol_mean amygdala 25 
+
+connmean_noGS_mean anterior-cingulate 89 
+
+vol_mean amygdala 33 
+
+reho_noGS_mean amygdala 12 
+
+vol_mean anterior-cingulate 96 
+
+connmean_noGS_mean anterior-cingulate 97 
+
+connmean_noGS_mean anterior-cingulate 85 
+
+vol_mean anterior-cingulate 60 
+
+vol_mean anterior-cingulate 68 
+
+vol_mean anterior-cingulate 64 
+
+vol_mean anterior-cingulate 76 
+
+vol_mean amygdala 21 
+
+connmean_noGS_mean anterior-cingulate 93 
+
+vol_mean anterior-cingulate 16 
+
+vol_mean anterior-cingulate 8 
+
+alff_mean amygdala 31 
+
+vol_mean anterior-cingulate 32 
+
+connmean_noGS_mean anterior-cingulate 77 
+
+alff_mean amygdala 39 
+
+vol_mean anterior-cingulate 24 
+
+alff_mean amygdala 35 
+
+vol_mean anterior-cingulate 20 
+
+reho_noGS_mean amygdala 16 
+
+vol_mean anterior-cingulate 40 
+
+vol_mean anterior-cingulate 52 
+
+connmean_noGS_mean anterior-cingulate 65 
+
+vol_mean amygdala 17 
+
+vol_mean anterior-cingulate 28 
+
+vol_mean anterior-cingulate 84 
+
+vol_mean amygdala 9 
+
+vol_mean amygdala 13 
+
+vol_mean anterior-cingulate 56 
+
+reho_noGS_mean amygdala 20 
+
+reho_noGS_mean amygdala 24 
+
+vol_mean anterior-cingulate 4 
+
+connmean_noGS_mean anterior-cingulate 73 
+
+alff_mean amygdala 15 
+
+alff_mean amygdala 23 
+
+vol_mean amygdala 5 
+
+vol_mean amygdala 1 
+
+vol_mean amygdala 98 
+
+connmean_noGS_mean anterior-cingulate 69 
+
+alff_mean amygdala 27 
+
+reho_noGS_mean amygdala 28 
+
+connmean_noGS_mean anterior-cingulate 61 
+
+reho_noGS_mean amygdala 32 
+
+connmean_noGS_mean anterior-cingulate 49 
+
+vol_mean anterior-cingulate 44 
+
+vol_mean anterior-cingulate 12 
+
+connmean_noGS_mean anterior-cingulate 57 
+
+connmean_noGS_mean anterior-cingulate 45 
+
+alff_mean amygdala 19 
+
+reho_noGS_mean amygdala 5 
+
+vol_mean amygdala 94 
+
+vol_mean amygdala 90 
+
+connmean_noGS_mean anterior-cingulate 53 
+
+reho_noGS_mean amygdala 36 
+
+reho_noGS_mean amygdala 1 
+
+vol_mean anterior-cingulate 36 
+
+reho_noGS_mean amygdala 40 
+
+vol_mean amygdala 86 
+
+alff_mean amygdala 11 
+
+reho_noGS_mean amygdala 9 
+
+connmean_noGS_mean anterior-cingulate 25 
+
+connmean_noGS_mean anterior-cingulate 37 
+
+vol_mean amygdala 78 
+
+vol_mean amygdala 82 
+
+connmean_noGS_mean anterior-cingulate 41 
+
+connmean_noGS_mean anterior-cingulate 17 
+
+alff_mean amygdala 3 
+
+alff_mean amygdala 7 
+
+reho_noGS_mean amygdala 44 
+
+connmean_noGS_mean dlpfc 80 
+
+connmean_noGS_mean dlpfc 52 
+
+connmean_noGS_mean anterior-cingulate 33 
+
+reho_noGS_mean amygdala 52 
+
+reho_noGS_mean amygdala 13 
+
+connmean_noGS_mean dlpfc 96 
+
+vol_mean anterior-cingulate 0 
+
+connmean_noGS_mean anterior-cingulate 29 
+
+connmean_noGS_mean dlpfc 76 
+
+connmean_noGS_mean anterior-cingulate 13 
+
+connmean_noGS_mean anterior-cingulate 21 
+
+vol_mean amygdala 74 
+
+connmean_noGS_mean dlpfc 92 
+
+reho_noGS_mean amygdala 48 
+
+connmean_noGS_mean dlpfc 64 
+
+alff_mean dlpfc 64 
+
+connmean_noGS_mean dlpfc 60 
+
+connmean_noGS_mean dlpfc 44 
+
+connmean_noGS_mean dlpfc 68 
+
+connmean_noGS_mean dlpfc 36 
+
+reho_noGS_mean amygdala 56 
+
+alff_mean dlpfc 96 
+
+connmean_noGS_mean dlpfc 72 
+
+alff_mean dlpfc 48 
+
+vol_mean amygdala 66 
+
+connmean_noGS_mean dlpfc 40 
+
+vol_mean amygdala 70 
+
+connmean_noGS_mean dlpfc 56 
+
+reho_noGS_mean amygdala 17 
+
+alff_mean dlpfc 56 
+
+vol_mean amygdala 58 
+
+connmean_noGS_mean dlpfc 88 
+
+alff_mean dlpfc 84 
+
+connmean_noGS_mean dlpfc 48 
+
+connmean_noGS_mean anterior-cingulate 5 
+
+alff_mean dlpfc 8 
+
+connmean_noGS_mean anterior-cingulate 9 
+
+alff_mean dlpfc 88 
+
+alff_mean dlpfc 20 
+
+connmean_noGS_mean dlpfc 8 
+
+reho_noGS_mean amygdala 21 
+
+reho_noGS_mean amygdala 60 
+
+alff_mean dlpfc 32 
+
+alff_mean dlpfc 16 
+
+alff_mean dlpfc 24 
+
+connmean_noGS_mean dlpfc 84 
+
+reho_noGS_mean amygdala 25 
+
+reho_noGS_mean amygdala 64 
+
+alff_mean dlpfc 92 
+
+alff_mean dlpfc 40 
+
+connmean_noGS_mean anterior-cingulate 1 
+
+alff_mean dlpfc 28 
+
+vol_mean amygdala 62 
+
+vol_mean amygdala 54 
+
+reho_noGS_mean amygdala 33 
+
+reho_noGS_mean amygdala 68 
+
+reho_noGS_mean amygdala 6 
+
+connmean_noGS_mean dlpfc 24 
+
+reho_noGS_mean amygdala 29 
+
+alff_mean dlpfc 52 
+
+connmean_noGS_mean dlpfc 0 
+
+reho_noGS_mean dlpfc 92 
+
+vol_mean amygdala 42 
+
+reho_noGS_mean dlpfc 60 
+
+reho_noGS_mean amygdala 2 
+
+connmean_noGS_mean dlpfc 20 
+
+connmean_noGS_mean dlpfc 32 
+
+connmean_noGS_mean dlpfc 28 
+
+alff_mean dlpfc 80 
+
+alff_mean anterior-cingulate 97 
+
+alff_mean dlpfc 0 
+
+connmean_noGS_mean dlpfc 16 
+
+alff_mean dlpfc 76 
+
+reho_noGS_mean amygdala 76 
+
+vol_mean amygdala 38 
+
+reho_noGS_mean amygdala 72 
+
+vol_mean amygdala 50 
+
+alff_mean dlpfc 68 
+
+connmean_noGS_mean dlpfc 12 
+
+alff_mean dlpfc 44 
+
+reho_noGS_mean amygdala 80 
+
+alff_mean dlpfc 12 
+
+connmean_noGS_mean dlpfc 4 
+
+reho_noGS_mean amygdala 10 
+
+reho_noGS_mean amygdala 37 
+
+vol_mean amygdala 46 
+
+reho_noGS_mean amygdala 41 
+
+alff_mean dlpfc 72 
+
+alff_mean anterior-cingulate 65 
+
+alff_mean dlpfc 60 
+
+alff_mean anterior-cingulate 81 
+
+reho_noGS_mean dlpfc 28 
+
+alff_mean anterior-cingulate 93 
+
+connmean_noGS_mean anterior-cingulate 82 
+
+alff_mean anterior-cingulate 85 
+
+alff_mean dlpfc 4 
+
+alff_mean anterior-cingulate 77 
+
+reho_noGS_mean dlpfc 64 
+
+reho_noGS_mean amygdala 84 
+
+connmean_noGS_mean anterior-cingulate 98 
+
+vol_mean amygdala 30 
+
+reho_noGS_mean amygdala 14 
+
+alff_mean anterior-cingulate 73 
+
+connmean_noGS_mean anterior-cingulate 90 
+
+vol_mean amygdala 99 
+
+alff_mean anterior-cingulate 69 
+
+alff_mean anterior-cingulate 89 
+
+reho_noGS_mean anterior-cingulate 93 
+
+alff_mean dlpfc 36 
+
+reho_noGS_mean anterior-cingulate 85 
+
+reho_noGS_mean amygdala 45 
+
+reho_noGS_mean dlpfc 96 
+
+reho_noGS_mean dlpfc 68 
+
+reho_noGS_mean anterior-cingulate 89 
+
+reho_noGS_mean amygdala 53 
+
+reho_noGS_mean anterior-cingulate 81 
+
+vol_mean amygdala 34 
+
+reho_noGS_mean dlpfc 24 
+
+reho_noGS_mean anterior-cingulate 97 
+
+vol_mean amygdala 26 
+
+connmean_noGS_mean anterior-cingulate 94 
+
+reho_noGS_mean dlpfc 44 
+
+alff_mean anterior-cingulate 37 
+
+reho_noGS_mean amygdala 88 
+
+alff_mean anterior-cingulate 53 
+
+reho_noGS_mean amygdala 18 
+
+vol_mean amygdala 95 
+
+reho_noGS_mean dlpfc 88 
+
+vol_mean amygdala 91 
+
+reho_noGS_mean amygdala 96 
+
+reho_noGS_mean amygdala 92 
+
+reho_noGS_mean amygdala 49 
+
+reho_noGS_mean dlpfc 4 
+
+reho_noGS_mean anterior-cingulate 77 
+
+reho_noGS_mean anterior-cingulate 65 
+
+reho_noGS_mean dlpfc 80 
+
+vol_mean amygdala 22 
+
+connmean_noGS_mean anterior-cingulate 78 
+
+alff_mean anterior-cingulate 61 
+
+reho_noGS_mean dlpfc 20 
+
+connmean_noGS_mean anterior-cingulate 86 
+
+reho_noGS_mean amygdala 57 
+
+alff_mean anterior-cingulate 49 
+
+reho_noGS_mean amygdala 22 
+
+reho_noGS_mean anterior-cingulate 69 
+
+reho_noGS_mean dlpfc 56 
+
+reho_noGS_mean dlpfc 36 
+
+reho_noGS_mean anterior-cingulate 61 
+
+reho_noGS_mean amygdala 7 
+
+reho_noGS_mean dlpfc 52 
+
+alff_mean anterior-cingulate 41 
+
+reho_noGS_mean anterior-cingulate 73 
+
+reho_noGS_mean dlpfc 0 
+
+reho_noGS_mean anterior-cingulate 45 
+
+vol_mean amygdala 18 
+
+reho_noGS_mean anterior-cingulate 57 
+
+reho_noGS_mean dlpfc 84 
+
+reho_noGS_mean amygdala 26 
+
+reho_noGS_mean amygdala 34 
+
+reho_noGS_mean dlpfc 72 
+
+vol_mean amygdala 14 
+
+alff_mean anterior-cingulate 17 
+
+alff_mean anterior-cingulate 45 
+
+vol_mean amygdala 10 
+
+reho_noGS_mean dlpfc 12 
+
+reho_noGS_mean amygdala 30 
+
+vol_mean amygdala 87 
+
+reho_noGS_mean amygdala 3 
+
+connmean_noGS_mean anterior-cingulate 66 
+
+reho_noGS_mean dlpfc 8 
+
+reho_noGS_mean anterior-cingulate 49 
+
+alff_mean anterior-cingulate 57 
+
+connmean_noGS_mean anterior-cingulate 74 
+
+reho_noGS_mean anterior-cingulate 53 
+
+vol_mean amygdala 83 
+
+reho_noGS_mean dlpfc 48 
+
+connmean_noGS_mean anterior-cingulate 70 
+
+vol_mean amygdala 79 
+
+reho_noGS_mean dlpfc 76 
+
+reho_noGS_mean dlpfc 40 
+
+reho_noGS_mean anterior-cingulate 17 
+
+alff_mean anterior-cingulate 33 
+
+reho_noGS_mean amygdala 65 
+
+reho_noGS_mean amygdala 61 
+
+connmean_noGS_mean anterior-cingulate 62 
+
+alff_mean anterior-cingulate 5 
+
+reho_noGS_mean amygdala 69 
+
+reho_noGS_mean amygdala 11 
+
+reho_noGS_mean dlpfc 32 
+
+vol_mean amygdala 6 
+
+vol_mean amygdala 2 
+
+vol_mean amygdala 75 
+
+reho_noGS_mean anterior-cingulate 25 
+
+reho_noGS_mean anterior-cingulate 29 
+
+connmean_noGS_mean anterior-cingulate 58 
+
+reho_noGS_mean dlpfc 16 
+
+alff_mean anterior-cingulate 1 
+
+reho_noGS_mean anterior-cingulate 41 
+
+alff_mean anterior-cingulate 25 
+
+reho_noGS_mean amygdala 38 
+
+connmean_noGS_mean anterior-cingulate 50 
+
+reho_noGS_mean anterior-cingulate 33 
+
+reho_noGS_mean amygdala 42 
+
+reho_noGS_mean amygdala 15 
+
+vol_mean amygdala 67 
+
+reho_noGS_mean anterior-cingulate 37 
+
+reho_noGS_mean anterior-cingulate 1 
+
+reho_noGS_mean anterior-cingulate 9 
+
+connmean_noGS_mean anterior-cingulate 54 
+
+alff_mean anterior-cingulate 29 
+
+reho_noGS_mean amygdala 73 
+
+reho_noGS_mean anterior-cingulate 21 
+
+reho_noGS_mean amygdala 81 
+
+reho_noGS_mean amygdala 77 
+
+vol_mean amygdala 71 
+
+alff_mean anterior-cingulate 13 
+
+alff_mean anterior-cingulate 9 
+
+connmean_noGS_mean anterior-cingulate 46 
+
+alff_mean anterior-cingulate 21 
+
+reho_noGS_mean amygdala 19 
+
+vol_mean amygdala 59 
+
+reho_noGS_mean anterior-cingulate 5 
+
+connmean_noGS_mean amygdala 12 
+
+reho_noGS_mean amygdala 54 
+
+connmean_noGS_mean anterior-cingulate 42 
+
+reho_noGS_mean amygdala 46 
+
+reho_noGS_mean amygdala 23 
+
+reho_noGS_mean anterior-cingulate 13 
+
+vol_mean amygdala 55 
+
+reho_noGS_mean amygdala 85 
+
+vol_mean amygdala 63 
+
+connmean_noGS_mean anterior-cingulate 38 
+
+connmean_noGS_mean amygdala 20 
+
+reho_noGS_mean amygdala 27 
+
+connmean_noGS_mean amygdala 0 
+
+reho_noGS_mean amygdala 35 
+
+connmean_noGS_mean anterior-cingulate 26 
+
+connmean_noGS_mean anterior-cingulate 34 
+
+reho_noGS_mean amygdala 58 
+
+reho_noGS_mean amygdala 50 
+
+vol_mean dlpfc 80 
+
+vol_mean dlpfc 88 
+
+reho_noGS_mean amygdala 31 
+
+connmean_noGS_mean amygdala 32 
+
+reho_noGS_mean amygdala 89 
+
+connmean_noGS_mean anterior-cingulate 30 
+
+vol_mean amygdala 43 
+
+connmean_noGS_mean amygdala 8 
+
+connmean_noGS_mean anterior-cingulate 22 
+
+reho_noGS_mean amygdala 93 
+
+connmean_noGS_mean anterior-cingulate 18 
+
+connmean_noGS_mean anterior-cingulate 14 
+
+connmean_noGS_mean amygdala 4 
+
+vol_mean amygdala 51 
+
+reho_noGS_mean amygdala 97 
+
+vol_mean dlpfc 52 
+
+connmean_noGS_mean amygdala 40 
+
+vol_mean amygdala 39 
+
+vol_mean amygdala 47 
+
+vol_mean dlpfc 32 
+
+reho_noGS_mean amygdala 70 
+
+vol_mean dlpfc 92 
+
+connmean_noGS_mean anterior-cingulate 6 
+
+reho_noGS_mean amygdala 66 
+
+connmean_noGS_mean anterior-cingulate 99 
+
+connmean_noGS_mean amygdala 13 
+
+connmean_noGS_mean anterior-cingulate 10 
+
+reho_noGS_mean amygdala 39 
+
+reho_noGS_mean amygdala 43 
+
+reho_noGS_mean amygdala 62 
+
+connmean_noGS_mean anterior-cingulate 83 
+
+connmean_noGS_mean amygdala 16 
+
+connmean_noGS_mean amygdala 24 
+
+vol_mean anterior-cingulate 89 
+
+connmean_noGS_mean anterior-cingulate 91 
+
+connmean_noGS_mean anterior-cingulate 95 
+
+connmean_noGS_mean amygdala 52 
+
+vol_mean dlpfc 96 
+
+vol_mean anterior-cingulate 93 
+
+connmean_noGS_mean amygdala 28 
+
+vol_mean amygdala 31 
+
+connmean_noGS_mean amygdala 60 
+
+vol_mean dlpfc 24 
+
+connmean_noGS_mean anterior-cingulate 2 
+
+vol_mean dlpfc 76 
+
+vol_mean dlpfc 84 
+
+connmean_noGS_mean amygdala 36 
+
+vol_mean dlpfc 48 
+
+vol_mean dlpfc 68 
+
+vol_mean anterior-cingulate 97 
+
+vol_mean anterior-cingulate 81 
+
+vol_mean anterior-cingulate 73 
+
+vol_mean dlpfc 72 
+
+vol_mean amygdala 35 
+
+vol_mean amygdala 27 
+
+vol_mean dlpfc 56 
+
+reho_noGS_mean amygdala 82 
+
+connmean_noGS_mean amygdala 21 
+
+reho_noGS_mean amygdala 74 
+
+vol_mean dlpfc 60 
+
+reho_noGS_mean amygdala 55 
+
+vol_mean dlpfc 36 
+
+vol_mean dlpfc 64 
+
+connmean_noGS_mean amygdala 72 
+
+vol_mean anterior-cingulate 69 
+
+vol_mean anterior-cingulate 49 
+
+connmean_noGS_mean anterior-cingulate 87 
+
+vol_mean dlpfc 44 
+
+connmean_noGS_mean amygdala 76 
+
+vol_mean anterior-cingulate 61 
+
+vol_mean anterior-cingulate 77 
+
+connmean_noGS_mean amygdala 33 
+
+reho_noGS_mean amygdala 47 
+
+vol_mean amygdala 23 
+
+reho_noGS_mean amygdala 78 
+
+connmean_noGS_mean amygdala 80 
+
+connmean_noGS_mean anterior-cingulate 79 
+
+connmean_noGS_mean amygdala 44 
+
+vol_mean amygdala 19 
+
+vol_mean anterior-cingulate 85 
+
+vol_mean dlpfc 40 
+
+vol_mean anterior-cingulate 25 
+
+vol_mean dlpfc 20 
+
+connmean_noGS_mean amygdala 48 
+
+vol_mean anterior-cingulate 53 
+
+vol_mean anterior-cingulate 65 
+
+vol_mean anterior-cingulate 57 
+
+vol_mean dlpfc 28 
+
+alff_mean anterior-cingulate 98 
+
+reho_noGS_mean amygdala 59 
+
+vol_mean anterior-cingulate 33 
+
+connmean_noGS_mean amygdala 41 
+
+vol_mean anterior-cingulate 29 
+
+alff_mean anterior-cingulate 66 
+
+vol_mean anterior-cingulate 17 
+
+reho_noGS_mean amygdala 86 
+
+vol_mean anterior-cingulate 21 
+
+vol_mean anterior-cingulate 41 
+
+vol_mean anterior-cingulate 9 
+
+vol_mean dlpfc 8 
+
+reho_noGS_mean amygdala 51 
+
+alff_mean anterior-cingulate 82 
+
+vol_mean amygdala 15 
+
+vol_mean dlpfc 12 
+
+connmean_noGS_mean amygdala 14 
+
+vol_mean dlpfc 16 
+
+connmean_noGS_mean amygdala 56 
+
+connmean_noGS_mean anterior-cingulate 75 
+
+alff_mean anterior-cingulate 94 
+
+vol_mean anterior-cingulate 45 
+
+connmean_noGS_mean anterior-cingulate 71 
+
+connmean_noGS_mean anterior-cingulate 67 
+
+connmean_noGS_mean amygdala 1 
+
+vol_mean amygdala 11 
+
+vol_mean anterior-cingulate 5 
+
+alff_mean anterior-cingulate 78 
+
+vol_mean dlpfc 4 
+
+connmean_noGS_mean anterior-cingulate 63 
+
+connmean_noGS_mean amygdala 64 
+
+connmean_noGS_mean amygdala 68 
+
+vol_mean dlpfc 0 
+
+vol_mean anterior-cingulate 13 
+
+alff_mean anterior-cingulate 86 
+
+connmean_noGS_mean anterior-cingulate 59 
+
+reho_noGS_mean amygdala 90 
+
+connmean_noGS_mean amygdala 9 
+
+reho_noGS_mean amygdala 94 
+
+alff_mean anterior-cingulate 70 
+
+reho_noGS_mean anterior-cingulate 82 
+
+connmean_noGS_mean amygdala 53 
+
+connmean_noGS_mean amygdala 5 
+
+alff_mean anterior-cingulate 74 
+
+reho_noGS_mean anterior-cingulate 86 
+
+alff_mean anterior-cingulate 90 
+
+reho_noGS_mean amygdala 67 
+
+reho_noGS_mean amygdala 71 
+
+vol_mean amygdala 3 
+
+reho_noGS_mean anterior-cingulate 94 
+
+connmean_noGS_mean amygdala 22 
+
+connmean_noGS_mean amygdala 61 
+
+reho_noGS_mean anterior-cingulate 98 
+
+vol_mean hippocampus 4 
+
+vol_mean amygdala 7 
+
+connmean_noGS_mean amygdala 84 
+
+connmean_noGS_mean anterior-cingulate 51 
+
+reho_noGS_mean amygdala 98 
+
+vol_mean anterior-cingulate 37 
+
+reho_noGS_mean anterior-cingulate 90 
+
+vol_mean hippocampus 8 
+
+reho_noGS_mean amygdala 63 
+
+alff_mean anterior-cingulate 38 
+
+alff_mean anterior-cingulate 54 
+
+reho_noGS_mean anterior-cingulate 78 
+
+connmean_noGS_mean amygdala 34 
+
+connmean_noGS_mean amygdala 73 
+
+connmean_noGS_mean amygdala 77 
+
+connmean_noGS_mean amygdala 81 
+
+reho_noGS_mean anterior-cingulate 66 
+
+alff_mean anterior-cingulate 62 
+
+alff_mean anterior-cingulate 50 
+
+connmean_noGS_mean anterior-cingulate 55 
+
+connmean_noGS_mean amygdala 88 
+
+reho_noGS_mean anterior-cingulate 70 
+
+connmean_noGS_mean anterior-cingulate 47 
+
+reho_noGS_mean anterior-cingulate 62 
+
+vol_mean hippocampus 36 
+
+vol_mean anterior-cingulate 1 
+
+alff_mean anterior-cingulate 42 
+
+connmean_noGS_mean amygdala 96 
+
+connmean_noGS_mean amygdala 17 
+
+connmean_noGS_mean amygdala 42 
+
+connmean_noGS_mean amygdala 92 
+
+connmean_noGS_mean amygdala 25 
+
+connmean_noGS_mean amygdala 15 
+
+reho_noGS_mean amygdala 83 
+
+alff_mean anterior-cingulate 58 
+
+reho_noGS_mean anterior-cingulate 58 
+
+reho_noGS_mean anterior-cingulate 74 
+
+connmean_noGS_mean anterior-cingulate 43 
+
+alff_mean anterior-cingulate 46 
+
+reho_noGS_mean amygdala 75 
+
+connmean_noGS_mean amygdala 29 
+
+vol_mean hippocampus 44 
+
+reho_noGS_mean anterior-cingulate 54 
+
+connmean_noGS_mean amygdala 37 
+
+alff_mean anterior-cingulate 18 
+
+reho_noGS_mean anterior-cingulate 46 
+
+reho_noGS_mean amygdala 79 
+
+connmean_noGS_mean dlpfc 97 
+
+reho_noGS_mean anterior-cingulate 50 
+
+connmean_noGS_mean anterior-cingulate 39 
+
+vol_mean hippocampus 60 
+
+connmean_noGS_mean amygdala 23 
+
+connmean_noGS_mean dlpfc 93 
+
+vol_mean hippocampus 64 
+
+connmean_noGS_mean anterior-cingulate 35 
+
+connmean_noGS_mean amygdala 54 
+
+connmean_noGS_mean amygdala 45 
+
+alff_mean anterior-cingulate 34 
+
+connmean_noGS_mean anterior-cingulate 31 
+
+connmean_noGS_mean amygdala 62 
+
+connmean_noGS_mean dlpfc 53 
+
+connmean_noGS_mean anterior-cingulate 27 
+
+connmean_noGS_mean anterior-cingulate 23 
+
+connmean_noGS_mean dlpfc 81 
+
+connmean_noGS_mean amygdala 49 
+
+connmean_noGS_mean dlpfc 69 
+
+alff_mean dlpfc 97 
+
+vol_mean hippocampus 0 
+
+connmean_noGS_mean dlpfc 77 
+
+alff_mean anterior-cingulate 6 
+
+connmean_noGS_mean dlpfc 61 
+
+connmean_noGS_mean dlpfc 73 
+
+reho_noGS_mean amygdala 87 
+
+reho_noGS_mean anterior-cingulate 18 
+
+reho_noGS_mean anterior-cingulate 42 
+
+alff_mean anterior-cingulate 26 
+
+connmean_noGS_mean dlpfc 89 
+
+alff_mean anterior-cingulate 30 
+
+connmean_noGS_mean dlpfc 45 
+
+alff_mean anterior-cingulate 2 
+
+reho_noGS_mean anterior-cingulate 30 
+
+alff_mean dlpfc 65 
+
+alff_mean hippocampus 0 
+
+vol_mean hippocampus 28 
+
+connmean_noGS_mean dlpfc 37 
+
+connmean_noGS_mean amygdala 35 
+
+connmean_noGS_mean anterior-cingulate 19 
+
+vol_mean hippocampus 5 
+
+reho_noGS_mean anterior-cingulate 38 
+
+connmean_noGS_mean amygdala 2 
+
+connmean_noGS_mean amygdala 74 
+
+vol_mean hippocampus 24 
+
+connmean_noGS_mean anterior-cingulate 15 
+
+connmean_noGS_mean dlpfc 57 
+
+vol_mean hippocampus 20 
+
+connmean_noGS_mean dlpfc 65 
+
+reho_noGS_mean anterior-cingulate 26 
+
+alff_mean dlpfc 85 
+
+connmean_noGS_mean amygdala 78 
+
+connmean_noGS_mean dlpfc 85 
+
+connmean_noGS_mean dlpfc 49 
+
+connmean_noGS_mean amygdala 82 
+
+vol_mean hippocampus 96 
+
+alff_mean anterior-cingulate 14 
+
+alff_mean hippocampus 28 
+
+vol_mean hippocampus 32 
+
+reho_noGS_mean anterior-cingulate 34 
+
+alff_mean dlpfc 89 
+
+connmean_noGS_mean amygdala 57 
+
+vol_mean hippocampus 16 
+
+alff_mean dlpfc 93 
+
+reho_noGS_mean amygdala 91 
+
+reho_noGS_mean amygdala 95 
+
+connmean_noGS_mean amygdala 10 
+
+vol_mean hippocampus 9 
+
+connmean_noGS_mean amygdala 43 
+
+alff_mean dlpfc 57 
+
+alff_mean anterior-cingulate 10 
+
+connmean_noGS_mean amygdala 6 
+
+vol_mean hippocampus 12 
+
+alff_mean dlpfc 49 
+
+connmean_noGS_mean dlpfc 41 
+
+alff_mean anterior-cingulate 22 
+
+vol_mean hippocampus 56 
+
+connmean_noGS_mean anterior-cingulate 7 
+
+reho_noGS_mean anterior-cingulate 22 
+
+connmean_noGS_mean amygdala 65 
+
+alff_mean hippocampus 16 
+
+reho_noGS_mean anterior-cingulate 10 
+
+vol_mean hippocampus 48 
+
+connmean_noGS_mean dlpfc 9 
+
+connmean_noGS_mean amygdala 69 
+
+reho_noGS_mean anterior-cingulate 2 
+
+alff_mean dlpfc 17 
+
+reho_noGS_mean amygdala 99 
+
+connmean_noGS_mean dlpfc 25 
+
+alff_mean dlpfc 77 
+
+reho_noGS_mean anterior-cingulate 6 
+
+connmean_noGS_mean anterior-cingulate 11 
+
+vol_mean hippocampus 37 
+
+connmean_noGS_mean dlpfc 21 
+
+alff_mean dlpfc 9 
+
+alff_mean dlpfc 53 
+
+vol_mean hippocampus 40 
+
+alff_mean dlpfc 21 
+
+connmean_noGS_mean dlpfc 1 
+
+alff_mean dlpfc 69 
+
+alff_mean dlpfc 41 
+
+alff_mean hippocampus 52 
+
+connmean_noGS_mean dlpfc 33 
+
+alff_mean dlpfc 33 
+
+vol_mean hippocampus 52 
+
+alff_mean dlpfc 29 
+
+alff_mean hippocampus 32 
+
+alff_mean dlpfc 25 
+
+connmean_noGS_mean amygdala 85 
+
+alff_mean dlpfc 81 
+
+vol_mean hippocampus 68 
+
+connmean_noGS_mean dlpfc 13 
+
+connmean_noGS_mean amygdala 55 
+
+connmean_noGS_mean dlpfc 29 
+
+connmean_noGS_mean anterior-cingulate 3 
+
+alff_mean dlpfc 73 
+
+reho_noGS_mean anterior-cingulate 14 
+
+alff_mean dlpfc 45 
+
+alff_mean dlpfc 61 
+
+connmean_noGS_mean dlpfc 5 
+
+connmean_noGS_mean amygdala 18 
+
+vol_mean hippocampus 45 
+
+connmean_noGS_mean amygdala 63 
+
+vol_mean hippocampus 84 
+
+connmean_noGS_mean dlpfc 17 
+
+connmean_noGS_mean amygdala 26 
+
+vol_mean hippocampus 72 
+
+alff_mean hippocampus 40 
+
+alff_mean hippocampus 4 
+
+alff_mean hippocampus 76 
+
+connmean_noGS_mean amygdala 89 
+
+alff_mean hippocampus 44 
+
+alff_mean hippocampus 29 
+
+alff_mean hippocampus 8 
+
+vol_mean hippocampus 61 
+
+connmean_noGS_mean amygdala 75 
+
+vol_mean hippocampus 65 
+
+vol_mean hippocampus 76 
+
+alff_mean dlpfc 1 
+
+connmean_noGS_mean amygdala 79 
+
+connmean_noGS_mean amygdala 30 
+
+connmean_noGS_mean amygdala 83 
+
+alff_mean dlpfc 13 
+
+alff_mean dlpfc 37 
+
+alff_mean hippocampus 96 
+
+alff_mean dlpfc 5 
+
+reho_noGS_mean dlpfc 93 
+
+alff_mean hippocampus 72 
+
+connmean_noGS_mean amygdala 97 
+
+connmean_noGS_mean amygdala 38 
+
+alff_mean hippocampus 1 
+
+connmean_noGS_mean amygdala 93 
+
+vol_mean hippocampus 88 
+
+vol_mean hippocampus 80 
+
+reho_noGS_mean dlpfc 61 
+
+vol_mean hippocampus 6 
+
+alff_mean hippocampus 12 
+
+vol_mean hippocampus 97 
+
+connmean_noGS_mean amygdala 50 
+
+connmean_noGS_mean amygdala 46 
+
+alff_mean anterior-cingulate 99 
+
+alff_mean anterior-cingulate 83 
+
+alff_mean hippocampus 53 
+
+alff_mean anterior-cingulate 95 
+
+vol_mean hippocampus 10 
+
+vol_mean hippocampus 92 
+
+alff_mean hippocampus 88 
+
+connmean_noGS_mean amygdala 3 
+
+alff_mean anterior-cingulate 67 
+
+alff_mean hippocampus 92 
+
+alff_mean hippocampus 24 
+
+alff_mean hippocampus 17 
+
+alff_mean hippocampus 20 
+
+connmean_noGS_mean amygdala 11 
+
+alff_mean anterior-cingulate 79 
+
+reho_noGS_mean dlpfc 65 
+
+connmean_noGS_mean amygdala 7 
+
+vol_mean hippocampus 38 
+
+alff_mean hippocampus 30 
+
+reho_noGS_mean dlpfc 97 
+
+alff_mean anterior-cingulate 91 
+
+connmean_noGS_mean amygdala 58 
+
+alff_mean hippocampus 33 
+
+alff_mean hippocampus 36 
+
+reho_noGS_mean anterior-cingulate 87 
+
+reho_noGS_mean dlpfc 29 
+
+alff_mean hippocampus 77 
+
+reho_noGS_mean hippocampus 12 
+
+alff_mean anterior-cingulate 71 
+
+alff_mean anterior-cingulate 75 
+
+vol_mean anterior-cingulate 90 
+
+reho_noGS_mean anterior-cingulate 95 
+
+reho_noGS_mean dlpfc 69 
+
+connmean_noGS_mean amygdala 66 
+
+alff_mean anterior-cingulate 87 
+
+reho_noGS_mean dlpfc 25 
+
+reho_noGS_mean anterior-cingulate 99 
+
+vol_mean hippocampus 46 
+
+alff_mean hippocampus 97 
+
+reho_noGS_mean hippocampus 20 
+
+reho_noGS_mean anterior-cingulate 83 
+
+reho_noGS_mean dlpfc 57 
+
+reho_noGS_mean dlpfc 81 
+
+reho_noGS_mean anterior-cingulate 91 
+
+vol_mean anterior-cingulate 94 
+
+reho_noGS_mean hippocampus 4 
+
+alff_mean hippocampus 48 
+
+reho_noGS_mean dlpfc 89 
+
+reho_noGS_mean dlpfc 85 
+
+reho_noGS_mean dlpfc 45 
+
+alff_mean hippocampus 45 
+
+connmean_noGS_mean amygdala 70 
+
+vol_mean hippocampus 1 
+
+reho_noGS_mean hippocampus 24 
+
+reho_noGS_mean anterior-cingulate 79 
+
+vol_mean anterior-cingulate 98 
+
+vol_mean hippocampus 25 
+
+alff_mean hippocampus 41 
+
+vol_mean hippocampus 29 
+
+vol_mean hippocampus 62 
+
+reho_noGS_mean dlpfc 37 
+
+alff_mean hippocampus 56 
+
+vol_mean hippocampus 33 
+
+connmean_noGS_mean amygdala 19 
+
+vol_mean anterior-cingulate 82 
+
+reho_noGS_mean hippocampus 28 
+
+alff_mean hippocampus 54 
+
+reho_noGS_mean dlpfc 73 
+
+vol_mean anterior-cingulate 74 
+
+alff_mean anterior-cingulate 55 
+
+alff_mean anterior-cingulate 39 
+
+vol_mean hippocampus 66 
+
+connmean_noGS_mean amygdala 27 
+
+vol_mean hippocampus 21 
+
+alff_mean hippocampus 2 
+
+alff_mean hippocampus 60 
+
+vol_mean hippocampus 57 
+
+connmean_noGS_mean amygdala 86 
+
+reho_noGS_mean dlpfc 21 
+
+vol_mean anterior-cingulate 62 
+
+alff_mean hippocampus 64 
+
+vol_mean hippocampus 7 
+
+alff_mean hippocampus 68 
+
+reho_noGS_mean hippocampus 32 
+
+reho_noGS_mean dlpfc 1 
+
+reho_noGS_mean dlpfc 53 
+
+alff_mean anterior-cingulate 63 
+
+reho_noGS_mean dlpfc 77 
+
+reho_noGS_mean dlpfc 49 
+
+vol_mean anterior-cingulate 78 
+
+alff_mean anterior-cingulate 59 
+
+vol_mean anterior-cingulate 70 
+
+alff_mean anterior-cingulate 51 
+
+reho_noGS_mean dlpfc 5 
+
+vol_mean hippocampus 49 
+
+alff_mean hippocampus 73 
+
+reho_noGS_mean anterior-cingulate 67 
+
+alff_mean hippocampus 31 
+
+reho_noGS_mean anterior-cingulate 71 
+
+alff_mean anterior-cingulate 43 
+
+connmean_noGS_mean amygdala 31 
+
+alff_mean anterior-cingulate 47 
+
+vol_mean anterior-cingulate 50 
+
+reho_noGS_mean dlpfc 13 
+
+vol_mean hippocampus 17 
+
+vol_mean hippocampus 98 
+
+reho_noGS_mean anterior-cingulate 75 
+
+vol_mean anterior-cingulate 86 
+
+alff_mean hippocampus 80 
+
+reho_noGS_mean anterior-cingulate 63 
+
+reho_noGS_mean dlpfc 41 
+
+vol_mean anterior-cingulate 26 
+
+reho_noGS_mean dlpfc 33 
+
+connmean_noGS_mean amygdala 90 
+
+vol_mean hippocampus 13 
+
+vol_mean hippocampus 11 
+
+alff_mean hippocampus 84 
+
+alff_mean hippocampus 78 
+
+alff_mean hippocampus 89 
+
+connmean_noGS_mean amygdala 39 
+
+vol_mean anterior-cingulate 66 
+
+reho_noGS_mean anterior-cingulate 59 
+
+reho_noGS_mean dlpfc 17 
+
+reho_noGS_mean dlpfc 9 
+
+reho_noGS_mean anterior-cingulate 55 
+
+vol_mean hippocampus 39 
+
+vol_mean anterior-cingulate 42 
+
+vol_mean anterior-cingulate 54 
+
+connmean_noGS_mean amygdala 98 
+
+vol_mean anterior-cingulate 58 
+
+vol_mean hippocampus 41 
+
+connmean_noGS_mean amygdala 51 
+
+alff_mean hippocampus 18 
+
+alff_mean hippocampus 9 
+
+reho_noGS_mean anterior-cingulate 47 
+
+vol_mean anterior-cingulate 34 
+
+vol_mean hippocampus 69 
+
+vol_mean anterior-cingulate 30 
+
+alff_mean anterior-cingulate 19 
+
+reho_noGS_mean anterior-cingulate 51 
+
+alff_mean hippocampus 98 
+
+alff_mean hippocampus 93 
+
+connmean_noGS_mean amygdala 94 
+
+vol_mean anterior-cingulate 46 
+
+vol_mean hippocampus 53 
+
+connmean_noGS_mean amygdala 47 
+
+vol_mean anterior-cingulate 22 
+
+alff_mean anterior-cingulate 35 
+
+alff_mean hippocampus 5 
+
+vol_mean anterior-cingulate 10 
+
+reho_noGS_mean hippocampus 13 
+
+alff_mean hippocampus 34 
+
+vol_mean hippocampus 85 
+
+vol_mean anterior-cingulate 18 
+
+alff_mean hippocampus 55 
+
+alff_mean anterior-cingulate 31 
+
+vol_mean hippocampus 47 
+
+alff_mean anterior-cingulate 27 
+
+reho_noGS_mean hippocampus 21 
+
+alff_mean hippocampus 46 
+
+vol_mean anterior-cingulate 14 
+
+reho_noGS_mean hippocampus 48 
+
+alff_mean anterior-cingulate 7 
+
+reho_noGS_mean anterior-cingulate 43 
+
+reho_noGS_mean anterior-cingulate 19 
+
+alff_mean anterior-cingulate 3 
+
+reho_noGS_mean hippocampus 25 
+
+reho_noGS_mean anterior-cingulate 39 
+
+connmean_noGS_mean hippocampus 24 
+
+connmean_noGS_mean amygdala 59 
+
+reho_noGS_mean anterior-cingulate 31 
+
+reho_noGS_mean hippocampus 64 
+
+vol_mean hippocampus 73 
+
+vol_mean hippocampus 63 
+
+vol_mean anterior-cingulate 38 
+
+vol_mean anterior-cingulate 6 
+
+connmean_noGS_mean hippocampus 44 
+
+reho_noGS_mean hippocampus 56 
+
+alff_mean anterior-cingulate 15 
+
+alff_mean hippocampus 42 
+
+reho_noGS_mean hippocampus 0 
+
+reho_noGS_mean hippocampus 29 
+
+alff_mean anterior-cingulate 23 
+
+vol_mean hippocampus 77 
+
+reho_noGS_mean anterior-cingulate 27 
+
+alff_mean hippocampus 3 
+
+alff_mean hippocampus 79 
+
+vol_mean hippocampus 67 
+
+alff_mean anterior-cingulate 11 
+
+reho_noGS_mean hippocampus 33 
+
+alff_mean hippocampus 13 
+
+connmean_noGS_mean amygdala 67 
+
+vol_mean hippocampus 89 
+
+reho_noGS_mean hippocampus 8 
+
+reho_noGS_mean anterior-cingulate 35 
+
+connmean_noGS_mean hippocampus 8 
+
+reho_noGS_mean hippocampus 5 
+
+connmean_noGS_mean amygdala 71 
+
+reho_noGS_mean anterior-cingulate 23 
+
+vol_mean anterior-cingulate 2 
+
+connmean_noGS_mean hippocampus 20 
+
+connmean_noGS_mean hippocampus 88 
+
+alff_mean hippocampus 74 
+
+connmean_noGS_mean hippocampus 72 
+
+reho_noGS_mean anterior-cingulate 11 
+
+alff_mean hippocampus 99 
+
+vol_mean hippocampus 81 
+
+alff_mean hippocampus 25 
+
+vol_mean hippocampus 99 
+
+alff_mean hippocampus 21 
+
+reho_noGS_mean hippocampus 16 
+
+vol_mean hippocampus 93 
+
+connmean_noGS_mean hippocampus 56 
+
+connmean_noGS_mean amygdala 87 
+
+reho_noGS_mean anterior-cingulate 7 
+
+alff_mean hippocampus 90 
+
+alff_mean hippocampus 37 
+
+alff_mean hippocampus 19 
+
+reho_noGS_mean anterior-cingulate 15 
+
+vol_mean hippocampus 26 
+
+reho_noGS_mean anterior-cingulate 3 
+
+vol_mean hippocampus 30 
+
+reho_noGS_mean hippocampus 14 
+
+vol_mean hippocampus 34 
+
+connmean_noGS_mean amygdala 91 
+
+connmean_noGS_mean hippocampus 76 
+
+connmean_noGS_mean hippocampus 45 
+
+alff_mean hippocampus 35 
+
+alff_mean hippocampus 94 
+
+vol_mean hippocampus 2 
+
+vol_mean hippocampus 58 
+
+connmean_noGS_mean hippocampus 92 
+
+connmean_noGS_mean hippocampus 25 
+
+alff_mean hippocampus 47 
+
+connmean_noGS_mean dlpfc 98 
+
+reho_noGS_mean hippocampus 22 
+
+vol_mean hippocampus 22 
+
+reho_noGS_mean hippocampus 26 
+
+vol_mean dlpfc 89 
+
+connmean_noGS_mean amygdala 99 
+
+vol_mean hippocampus 50 
+
+vol_mean dlpfc 81 
+
+connmean_noGS_mean dlpfc 94 
+
+connmean_noGS_mean amygdala 95 
+
+alff_mean hippocampus 49 
+
+reho_noGS_mean hippocampus 30 
+
+alff_mean hippocampus 57 
+
+vol_mean caudate 16 
+
+reho_noGS_mean hippocampus 34 
+
+connmean_noGS_mean dlpfc 70 
+
+connmean_noGS_mean dlpfc 54 
+
+alff_mean dlpfc 98 
+
+alff_mean hippocampus 43 
+
+connmean_noGS_mean hippocampus 89 
+
+connmean_noGS_mean dlpfc 62 
+
+connmean_noGS_mean dlpfc 78 
+
+connmean_noGS_mean hippocampus 4 
+
+connmean_noGS_mean dlpfc 46 
+
+connmean_noGS_mean dlpfc 74 
+
+connmean_noGS_mean hippocampus 73 
+
+alff_mean caudate 12 
+
+connmean_noGS_mean dlpfc 82 
+
+connmean_noGS_mean dlpfc 90 
+
+alff_mean hippocampus 10 
+
+vol_mean dlpfc 53 
+
+alff_mean dlpfc 94 
+
+reho_noGS_mean hippocampus 49 
+
+connmean_noGS_mean hippocampus 0 
+
+connmean_noGS_mean dlpfc 86 
+
+alff_mean hippocampus 61 
+
+alff_mean hippocampus 69 
+
+alff_mean dlpfc 90 
+
+alff_mean hippocampus 65 
+
+connmean_noGS_mean dlpfc 66 
+
+alff_mean dlpfc 66 
+
+vol_mean dlpfc 93 
+
+vol_mean hippocampus 18 
+
+vol_mean hippocampus 70 
+
+vol_mean caudate 24 
+
+alff_mean hippocampus 81 
+
+alff_mean caudate 16 
+
+alff_mean hippocampus 6 
+
+alff_mean hippocampus 75 
+
+alff_mean dlpfc 86 
+
+vol_mean hippocampus 14 
+
+reho_noGS_mean hippocampus 65 
+
+reho_noGS_mean hippocampus 57 
+
+connmean_noGS_mean dlpfc 50 
+
+alff_mean dlpfc 58 
+
+vol_mean dlpfc 85 
+
+connmean_noGS_mean hippocampus 46 
+
+vol_mean dlpfc 33 
+
+connmean_noGS_mean hippocampus 9 
+
+reho_noGS_mean hippocampus 72 
+
+reho_noGS_mean hippocampus 84 
+
+connmean_noGS_mean dlpfc 58 
+
+vol_mean hippocampus 86 
+
+vol_mean caudate 80 
+
+vol_mean dlpfc 77 
+
+connmean_noGS_mean hippocampus 21 
+
+vol_mean hippocampus 42 
+
+reho_noGS_mean hippocampus 92 
+
+connmean_noGS_mean dlpfc 38 
+
+vol_mean caudate 60 
+
+alff_mean dlpfc 50 
+
+alff_mean dlpfc 78 
+
+reho_noGS_mean hippocampus 96 
+
+vol_mean dlpfc 73 
+
+connmean_noGS_mean hippocampus 48 
+
+reho_noGS_mean hippocampus 15 
+
+vol_mean hippocampus 54 
+
+vol_mean dlpfc 69 
+
+alff_mean hippocampus 85 
+
+reho_noGS_mean hippocampus 44 
+
+alff_mean dlpfc 70 
+
+connmean_noGS_mean hippocampus 64 
+
+reho_noGS_mean hippocampus 6 
+
+connmean_noGS_mean hippocampus 26 
+
+connmean_noGS_mean dlpfc 10 
+
+alff_mean hippocampus 91 
+
+vol_mean caudate 8 
+
+connmean_noGS_mean dlpfc 26 
+
+alff_mean dlpfc 82 
+
+vol_mean caudate 84 
+
+vol_mean dlpfc 97 
+
+connmean_noGS_mean hippocampus 40 
+
+alff_mean dlpfc 18 
+
+alff_mean dlpfc 10 
+
+alff_mean dlpfc 42 
+
+vol_mean caudate 76 
+
+reho_noGS_mean hippocampus 36 
+
+alff_mean caudate 28 
+
+alff_mean caudate 0 
+
+connmean_noGS_mean dlpfc 42 alff_mean
+ 
+dlpfc 54 
+
+reho_noGS_mean hippocampus 40 
+
+connmean_noGS_mean dlpfc 2 
+
+connmean_noGS_mean dlpfc 34 
+
+vol_mean dlpfc 65 
+
+connmean_noGS_mean dlpfc 22 
+
+connmean_noGS_mean hippocampus 57 
+
+alff_mean dlpfc 26 
+
+connmean_noGS_mean hippocampus 68 
+
+reho_noGS_mean hippocampus 23 
+
+vol_mean dlpfc 57 
+
+alff_mean dlpfc 22 
+
+connmean_noGS_mean dlpfc 14 
+
+alff_mean dlpfc 34 
+
+alff_mean caudate 44 
+
+reho_noGS_mean hippocampus 27 
+
+connmean_noGS_mean dlpfc 30 
+
+alff_mean dlpfc 62 
+
+alff_mean dlpfc 46 
+
+connmean_noGS_mean hippocampus 80 
+
+alff_mean dlpfc 30 
+
+vol_mean dlpfc 49 
+
+alff_mean dlpfc 74 
+
+alff_mean hippocampus 95 
+
+vol_mean dlpfc 61 
+
+vol_mean dlpfc 25 
+
+reho_noGS_mean hippocampus 52 
+
+reho_noGS_mean hippocampus 60 
+
+connmean_noGS_mean dlpfc 6 
+
+connmean_noGS_mean hippocampus 77 
+
+reho_noGS_mean hippocampus 31 
+
+connmean_noGS_mean hippocampus 84 
+
+alff_mean caudate 48 
+
+connmean_noGS_mean dlpfc 18 
+
+vol_mean dlpfc 37 
+
+connmean_noGS_mean hippocampus 90 
+
+reho_noGS_mean hippocampus 35 
+
+vol_mean hippocampus 74 
+
+alff_mean caudate 13 
+
+alff_mean hippocampus 14 
+
+connmean_noGS_mean hippocampus 74 
+
+vol_mean dlpfc 45 
+
+connmean_noGS_mean hippocampus 96 
+
+vol_mean caudate 52 
+
+connmean_noGS_mean hippocampus 16 
+
+connmean_noGS_mean hippocampus 93 
+
+vol_mean dlpfc 41 
+
+connmean_noGS_mean hippocampus 47 
+
+connmean_noGS_mean hippocampus 60 
+
+connmean_noGS_mean hippocampus 28 
+
+vol_mean hippocampus 78 
+
+connmean_noGS_mean hippocampus 32 
+
+connmean_noGS_mean hippocampus 12 
+
+vol_mean anterior-cingulate 91 
+
+alff_mean caudate 20 
+
+reho_noGS_mean hippocampus 68 
+
+vol_mean hippocampus 27 
+
+alff_mean caudate 40 
+
+connmean_noGS_mean hippocampus 36 
+
+vol_mean caudate 92 
+
+reho_noGS_mean hippocampus 80 
+
+vol_mean hippocampus 90 
+
+reho_noGS_mean hippocampus 76 
+
+vol_mean anterior-cingulate 99 
+
+alff_mean dlpfc 14 
+
+vol_mean caudate 17 
+
+reho_noGS_mean hippocampus 88 
+
+vol_mean anterior-cingulate 95 
+
+alff_mean dlpfc 38 
+
+alff_mean dlpfc 6 
+
+alff_mean caudate 60 
+
+vol_mean hippocampus 35 
+
+alff_mean hippocampus 26 
+
+alff_mean dlpfc 2 
+
+vol_mean dlpfc 29 
+
+vol_mean hippocampus 31 
+
+alff_mean hippocampus 22 
+
+connmean_noGS_mean hippocampus 52 
+
+vol_mean dlpfc 13 
+
+vol_mean hippocampus 59 
+
+alff_mean caudate 68 
+
+alff_mean caudate 17 
+
+vol_mean anterior-cingulate 75 
+
+vol_mean dlpfc 9 
+
+vol_mean dlpfc 21 
+
+vol_mean hippocampus 82 
+
+alff_mean caudate 56 
+
+connmean_noGS_mean hippocampus 27 
+
+alff_mean caudate 52 
+
+vol_mean dlpfc 17 
+
+alff_mean hippocampus 38 
+
+vol_mean anterior-cingulate 83 
+
+vol_mean anterior-cingulate 63 
+
+reho_noGS_mean hippocampus 1 
+
+alff_mean caudate 64 
+
+vol_mean anterior-cingulate 79 
+
+reho_noGS_mean hippocampus 50 
+
+connmean_noGS_mean hippocampus 22 
+
+connmean_noGS_mean hippocampus 10 
+
+alff_mean caudate 76 
+
+vol_mean dlpfc 5 
+
+vol_mean hippocampus 3 
+
+vol_mean caudate 81 
+
+vol_mean hippocampus 94 
+
+vol_mean anterior-cingulate 71 
+
+vol_mean anterior-cingulate 87 
+
+alff_mean caudate 80 
+
+vol_mean caudate 25 
+
+vol_mean hippocampus 51 
+
+vol_mean anterior-cingulate 27 
+
+reho_noGS_mean hippocampus 9 
+
+alff_mean hippocampus 11 
+
+alff_mean caudate 29 
+
+vol_mean dlpfc 1 
+
+vol_mean anterior-cingulate 51 
+
+alff_mean caudate 88 
+
+reho_noGS_mean hippocampus 58 
+
+reho_noGS_mean hippocampus 66 
+
+alff_mean caudate 14 
+
+connmean_noGS_mean hippocampus 91 
+
+vol_mean anterior-cingulate 67 
+
+alff_mean caudate 72 
+
+connmean_noGS_mean hippocampus 75 
+
+alff_mean caudate 92 
+
+alff_mean caudate 96 
+
+vol_mean hippocampus 23 
+
+alff_mean caudate 45 
+
+vol_mean caudate 61 
+
+reho_noGS_mean hippocampus 7 
+
+reho_noGS_mean hippocampus 17 
+
+vol_mean anterior-cingulate 55 
+
+alff_mean caudate 4 
+
+vol_mean anterior-cingulate 59 
+
+reho_noGS_mean dlpfc 94 
+
+vol_mean anterior-cingulate 23 
+
+vol_mean anterior-cingulate 31 
+
+alff_mean hippocampus 7 
+
+reho_noGS_mean dlpfc 62 
+
+connmean_noGS_mean hippocampus 58 
+
+vol_mean anterior-cingulate 43 
+
+vol_mean anterior-cingulate 35 
+
+vol_mean hippocampus 71 
+
+alff_mean caudate 49 
+
+alff_mean hippocampus 50 
+
+alff_mean hippocampus 58 
+
+alff_mean caudate 1 
+
+vol_mean caudate 4 
+
+vol_mean caudate 85 
+
+vol_mean anterior-cingulate 47 
+
+alff_mean caudate 84 
+
+connmean_noGS_mean hippocampus 78 
+
+vol_mean hippocampus 87 
+
+alff_mean caudate 69 
+
+alff_mean hippocampus 66 
+
+vol_mean caudate 77 
+
+connmean_noGS_mean hippocampus 94 
+
+vol_mean anterior-cingulate 11 
+
+alff_mean caudate 8 
+
+vol_mean hippocampus 19 
+
+reho_noGS_mean dlpfc 66 
+
+alff_mean hippocampus 70 
+
+vol_mean anterior-cingulate 19 
+
+alff_mean hippocampus 62 
+
+reho_noGS_mean dlpfc 98 
+
+vol_mean hippocampus 15 
+
+vol_mean anterior-cingulate 39 
+
+vol_mean hippocampus 43 
+
+alff_mean hippocampus 82 
+
+vol_mean anterior-cingulate 15 
+
+alff_mean caudate 18 
+
+alff_mean caudate 61 
+
+connmean_noGS_mean hippocampus 1 
+
+vol_mean anterior-cingulate 7 
+
+alff_mean caudate 81 
+
+reho_noGS_mean dlpfc 30 
+
+alff_mean caudate 32 
+
+alff_mean caudate 77 
+
+vol_mean caudate 18 
+
+reho_noGS_mean dlpfc 90 
+
+alff_mean caudate 24 
+
+reho_noGS_mean dlpfc 70 
+
+connmean_noGS_mean hippocampus 5 
+
+reho_noGS_mean dlpfc 86 
+
+reho_noGS_mean dlpfc 46 
+
+reho_noGS_mean dlpfc 82 
+
+reho_noGS_mean dlpfc 58 
+
+alff_mean caudate 15 
+
+reho_noGS_mean dlpfc 26 
+
+vol_mean anterior-cingulate 3 
+
+alff_mean caudate 97 
+
+vol_mean hippocampus 55 
+
+alff_mean caudate 41 
+
+alff_mean caudate 65 
+
+alff_mean caudate 89 
+
+vol_mean caudate 36 
+
+connmean_noGS_mean hippocampus 11 
+
+alff_mean caudate 36 
+
+vol_mean caudate 9 
+
+alff_mean caudate 21 
+
+alff_mean hippocampus 86 
+
+reho_noGS_mean dlpfc 74 
+
+reho_noGS_mean dlpfc 50 
+
+vol_mean caudate 56 
+
+reho_noGS_mean dlpfc 38 
+
+vol_mean caudate 48 
+
+reho_noGS_mean dlpfc 78 
+
+alff_mean caudate 93 
+
+vol_mean caudate 40 
+
+connmean_noGS_mean hippocampus 65 
+
+reho_noGS_mean dlpfc 22 
+
+reho_noGS_mean dlpfc 54 
+
+vol_mean caudate 96 
+
+connmean_noGS_mean hippocampus 23 
+
+vol_mean caudate 72 
+
+vol_mean hippocampus 75 
+
+alff_mean caudate 30 
+
+alff_mean hippocampus 15 
+
+reho_noGS_mean hippocampus 73 
+
+vol_mean caudate 82 
+
+alff_mean caudate 57 
+
+reho_noGS_mean dlpfc 42 
+
+reho_noGS_mean dlpfc 2 
+
+reho_noGS_mean hippocampus 51 
+
+connmean_noGS_mean hippocampus 49 
+
+reho_noGS_mean dlpfc 14 
+
+reho_noGS_mean dlpfc 34 
+
+reho_noGS_mean hippocampus 93 
+
+reho_noGS_mean dlpfc 6 
+
+connmean_noGS_mean hippocampus 41 
+
+alff_mean caudate 73 
+
+alff_mean caudate 46 
+
+reho_noGS_mean dlpfc 18 
+
+connmean_noGS_mean hippocampus 69 
+
+vol_mean caudate 53 
+
+alff_mean caudate 53 
+
+reho_noGS_mean hippocampus 85 
+
+vol_mean hippocampus 79 
+
+alff_mean caudate 70 
+
+reho_noGS_mean dlpfc 10 
+
+alff_mean hippocampus 27 
+
+reho_noGS_mean hippocampus 67 
+
+reho_noGS_mean hippocampus 59 
+
+vol_mean caudate 26 
+
+alff_mean hippocampus 23 
+
+connmean_noGS_mean hippocampus 81 
+
+vol_mean caudate 12 
+
+alff_mean caudate 50 
+
+vol_mean caudate 0 
+
+reho_noGS_mean hippocampus 97 
+
+vol_mean hippocampus 91 
+
+connmean_noGS_mean hippocampus 59 
+
+vol_mean caudate 93 
+
+alff_mean hippocampus 39 
+
+connmean_noGS_mean hippocampus 85 
+
+alff_mean caudate 82 
+
+reho_noGS_mean caudate 32 
+
+connmean_noGS_mean hippocampus 97 
+
+alff_mean caudate 85 
+
+connmean_noGS_mean hippocampus 95 
+
+alff_mean caudate 78 
+
+connmean_noGS_mean caudate 68 
+
+alff_mean caudate 98 
+
+vol_mean caudate 62 
+
+connmean_noGS_mean hippocampus 79 
+
+vol_mean hippocampus 83 
+
+vol_mean caudate 28 
+
+connmean_noGS_mean dlpfc 99 
+
+vol_mean caudate 20 
+
+alff_mean caudate 19 
+
+vol_mean caudate 44 
+
+vol_mean caudate 64 
+
+vol_mean caudate 32 
+
+alff_mean caudate 2 
+
+vol_mean caudate 68 
+
+connmean_noGS_mean dlpfc 95 
+
+alff_mean dlpfc 99 
+
+connmean_noGS_mean dlpfc 55 
+
+reho_noGS_mean hippocampus 45 
+
+alff_mean caudate 90 
+
+connmean_noGS_mean hippocampus 61 
+
+connmean_noGS_mean dlpfc 71 
+
+connmean_noGS_mean hippocampus 29 
+
+reho_noGS_mean hippocampus 37 
+
+connmean_noGS_mean dlpfc 63 
+
+alff_mean caudate 62 
+
+alff_mean dlpfc 91 
+
+connmean_noGS_mean hippocampus 13 
+
+vol_mean caudate 86 
+
+connmean_noGS_mean hippocampus 33 
+
+connmean_noGS_mean hippocampus 17 
+
+vol_mean caudate 88 
+
+connmean_noGS_mean dlpfc 79 
+
+connmean_noGS_mean dlpfc 47 
+
+connmean_noGS_mean dlpfc 87 
+
+connmean_noGS_mean caudate 24 
+
+connmean_noGS_mean dlpfc 75 
+
+connmean_noGS_mean dlpfc 83 
+
+vol_mean hippocampus 95 
+
+alff_mean dlpfc 67 
+
+connmean_noGS_mean dlpfc 67 
+
+alff_mean caudate 94 
+
+connmean_noGS_mean caudate 12 
+
+alff_mean dlpfc 95 
+
+reho_noGS_mean hippocampus 41 
+
+alff_mean dlpfc 59 
+
+connmean_noGS_mean dlpfc 91 
+
+reho_noGS_mean caudate 84 
+
+connmean_noGS_mean hippocampus 37 
+
+alff_mean dlpfc 87 
+
+reho_noGS_mean caudate 76 
+
+alff_mean caudate 66 
+
+connmean_noGS_mean hippocampus 53 
+
+connmean_noGS_mean dlpfc 51 
+
+connmean_noGS_mean caudate 32 
+
+reho_noGS_mean hippocampus 2 
+
+connmean_noGS_mean dlpfc 59 
+
+alff_mean dlpfc 51 
+
+alff_mean hippocampus 59 
+
+reho_noGS_mean hippocampus 61 
+
+alff_mean dlpfc 79 
+
+connmean_noGS_mean caudate 40 
+
+vol_mean caudate 78 
+
+connmean_noGS_mean caudate 80 
+
+reho_noGS_mean hippocampus 53 
+
+reho_noGS_mean caudate 16 
+
+alff_mean hippocampus 51 
+
+reho_noGS_mean caudate 4 
+
+alff_mean dlpfc 71 
+
+connmean_noGS_mean dlpfc 39 
+
+vol_mean caudate 19 
+
+alff_mean hippocampus 67 
+
+alff_mean dlpfc 83 
+
+alff_mean dlpfc 55 
+
+alff_mean caudate 31 
+
+connmean_noGS_mean dlpfc 23 
+
+connmean_noGS_mean caudate 56 
+
+reho_noGS_mean hippocampus 10 
+
+alff_mean hippocampus 71 
+
+alff_mean caudate 71 
+
+reho_noGS_mean hippocampus 69 
+
+alff_mean dlpfc 19 
+
+alff_mean dlpfc 35 
+
+connmean_noGS_mean dlpfc 27 
+
+connmean_noGS_mean dlpfc 35 
+
+alff_mean dlpfc 43 
+
+connmean_noGS_mean caudate 48 
+
+reho_noGS_mean caudate 20 
+
+reho_noGS_mean caudate 24 
+
+connmean_noGS_mean dlpfc 3 
+
+reho_noGS_mean caudate 92 
+
+connmean_noGS_mean dlpfc 11 
+
+alff_mean dlpfc 63 
+
+connmean_noGS_mean dlpfc 43 
+
+alff_mean dlpfc 27 
+
+reho_noGS_mean hippocampus 77 
+
+alff_mean hippocampus 63 
+
+reho_noGS_mean hippocampus 81 
+
+connmean_noGS_mean dlpfc 15 
+
+alff_mean dlpfc 47 
+
+alff_mean dlpfc 31 
+
+connmean_noGS_mean dlpfc 31 
+
+alff_mean caudate 47 
+
+alff_mean dlpfc 11 
+
+alff_mean caudate 42 
+
+connmean_noGS_mean caudate 84 
+
+alff_mean dlpfc 75 
+
+connmean_noGS_mean caudate 96 
+
+alff_mean hippocampus 83 
+
+alff_mean dlpfc 23 
+
+connmean_noGS_mean dlpfc 7 
+
+alff_mean caudate 22 
+
+alff_mean caudate 74 
+
+reho_noGS_mean hippocampus 89 
+
+connmean_noGS_mean dlpfc 19 
+
+reho_noGS_mean hippocampus 18 
+
+alff_mean caudate 5 
+
+connmean_noGS_mean caudate 69 
+
+alff_mean caudate 83 
+
+vol_mean caudate 83 
+
+alff_mean caudate 99 
+
+connmean_noGS_mean hippocampus 2 
+
+alff_mean caudate 79 
+
+alff_mean dlpfc 39 
+
+alff_mean caudate 51 
+
+alff_mean dlpfc 15 
+
+reho_noGS_mean caudate 60 
+
+connmean_noGS_mean caudate 76 
+
+connmean_noGS_mean caudate 88 
+
+connmean_noGS_mean hippocampus 6 
+
+alff_mean caudate 58 
+
+vol_mean putamen 12 
+
+reho_noGS_mean caudate 48 
+
+alff_mean dlpfc 7 
+
+alff_mean hippocampus 87 
+
+alff_mean caudate 91 
+
+alff_mean caudate 9 
+
+reho_noGS_mean caudate 68 
+
+vol_mean putamen 8 
+
+connmean_noGS_mean caudate 0 
+
+alff_mean caudate 54 
+
+alff_mean dlpfc 3 
+
+alff_mean caudate 86 
+
+connmean_noGS_mean caudate 4 
+
+connmean_noGS_mean hippocampus 66 
+
+connmean_noGS_mean caudate 8 
+
+vol_mean putamen 48 
+
+vol_mean caudate 10 
+
+connmean_noGS_mean caudate 16 
+
+connmean_noGS_mean caudate 92 
+
+connmean_noGS_mean caudate 20 
+
+reho_noGS_mean caudate 88 
+
+alff_mean caudate 33 
+
+alff_mean caudate 95 
+
+vol_mean caudate 27 
+
+vol_mean dlpfc 90 
+
+vol_mean dlpfc 82 
+
+vol_mean putamen 24 
+
+alff_mean putamen 56 
+
+connmean_noGS_mean caudate 28 
+
+alff_mean putamen 84 
+
+alff_mean caudate 63 
+
+alff_mean caudate 25 
+
+connmean_noGS_mean hippocampus 50 
+
+connmean_noGS_mean hippocampus 70 
+
+connmean_noGS_mean caudate 36 
+
+alff_mean caudate 3 
+
+connmean_noGS_mean hippocampus 42 
+
+vol_mean putamen 36 
+
+vol_mean putamen 32 
+
+connmean_noGS_mean caudate 44 
+
+connmean_noGS_mean caudate 52 
+
+alff_mean caudate 67 
+
+vol_mean caudate 63 
+
+connmean_noGS_mean caudate 60 
+
+vol_mean putamen 0 
+
+reho_noGS_mean hippocampus 74 
+
+alff_mean caudate 37 
+
+vol_mean putamen 16 
+
+vol_mean dlpfc 94 
+
+alff_mean putamen 72 
+
+connmean_noGS_mean caudate 70 
+
+vol_mean caudate 54 
+
+connmean_noGS_mean caudate 64 
+
+connmean_noGS_mean hippocampus 82 
+
+connmean_noGS_mean caudate 81 
+
+vol_mean putamen 4 
+
+vol_mean putamen 20 
+
+connmean_noGS_mean caudate 72 
+
+reho_noGS_mean caudate 33 
+
+vol_mean caudate 5 
+
+connmean_noGS_mean hippocampus 86 
+
+vol_mean caudate 87 
+
+vol_mean dlpfc 98 
+
+vol_mean dlpfc 34 
+
+vol_mean dlpfc 54 
+
+connmean_noGS_mean caudate 25 
+
+vol_mean dlpfc 74 
+
+vol_mean dlpfc 78 
+
+vol_mean dlpfc 86 
+
+reho_noGS_mean hippocampus 94 
+
+connmean_noGS_mean caudate 13 
+
+reho_noGS_mean hippocampus 86 
+
+connmean_noGS_mean hippocampus 98 
+
+reho_noGS_mean dlpfc 95 
+
+vol_mean dlpfc 70 
+
+vol_mean putamen 40 
+
+vol_mean caudate 94 
+
+vol_mean putamen 28 
+
+connmean_noGS_mean caudate 97 
+
+connmean_noGS_mean caudate 33 
+
+reho_noGS_mean hippocampus 98 
+
+reho_noGS_mean dlpfc 63 
+
+connmean_noGS_mean putamen 12 
+
+connmean_noGS_mean caudate 85 
+
+alff_mean caudate 75 
+
+vol_mean dlpfc 58 
+
+vol_mean caudate 79 
+
+vol_mean dlpfc 66 
+
+connmean_noGS_mean caudate 41 
+
+reho_noGS_mean caudate 85 
+
+vol_mean dlpfc 62 
+
+reho_noGS_mean caudate 0 
+
+alff_mean putamen 57 
+
+vol_mean caudate 57 
+
+vol_mean dlpfc 50 
+
+reho_noGS_mean dlpfc 99 
+
+reho_noGS_mean caudate 8 
+
+reho_noGS_mean dlpfc 67 
+
+vol_mean caudate 49 
+
+vol_mean putamen 96 
+
+connmean_noGS_mean putamen 20 
+
+alff_mean putamen 85 
+
+alff_mean putamen 44 
+
+alff_mean caudate 43 
+
+vol_mean caudate 37 
+
+connmean_noGS_mean caudate 57 
+
+connmean_noGS_mean hippocampus 30 
+
+connmean_noGS_mean hippocampus 34 
+
+connmean_noGS_mean hippocampus 14 
+
+connmean_noGS_mean putamen 24 
+
+reho_noGS_mean caudate 77 
+
+alff_mean putamen 36 
+
+vol_mean dlpfc 46 
+
+connmean_noGS_mean hippocampus 62 
+
+reho_noGS_mean caudate 12 
+
+reho_noGS_mean dlpfc 91 
+
+vol_mean caudate 41 
+
+connmean_noGS_mean caudate 49 
+
+alff_mean caudate 23 
+
+vol_mean caudate 97 
+
+vol_mean caudate 73 
+
+vol_mean putamen 49 
+
+vol_mean dlpfc 42 
+
+connmean_noGS_mean hippocampus 18 
+
+reho_noGS_mean putamen 84 
+
+alff_mean caudate 87 
+
+alff_mean putamen 60 
+
+reho_noGS_mean putamen 80 
+
+reho_noGS_mean dlpfc 71 
+
+connmean_noGS_mean hippocampus 38 
+
+vol_mean dlpfc 38 
+
+reho_noGS_mean putamen 76 
+
+reho_noGS_mean dlpfc 83 
+
+vol_mean dlpfc 26 
+
+alff_mean putamen 80 
+
+reho_noGS_mean dlpfc 87 
+
+reho_noGS_mean putamen 48 
+
+reho_noGS_mean caudate 28 
+
+reho_noGS_mean caudate 36 
+
+reho_noGS_mean caudate 44 
+
+reho_noGS_mean dlpfc 59 
+
+reho_noGS_mean putamen 88 
+
+vol_mean putamen 13 
+
+connmean_noGS_mean caudate 71 
+
+vol_mean putamen 9 
+
+connmean_noGS_mean hippocampus 54 
+
+vol_mean dlpfc 14 
+
+reho_noGS_mean dlpfc 47 
+
+reho_noGS_mean hippocampus 3 
+
+reho_noGS_mean dlpfc 31 
+
+reho_noGS_mean dlpfc 75 
+
+reho_noGS_mean caudate 56 
+
+reho_noGS_mean hippocampus 46 
+
+reho_noGS_mean caudate 40 
+
+connmean_noGS_mean putamen 28 
+
+alff_mean caudate 59 
+
+reho_noGS_mean dlpfc 51 
+
+vol_mean dlpfc 30 
+
+connmean_noGS_mean putamen 40 
+
+reho_noGS_mean dlpfc 55 
+
+reho_noGS_mean dlpfc 79 
+
+vol_mean dlpfc 22 
+
+reho_noGS_mean hippocampus 38 
+
+reho_noGS_mean dlpfc 27 
+
+connmean_noGS_mean putamen 36 
+
+reho_noGS_mean caudate 93 
+
+reho_noGS_mean dlpfc 39 
+
+alff_meanconnmean_noGS_mean  caudatecaudate  5577  
+
+
+
+vol_mean dlpfc 6 
+
+vol_mean dlpfc 10 
+
+reho_noGS_mean caudate 80 
+
+alff_mean putamen 73 
+
+reho_noGS_mean hippocampus 42 
+
+reho_noGS_mean hippocampus 11 
+
+reho_noGS_mean caudate 52 
+
+connmean_noGS_mean caudate 89 
+
+connmean_noGS_mean hippocampus 3 
+
+reho_noGS_mean putamen 96 
+
+reho_noGS_mean dlpfc 23 
+
+vol_mean putamen 25 
+
+vol_mean dlpfc 18 
+
+reho_noGS_mean caudate 72 
+
+alff_mean putamen 16 
+
+reho_noGS_mean dlpfc 15 
+
+reho_noGS_mean dlpfc 43 
+
+reho_noGS_mean dlpfc 35 
+
+connmean_noGS_mean putamen 32 
+
+connmean_noGS_mean putamen 44 
+
+alff_mean putamen 4 
+
+vol_mean putamen 44 
+
+reho_noGS_mean dlpfc 19 
+
+reho_noGS_mean dlpfc 3 
+
+reho_noGS_mean dlpfc 7 
+
+reho_noGS_mean caudate 64 
+
+reho_noGS_mean caudate 96 
+
+connmean_noGS_mean hippocampus 7 
+
+connmean_noGS_mean putamen 13 
+
+reho_noGS_mean dlpfc 11 
+
+vol_mean putamen 37 
+
+vol_mean putamen 52 
+
+vol_mean putamen 33 
+
+alff_mean putamen 28 
+
+reho_noGS_mean hippocampus 62 
+
+reho_noGS_mean hippocampus 54 
+
+alff_mean caudate 6 
+
+reho_noGS_mean hippocampus 19 
+
+alff_mean putamen 58 
+
+vol_mean caudate 13 
+
+vol_mean caudate 1 
+
+alff_mean putamen 24 
+
+vol_mean putamen 84 
+
+connmean_noGS_mean putamen 8 
+
+reho_noGS_mean caudate 5 
+
+reho_noGS_mean caudate 21 
+
+connmean_noGS_mean caudate 82 
+
+alff_mean putamen 86 
+
+connmean_noGS_mean caudate 93 
+
+vol_mean putamen 60 
+
+reho_noGS_mean caudate 17 
+
+reho_noGS_mean hippocampus 70 
+
+connmean_noGS_mean hippocampus 67 
+
+alff_mean putamen 52 
+
+vol_mean dlpfc 2 
+
+reho_noGS_mean hippocampus 78 
+
+vol_mean putamen 68 
+
+alff_mean putamen 8 
+
+alff_mean putamen 0 
+
+reho_noGS_mean caudate 25 
+
+vol_mean putamen 76 
+
+vol_mean caudate 11 
+
+alff_mean putamen 12 
+
+vol_mean putamen 88 
+
+vol_mean putamen 64 
+
+connmean_noGS_mean putamen 21 
+
+vol_mean caudate 29 
+connmean_noGS_mean
+ putamen 60 
+
+alff_mean putamen 76 
+
+connmean_noGS_mean caudate 98 
+
+vol_mean caudate 33 
+
+connmean_noGS_mean putamen 56 
+
+vol_mean putamen 92 
+
+reho_noGS_mean hippocampus 82 
+
+reho_noGS_mean putamen 28 
+
+alff_mean putamen 96 
+
+vol_mean caudate 21 
+
+connmean_noGS_mean putamen 25 
+
+vol_mean caudate 45 
+
+alff_mean putamen 20 
+
+alff_mean caudate 10 
+
+connmean_noGS_mean hippocampus 71 
+
+vol_mean putamen 80 
+
+connmean_noGS_mean hippocampus 51 
+
+vol_mean caudate 65 
+
+connmean_noGS_mean caudate 86 
+
+connmean_noGS_mean hippocampus 43 
+
+vol_mean caudate 69 
+
+connmean_noGS_mean caudate 26 
+
+reho_noGS_mean hippocampus 90 
+
+reho_noGS_mean putamen 60 
+
+vol_mean nucleus-accumbens 4 
+
+connmean_noGS_mean caudate 14 
+
+vol_mean caudate 89 
+
+alff_mean putamen 40 
+
+vol_mean putamen 1 
+
+alff_mean putamen 64 
+
+vol_mean putamen 56 
+
+alff_mean caudate 34 
+
+connmean_noGS_mean caudate 34 
+
+alff_mean putamen 68 
+
+alff_mean putamen 32 
+
+reho_noGS_mean caudate 61 
+
+alff_mean putamen 48 
+
+connmean_noGS_mean putamen 84 
+
+vol_mean putamen 50 
+
+connmean_noGS_mean hippocampus 83 
+
+connmean_noGS_mean putamen 41 
+
+vol_mean putamen 72 
+
+connmean_noGS_mean caudate 1 
+
+alff_mean caudate 26 
+
+vol_mean caudate 55 
+
+vol_mean putamen 17 
+
+connmean_noGS_mean putamen 29 
+
+reho_noGS_mean caudate 34 
+
+connmean_noGS_mean putamen 72 
+
+alff_mean putamen 88 
+
+connmean_noGS_mean putamen 80 
+
+connmean_noGS_mean hippocampus 87 
+
+alff_mean putamen 59 
+
+connmean_noGS_mean caudate 42 
+
+alff_mean putamen 74 
+
+vol_mean putamen 21 
+
+connmean_noGS_mean putamen 37 
+
+connmean_noGS_mean putamen 14 
+
+alff_mean putamen 92 
+
+reho_noGS_mean caudate 49 
+
+reho_noGS_mean caudate 69 
+
+connmean_noGS_mean hippocampus 99 
+
+connmean_noGS_mean caudate 5 
+
+vol_mean putamen 5 
+
+reho_noGS_mean putamen 85 
+
+connmean_noGS_mean caudate 9 
+
+connmean_noGS_mean putamen 45 
+
+reho_noGS_mean hippocampus 75 
+
+vol_mean putamen 10 
+
+connmean_noGS_mean caudate 21 
+
+vol_mean putamen 14 
+
+connmean_noGS_mean caudate 17 
+
+connmean_noGS_mean caudate 29 
+
+vol_mean putamen 41 
+
+alff_mean caudate 38 
+
+alff_mean putamen 87 
+
+reho_noGS_mean putamen 81 
+
+vol_mean caudate 95 
+
+connmean_noGS_mean caudate 58 
+
+reho_noGS_mean putamen 89 
+
+connmean_noGS_mean caudate 50 
+
+reho_noGS_mean putamen 77 
+
+vol_mean putamen 29 
+
+alff_mean putamen 45 
+
+reho_noGS_mean caudate 86 
+
+reho_noGS_mean caudate 89 
+
+connmean_noGS_mean putamen 22 
+
+alff_mean putamen 37 
+
+connmean_noGS_mean caudate 37 
+
+reho_noGS_mean hippocampus 95 
+
+connmean_noGS_mean caudate 53 
+
+reho_noGS_mean hippocampus 87 
+
+connmean_noGS_mean putamen 33 
+
+connmean_noGS_mean putamen 26 
+
+vol_mean putamen 97 
+
+reho_noGS_mean putamen 49 
+
+vol_mean nucleus-accumbens 24 
+
+vol_mean putamen 26 
+
+connmean_noGS_mean caudate 61 
+
+connmean_noGS_mean putamen 61 
+
+reho_noGS_mean caudate 78 
+
+connmean_noGS_mean caudate 83 
+
+vol_mean nucleus-accumbens 48 
+
+alff_mean putamen 61 
+
+vol_mean nucleus-accumbens 5 
+
+connmean_noGS_mean caudate 45 
+
+alff_mean putamen 81 
+
+reho_noGS_mean hippocampus 99 
+
+connmean_noGS_mean putamen 0 
+
+connmean_noGS_mean putamen 57 
+
+vol_mean putamen 38 
+
+vol_mean putamen 34 
+
+connmean_noGS_mean caudate 99 
+
+connmean_noGS_mean caudate 65 
+
+connmean_noGS_mean caudate 73 
+
+connmean_noGS_mean caudate 78 
+
+connmean_noGS_mean hippocampus 31 
+
+connmean_noGS_mean hippocampus 15 
+
+connmean_noGS_mean caudate 90 
+
+connmean_noGS_mean putamen 4 
+
+connmean_noGS_mean caudate 87 
+
+connmean_noGS_mean hippocampus 35 
+
+connmean_noGS_mean putamen 42 
+
+connmean_noGS_mean putamen 16 
+
+connmean_noGS_mean putamen 15 
+
+reho_noGS_mean putamen 97 
+
+connmean_noGS_mean hippocampus 63 
+
+vol_mean putamen 51 
+
+vol_mean nucleus-accumbens 12 
+
+connmean_noGS_mean putamen 46 
+
+connmean_noGS_mean hippocampus 19 
+
+connmean_noGS_mean putamen 85 
+
+reho_noGS_mean caudate 94 
+
+connmean_noGS_mean putamen 30 
+
+connmean_noGS_mean putamen 48 
+
+alff_mean putamen 75 
+
+connmean_noGS_mean hippocampus 39 
+
+connmean_noGS_mean putamen 38 
+
+connmean_noGS_mean putamen 23 
+
+alff_mean nucleus-accumbens 32 
+
+connmean_noGS_mean putamen 52 
+
+vol_mean caudate 6 
+
+connmean_noGS_mean caudate 27 
+
+connmean_noGS_mean hippocampus 55 
+
+vol_mean nucleus-accumbens 52 
+
+connmean_noGS_mean putamen 9 
+
+connmean_noGS_mean caudate 15 
+
+connmean_noGS_mean putamen 27 
+
+connmean_noGS_mean putamen 64 
+
+alff_mean nucleus-accumbens 4 
+
+connmean_noGS_mean caudate 94 
+
+connmean_noGS_mean caudate 35 
+
+connmean_noGS_mean putamen 73 
+
+connmean_noGS_mean putamen 81 
+
+alff_mean nucleus-accumbens 44 
+
+vol_mean nucleus-accumbens 56 
+
+vol_mean putamen 11 
+
+vol_mean nucleus-accumbens 6 
+
+vol_mean putamen 15 
+
+reho_noGS_mean putamen 32 
+
+reho_noGS_mean putamen 86 
+
+connmean_noGS_mean putamen 68 
+
+vol_mean caudate 38 
+
+connmean_noGS_mean putamen 62 
+
+connmean_noGS_mean putamen 76 
+
+reho_noGS_mean putamen 78 
+
+connmean_noGS_mean putamen 88 
+
+reho_noGS_mean hippocampus 47 
+
+reho_noGS_mean putamen 0 
+
+vol_mean caudate 58 
+
+vol_mean nucleus-accumbens 88 
+
+reho_noGS_mean putamen 82 
+
+vol_mean nucleus-accumbens 96 
+
+reho_noGS_mean putamen 20 
+
+connmean_noGS_mean putamen 96 
+
+alff_mean caudate 7 
+
+reho_noGS_mean hippocampus 39 
+
+connmean_noGS_mean caudate 43 
+
+vol_mean caudate 50 
+
+reho_noGS_mean putamen 90 
+
+reho_noGS_mean caudate 35 
+
+reho_noGS_mean putamen 44 
+
+reho_noGS_mean putamen 16 
+
+connmean_noGS_mean putamen 92 
+
+reho_noGS_mean putamen 8 
+
+connmean_noGS_mean putamen 34 
+
+vol_mean putamen 2 
+
+connmean_noGS_mean putamen 58 
+
+reho_noGS_mean putamen 68 
+
+alff_mean nucleus-accumbens 24 
+
+connmean_noGS_mean putamen 43 
+
+reho_noGS_mean caudate 22 
+
+alff_mean putamen 17 
+
+connmean_noGS_mean putamen 47 
+
+connmean_noGS_mean caudate 51 
+
+reho_noGS_mean hippocampus 43 
+
+reho_noGS_mean caudate 6 
+
+vol_mean caudate 42 
+
+reho_noGS_mean caudate 18 
+
+vol_mean putamen 18 
+
+connmean_noGS_mean caudate 59 
+
+vol_mean putamen 27 
+
+alff_mean putamen 5 
+
+vol_mean caudate 74 
+
+vol_mean caudate 98 
+
+alff_mean caudate 11 
+
+alff_mean nucleus-accumbens 48 
+
+vol_mean dlpfc 91 
+
+vol_mean putamen 35 
+
+reho_noGS_mean putamen 72 
+
+reho_noGS_mean caudate 87 
+
+connmean_noGS_mean putamen 31 
+
+vol_mean dlpfc 83 
+
+vol_mean putamen 39 
+
+vol_mean nucleus-accumbens 49 
+
+alff_mean nucleus-accumbens 88 
+
+vol_mean nucleus-accumbens 25 
+
+alff_mean putamen 46 
+
+vol_mean putamen 22 
+
+connmean_noGS_mean putamen 39 
+
+vol_mean putamen 6 
+
+alff_mean nucleus-accumbens 60 
+
+reho_noGS_mean caudate 26 
+
+reho_noGS_mean putamen 50 
+
+alff_mean putamen 29 
+
+reho_noGS_mean nucleus-accumbens 12 
+
+alff_mean nucleus-accumbens 96 
+
+alff_mean nucleus-accumbens 33 
+
+connmean_noGS_mean putamen 86 
+
+reho_noGS_mean hippocampus 63 
+
+alff_mean putamen 38 
+
+vol_mean nucleus-accumbens 7 
+
+reho_noGS_mean caudate 79 
+
+vol_mean dlpfc 95 
+
+vol_mean nucleus-accumbens 0 
+
+vol_mean putamen 42 
+
+reho_noGS_mean hippocampus 55 
+
+alff_mean caudate 35 
+
+alff_mean nucleus-accumbens 0 
+
+alff_mean nucleus-accumbens 68 
+
+alff_mean putamen 25 
+
+reho_noGS_mean nucleus-accumbens 4 
+
+alff_mean putamen 77 
+
+connmean_noGS_mean caudate 79 
+
+reho_noGS_mean hippocampus 71 
+
+vol_mean dlpfc 99 
+
+vol_mean nucleus-accumbens 16 
+
+vol_mean nucleus-accumbens 28 
+
+vol_mean nucleus-accumbens 20 
+
+connmean_noGS_mean caudate 91 
+
+alff_mean putamen 62 
+
+reho_noGS_mean nucleus-accumbens 28 
+
+alff_mean caudate 27 
+
+reho_noGS_mean putamen 12 
+
+reho_noGS_mean caudate 62 
+
+alff_mean putamen 53 
+
+alff_mean nucleus-accumbens 45 
+
+reho_noGS_mean putamen 98 
+
+vol_mean putamen 30 
+
+alff_mean putamen 82 
+
+vol_mean nucleus-accumbens 8 
+
+reho_noGS_mean putamen 29 
+
+vol_mean dlpfc 87 
+
+connmean_noGS_mean putamen 63 
+
+reho_noGS_mean hippocampus 79 
+
+alff_mean nucleus-accumbens 80 
+
+alff_mean putamen 9 
+
+vol_mean nucleus-accumbens 36 
+
+vol_mean nucleus-accumbens 32 
+
+vol_mean dlpfc 79 
+
+vol_mean dlpfc 75 
+
+alff_mean nucleus-accumbens 16 
+
+alff_mean putamen 1 
+
+reho_noGS_mean hippocampus 83 
+
+alff_mean nucleus-accumbens 12 
+
+vol_mean putamen 45 
+
+alff_mean putamen 97 
+
+alff_mean caudate 39 
+
+connmean_noGS_mean caudate 2 
+
+reho_noGS_mean putamen 4 
+
+vol_mean putamen 98 
+
+alff_mean nucleus-accumbens 8 
+
+vol_mean nucleus-accumbens 44 
+
+reho_noGS_mean putamen 36 
+
+connmean_noGS_mean putamen 74 
+
+vol_mean nucleus-accumbens 40 
+
+vol_mean putamen 53 
+
+reho_noGS_mean putamen 56 
+
+reho_noGS_mean hippocampus 91 
+
+connmean_noGS_mean nucleus-accumbens 0 
+
+alff_mean putamen 21 
+
+vol_mean dlpfc 71 
+
+reho_noGS_mean putamen 24 
+
+alff_mean putamen 13 
+
+reho_noGS_mean nucleus-accumbens 60 
+
+reho_noGS_mean putamen 87 
+
+vol_mean nucleus-accumbens 64 
+
+vol_mean dlpfc 55 
+
+reho_noGS_mean putamen 79 
+
+reho_noGS_mean putamen 40 
+
+vol_mean dlpfc 59 
+
+vol_mean dlpfc 67 
+
+connmean_noGS_mean putamen 82 
+
+vol_mean nucleus-accumbens 68 
+
+connmean_noGS_mean putamen 59 
+
+vol_mean dlpfc 35 
+
+vol_mean nucleus-accumbens 60 
+
+reho_noGS_mean putamen 83 
+
+vol_mean putamen 69 
+
+vol_mean nucleus-accumbens 84 
+
+vol_mean putamen 85 
+
+reho_noGS_mean putamen 61 
+
+reho_noGS_mean caudate 70 
+
+vol_mean putamen 61 
+
+alff_mean nucleus-accumbens 40 
+
+reho_noGS_mean nucleus-accumbens 40 
+
+alff_mean putamen 65 
+
+reho_noGS_mean nucleus-accumbens 36 
+
+alff_mean nucleus-accumbens 5 
+
+connmean_noGS_mean nucleus-accumbens 24 
+
+connmean_noGS_mean nucleus-accumbens 4 
+
+reho_noGS_mean nucleus-accumbens 64 
+
+reho_noGS_mean caudate 50 
+
+vol_mean nucleus-accumbens 92 
+
+alff_mean putamen 49 
+
+vol_mean nucleus-accumbens 72 
+
+alff_mean nucleus-accumbens 20 
+
+reho_noGS_mean nucleus-accumbens 68 
+
+reho_noGS_mean putamen 64 
+
+reho_noGS_mean caudate 90 
+
+vol_mean putamen 65 
+
+connmean_noGS_mean nucleus-accumbens 28 
+
+connmean_noGS_mean caudate 18 
+
+connmean_noGS_mean caudate 6 
+
+connmean_noGS_mean caudate 10 
+
+alff_mean putamen 41 
+
+vol_meanvol_mean  dlpfcnucleus-accumbens  6376  
+
+
+
+vol_mean nucleus-accumbens 80 
+
+connmean_noGS_mean caudate 22 
+
+reho_noGS_mean caudate 95 
+
+reho_noGS_mean putamen 92 
+
+vol_mean dlpfc 47 
+
+alff_mean putamen 69 
+
+reho_noGS_mean putamen 52 
+
+vol_mean putamen 89 
+
+alff_mean putamen 33 
+
+vol_mean dlpfc 51 
+
+connmean_noGS_mean nucleus-accumbens 16 
+
+connmean_noGS_mean putamen 35 
+
+connmean_noGS_mean caudate 30 
+
+reho_noGS_mean putamen 91 
+
+vol_mean putamen 93 
+
+connmean_noGS_mean caudate 95 
+
+reho_noGS_mean caudate 9 
+
+alff_mean nucleus-accumbens 89 
+
+reho_noGS_mean nucleus-accumbens 13 
+
+vol_mean putamen 77 
+
+alff_mean nucleus-accumbens 28 
+
+connmean_noGS_mean nucleus-accumbens 12 
+
+alff_mean nucleus-accumbens 34 
+
+alff_mean putamen 89 
+
+reho_noGS_mean caudate 1 
+
+reho_noGS_mean nucleus-accumbens 16 
+
+alff_mean nucleus-accumbens 56 
+
+vol_mean putamen 81 
+
+connmean_noGS_mean caudate 54 
+
+vol_mean nucleus-accumbens 13 
+
+connmean_noGS_mean putamen 10 
+
+vol_mean dlpfc 43 
+
+alff_mean nucleus-accumbens 52 
+
+connmean_noGS_mean putamen 87 
+
+vol_mean dlpfc 27 
+
+vol_mean dlpfc 39 
+
+alff_mean putamen 93 
+
+connmean_noGS_mean caudate 38 
+
+reho_noGS_mean nucleus-accumbens 24 
+
+alff_mean nucleus-accumbens 36 
+
+reho_noGS_mean nucleus-accumbens 32 
+
+vol_mean caudate 14 
+
+vol_mean dlpfc 15 
+
+alff_mean nucleus-accumbens 97 
+
+connmean_noGS_mean caudate 62 
+
+alff_mean nucleus-accumbens 64 
+
+reho_noGS_mean caudate 13 
+
+connmean_noGS_mean caudate 46 
+
+vol_mean nucleus-accumbens 50 
+
+connmean_noGS_mean nucleus-accumbens 68 
+
+connmean_noGS_mean caudate 74 
+
+reho_noGS_mean caudate 45 
+
+vol_mean nucleus-accumbens 53 
+
+connmean_noGS_mean caudate 66 
+
+connmean_noGS_mean nucleus-accumbens 1 
+
+vol_mean putamen 57 
+
+reho_noGS_mean nucleus-accumbens 84 
+
+vol_mean caudate 2 
+
+vol_mean dlpfc 31 
+
+alff_mean nucleus-accumbens 46 
+
+vol_mean dlpfc 23 
+
+alff_mean nucleus-accumbens 25 
+
+reho_noGS_mean nucleus-accumbens 29 
+
+reho_noGS_mean caudate 37 
+
+reho_noGS_mean nucleus-accumbens 5 
+
+reho_noGS_mean nucleus-accumbens 96 
+
+reho_noGS_mean nucleus-accumbens 56 
+
+vol_mean caudate 30 
+
+vol_mean nucleus-accumbens 26 
+
+vol_mean putamen 73 
+
+alff_mean nucleus-accumbens 61 
+
+vol_mean dlpfc 19 
+
+vol_mean caudate 22 
+
+vol_mean nucleus-accumbens 57 
+
+connmean_noGS_mean nucleus-accumbens 25 
+
+vol_mean dlpfc 11 
+
+reho_noGS_mean caudate 29 
+
+reho_noGS_mean putamen 51 
+
+vol_mean caudate 66 
+
+alff_mean nucleus-accumbens 49 
+
+vol_mean caudate 34 
+
+vol_mean caudate 46 
+
+connmean_noGS_mean putamen 1 
+
+reho_noGS_mean nucleus-accumbens 72 
+
+alff_mean nucleus-accumbens 69 
+
+reho_noGS_mean caudate 57 
+
+reho_noGS_mean nucleus-accumbens 61 
+
+connmean_noGS_mean nucleus-accumbens 29 
+
+vol_mean putamen 3 
+
+alff_mean putamen 47 
+
+vol_mean nucleus-accumbens 97 
+
+connmean_noGS_mean nucleus-accumbens 48 
+
+connmean_noGS_mean nucleus-accumbens 5 
+
+connmean_noGS_mean putamen 49 
+
+vol_mean dlpfc 7 
+
+vol_mean putamen 19 
+
+reho_noGS_mean nucleus-accumbens 80 
+
+alff_mean putamen 39 
+
+connmean_noGS_mean nucleus-accumbens 56 
+
+reho_noGS_mean caudate 41 
+
+vol_mean caudate 90 
+
+connmean_noGS_mean putamen 75 
+
+vol_mean caudate 70 
+
+vol_mean putamen 23 
+
+vol_mean cerebellar-hemisphere 8 
+
+reho_noGS_mean caudate 53 
+
+connmean_noGS_mean nucleus-accumbens 17 
+
+connmean_noGS_mean putamen 83 
+
+connmean_noGS_mean putamen 5 
+
+vol_mean cerebellar-hemisphere 28 
+
+vol_mean nucleus-accumbens 89 
+
+reho_noGS_mean caudate 23 
+
+reho_noGS_mean caudate 81 
+
+reho_noGS_mean nucleus-accumbens 14 
+
+reho_noGS_mean putamen 99 
+
+connmean_noGS_mean putamen 17 
+
+vol_mean cerebellar-hemisphere 0 
+
+reho_noGS_mean nucleus-accumbens 69 
+
+reho_noGS_mean nucleus-accumbens 65 
+
+vol_mean putamen 43 
+
+vol_mean putamen 7 
+
+alff_mean nucleus-accumbens 81 
+
+connmean_noGS_mean nucleus-accumbens 13 
+
+reho_noGS_mean caudate 73 
+
+alff_mean nucleus-accumbens 90 
+
+alff_mean nucleus-accumbens 72 
+
+reho_noGS_mean nucleus-accumbens 41 
+
+connmean_noGS_mean putamen 53 
+
+connmean_noGS_mean nucleus-accumbens 69 
+
+alff_mean nucleus-accumbens 35 
+
+alff_mean putamen 63 
+
+connmean_noGS_mean putamen 65 
+
+vol_mean dlpfc 3 
+
+reho_noGS_mean caudate 97 
+
+connmean_noGS_mean nucleus-accumbens 2 
+
+alff_mean putamen 83 
+
+vol_mean caudate 7 
+
+connmean_noGS_mean nucleus-accumbens 26 
+
+alff_mean nucleus-accumbens 84 
+
+reho_noGS_mean caudate 7 
+
+reho_noGS_mean nucleus-accumbens 37 
+
+reho_noGS_mean caudate 19 
+
+reho_noGS_mean nucleus-accumbens 0 
+
+alff_mean nucleus-accumbens 76 
+
+connmean_noGS_mean putamen 77 
+
+connmean_noGS_mean nucleus-accumbens 40 
+
+reho_noGS_mean nucleus-accumbens 8 
+
+connmean_noGS_mean putamen 69 
+
+vol_mean putamen 31 
+
+connmean_noGS_mean nucleus-accumbens 60 
+
+connmean_noGS_mean nucleus-accumbens 44 
+
+vol_mean cerebellar-hemisphere 24 
+
+connmean_noGS_mean putamen 89 
+
+reho_noGS_mean caudate 65 
+
+vol_mean caudate 39 
+
+vol_mean cerebellar-hemisphere 52 
+
+alff_mean nucleus-accumbens 98 
+
+reho_noGS_mean nucleus-accumbens 48 
+
+alff_mean nucleus-accumbens 6 
+
+connmean_noGS_mean nucleus-accumbens 30 
+
+alff_mean nucleus-accumbens 92 
+
+alff_mean nucleus-accumbens 47 
+
+connmean_noGS_mean nucleus-accumbens 20 
+
+vol_mean putamen 99 
+
+alff_mean putamen 6 
+
+reho_noGS_mean nucleus-accumbens 20 
+
+alff_mean putamen 18 
+
+reho_noGS_mean nucleus-accumbens 62 
+
+reho_noGS_mean caudate 27 
+
+connmean_noGS_mean nucleus-accumbens 36 
+
+vol_mean cerebellar-hemisphere 36 
+
+reho_noGS_mean nucleus-accumbens 30 
+
+connmean_noGS_mean nucleus-accumbens 6 
+
+connmean_noGS_mean nucleus-accumbens 88 
+
+reho_noGS_mean nucleus-accumbens 44 
+
+reho_noGS_mean nucleus-accumbens 6 
+
+connmean_noGS_mean putamen 93 
+
+connmean_noGS_mean putamen 97 
+
+vol_mean nucleus-accumbens 51 
+
+reho_noGS_mean nucleus-accumbens 52 
+
+connmean_noGS_mean nucleus-accumbens 84 
+
+connmean_noGS_mean nucleus-accumbens 72 
+
+connmean_noGS_mean nucleus-accumbens 92 
+
+alff_mean cerebellar-hemisphere 48 
+
+connmean_noGS_mean nucleus-accumbens 18 
+
+connmean_noGS_mean nucleus-accumbens 27 
+
+reho_noGS_mean caudate 63 
+
+alff_mean cerebellar-hemisphere 36 
+
+alff_mean putamen 30 
+
+reho_noGS_mean nucleus-accumbens 76 
+
+connmean_noGS_mean nucleus-accumbens 3 
+
+reho_noGS_mean nucleus-accumbens 15 
+
+vol_mean caudate 59 
+
+vol_mean cerebellar-hemisphere 64 
+
+reho_noGS_mean nucleus-accumbens 85 
+
+alff_mean nucleus-accumbens 1 
+
+reho_noGS_mean nucleus-accumbens 88 
+
+vol_mean nucleus-accumbens 27 
+
+connmean_noGS_mean nucleus-accumbens 70 
+
+vol_mean cerebellar-hemisphere 48 
+
+reho_noGS_mean nucleus-accumbens 17 
+
+connmean_noGS_mean nucleus-accumbens 8 
+
+alff_mean nucleus-accumbens 26 
+
+reho_noGS_mean nucleus-accumbens 97 
+
+reho_noGS_mean putamen 30 
+
+vol_mean caudate 43 
+
+alff_mean putamen 78 
+
+connmean_noGS_mean putamen 11 
+
+vol_mean caudate 51 
+
+vol_mean caudate 75 
+
+vol_mean cerebellar-hemisphere 9 
+
+alff_mean nucleus-accumbens 62 
+
+reho_noGS_mean nucleus-accumbens 25 
+
+vol_mean cerebellar-hemisphere 29 
+
+reho_noGS_mean nucleus-accumbens 70 
+
+reho_noGS_mean nucleus-accumbens 66 
+
+alff_mean nucleus-accumbens 70 
+
+reho_noGS_mean nucleus-accumbens 33 
+
+alff_mean putamen 26 
+
+alff_mean nucleus-accumbens 91 
+
+connmean_noGS_mean nucleus-accumbens 14 
+
+alff_mean cerebellar-hemisphere 20 
+
+alff_mean cerebellar-hemisphere 84 
+
+alff_mean putamen 54 
+
+vol_mean cerebellar-hemisphere 96 
+
+connmean_noGS_mean caudate 3 
+
+connmean_noGS_mean nucleus-accumbens 31 
+
+alff_mean nucleus-accumbens 13 
+
+vol_mean caudate 99 
+
+connmean_noGS_mean nucleus-accumbens 49 
+
+connmean_noGS_mean nucleus-accumbens 57 
+
+alff_mean nucleus-accumbens 50 
+
+vol_mean cerebellar-hemisphere 1 
+
+alff_mean cerebellar-hemisphere 32 
+
+alff_mean cerebellar-hemisphere 28 
+
+vol_mean nucleus-accumbens 14 
+
+alff_mean nucleus-accumbens 9 
+
+alff_mean nucleus-accumbens 17 
+
+reho_noGS_mean nucleus-accumbens 57 
+
+connmean_noGS_mean nucleus-accumbens 52 
+
+connmean_noGS_mean nucleus-accumbens 32 
+
+reho_noGS_mean caudate 91 
+
+reho_noGS_mean caudate 71 
+
+vol_mean nucleus-accumbens 54 
+
+reho_noGS_mean nucleus-accumbens 42 
+
+alff_mean cerebellar-hemisphere 49 
+
+alff_mean nucleus-accumbens 41 
+
+alff_mean cerebellar-hemisphere 0 
+
+reho_noGS_mean nucleus-accumbens 63 
+
+alff_mean putamen 98 
+
+connmean_noGS_mean nucleus-accumbens 64 
+
+alff_mean putamen 10 
+
+connmean_noGS_mean nucleus-accumbens 7 
+
+alff_mean putamen 22 
+
+reho_noGS_mean caudate 51 
+
+alff_mean putamen 2 
+
+reho_noGS_mean nucleus-accumbens 38 
+
+alff_mean nucleus-accumbens 82 
+
+connmean_noGS_mean caudate 19 
+
+alff_mean cerebellar-hemisphere 68 
+
+connmean_noGS_mean nucleus-accumbens 76 
+
+reho_noGS_mean cerebellar-hemisphere 0 
+
+reho_noGS_mean nucleus-accumbens 73 
+
+reho_noGS_mean nucleus-accumbens 31 
+
+alff_mean nucleus-accumbens 99 
+
+connmean_noGS_mean caudate 11 
+
+connmean_noGS_mean caudate 31 
+
+connmean_noGS_mean caudate 7 
+
+alff_mean cerebellar-hemisphere 12 
+
+connmean_noGS_mean caudate 23 
+
+alff_mean cerebellar-hemisphere 72 
+
+alff_mean nucleus-accumbens 21 
+
+alff_mean putamen 66 
+
+vol_mean nucleus-accumbens 58 
+
+connmean_noGS_mean nucleus-accumbens 19 
+
+reho_noGS_mean nucleus-accumbens 81 
+
+reho_noGS_mean nucleus-accumbens 7 
+
+vol_mean cerebellar-hemisphere 56 
+
+alff_mean nucleus-accumbens 57 
+
+alff_mean cerebellar-hemisphere 4 
+
+vol_mean cerebellar-hemisphere 53 
+
+alff_mean putamen 14 
+
+alff_mean cerebellar-hemisphere 24 
+
+connmean_noGS_mean nucleus-accumbens 80 
+
+alff_mean cerebellar-hemisphere 37 
+
+reho_noGS_mean cerebellar-hemisphere 12 
+
+reho_noGS_mean putamen 62 
+
+alff_mean cerebellar-hemisphere 40 
+
+reho_noGS_mean cerebellar-hemisphere 8 
+
+vol_mean nucleus-accumbens 1 
+
+alff_mean cerebellar-hemisphere 16 
+
+connmean_noGS_mean nucleus-accumbens 71 
+
+connmean_noGS_mean nucleus-accumbens 96 
+
+alff_mean nucleus-accumbens 53 
+
+alff_mean putamen 42 
+
+connmean_noGS_mean caudate 55 
+
+alff_mean cerebellar-hemisphere 85 
+
+alff_mean nucleus-accumbens 65 
+
+vol_mean nucleus-accumbens 37 
+
+vol_mean nucleus-accumbens 29 
+
+vol_mean putamen 54 
+
+vol_mean nucleus-accumbens 98 
+
+alff_mean nucleus-accumbens 29 
+
+alff_mean putamen 34 
+
+vol_mean nucleus-accumbens 21 
+
+vol_mean cerebellar-hemisphere 25 
+
+vol_mean nucleus-accumbens 17 
+
+vol_mean putamen 46 
+
+alff_mean putamen 50 
+
+alff_mean nucleus-accumbens 7 
+
+vol_mean nucleus-accumbens 33 
+
+alff_mean cerebellar-hemisphere 76 
+
+reho_noGS_mean cerebellar-hemisphere 40 
+
+alff_mean cerebellar-hemisphere 92 
+
+alff_mean cerebellar-hemisphere 44 
+
+vol_mean nucleus-accumbens 9 
+
+alff_mean cerebellar-hemisphere 96 
+
+alff_mean cerebellar-hemisphere 50 
+
+connmean_noGS_mean caudate 63 
+
+alff_mean putamen 70 
+
+vol_mean putamen 70 
+
+alff_mean cerebellar-hemisphere 60 
+
+alff_mean cerebellar-hemisphere 52 
+
+connmean_noGS_mean caudate 39 
+
+alff_mean nucleus-accumbens 37 
+
+reho_noGS_mean cerebellar-hemisphere 48 
+
+connmean_noGS_mean caudate 47 
+
+vol_mean cerebellar-hemisphere 37 
+
+vol_mean putamen 86 
+
+vol_mean nucleus-accumbens 45 
+
+vol_mean nucleus-accumbens 65 
+
+reho_noGS_mean nucleus-accumbens 71 
+
+vol_mean cerebellar-hemisphere 10 
+
+vol_mean nucleus-accumbens 90 
+
+reho_noGS_mean cerebellar-hemisphere 64 
+
+reho_noGS_mean nucleus-accumbens 67 
+
+vol_mean putamen 62 
+
+connmean_noGS_mean caudate 75 
+
+vol_mean putamen 66 
+
+alff_mean putamen 90 
+
+vol_mean cerebellar-hemisphere 30 
+
+connmean_noGS_mean nucleus-accumbens 15 
+
+vol_mean nucleus-accumbens 69 
+
+connmean_noGS_mean caudate 67 
+
+vol_mean nucleus-accumbens 41 
+
+reho_noGS_mean cerebellar-hemisphere 4 
+
+alff_mean cerebellar-hemisphere 88 
+
+reho_noGS_mean nucleus-accumbens 86 
+
+reho_noGS_mean cerebellar-hemisphere 1 
+
+vol_mean putamen 94 
+
+vol_mean putamen 90 
+
+vol_mean cerebellar-hemisphere 2 
+
+reho_noGS_mean cerebellar-hemisphere 20 
+
+alff_mean putamen 94 
+
+alff_mean cerebellar-hemisphere 21 
+
+alff_mean cerebellar-hemisphere 64 
+
+reho_noGS_mean cerebellar-hemisphere 80 
+
+reho_noGS_mean nucleus-accumbens 98 
+
+vol_mean nucleus-accumbens 85 
+
+reho_noGS_mean cerebellar-hemisphere 84 
+
+alff_mean nucleus-accumbens 27 
+
+connmean_noGS_mean nucleus-accumbens 61 
+
+alff_mean cerebellar-hemisphere 86 
+
+vol_mean nucleus-accumbens 77 
+
+alff_mean nucleus-accumbens 63 
+
+vol_mean putamen 78 
+
+vol_mean nucleus-accumbens 73 
+
+vol_mean nucleus-accumbens 61 
+
+vol_mean putamen 82 
+
+alff_mean nucleus-accumbens 71 
+
+vol_mean cerebellar-hemisphere 65 
+
+connmean_noGS_mean cerebellar-hemisphere 8 
+
+reho_noGS_mean putamen 1 
+
+vol_mean cerebellar-hemisphere 97 
+
+reho_noGS_mean cerebellar-hemisphere 68 
+
+reho_noGS_mean cerebellar-hemisphere 9 
+
+connmean_noGS_mean cerebellar-hemisphere 4 
+
+connmean_noGS_mean nucleus-accumbens 45 
+
+alff_mean cerebellar-hemisphere 33 
+
+reho_noGS_mean cerebellar-hemisphere 13 
+
+alff_mean cerebellar-hemisphere 29 
+
+alff_mean cerebellar-hemisphere 38 
+
+alff_mean cerebellar-hemisphere 51 
+
+vol_mean nucleus-accumbens 93 
+
+connmean_noGS_mean nucleus-accumbens 41 
+
+connmean_noGS_mean nucleus-accumbens 50 
+
+reho_noGS_mean nucleus-accumbens 18 
+
+connmean_noGS_mean nucleus-accumbens 58 
+
+reho_noGS_mean nucleus-accumbens 43 
+
+connmean_noGS_mean cerebellar-hemisphere 12 
+
+alff_mean cerebellar-hemisphere 80 
+
+vol_mean nucleus-accumbens 81 
+
+connmean_noGS_mean putamen 50 
+
+reho_noGS_mean nucleus-accumbens 39 
+
+reho_noGS_mean putamen 21 
+
+reho_noGS_mean cerebellar-hemisphere 41 
+
+reho_noGS_mean nucleus-accumbens 92 
+
+reho_noGS_mean putamen 33 
+
+alff_mean nucleus-accumbens 51 
+
+vol_mean cerebellar-hemisphere 54 
+
+connmean_noGS_mean nucleus-accumbens 89 
+
+vol_mean cerebellar-hemisphere 49 
+
+connmean_noGS_mean nucleus-accumbens 21 
+
+reho_noGS_mean nucleus-accumbens 34 
+
+reho_noGS_mean putamen 17 
+
+connmean_noGS_mean nucleus-accumbens 85 
+
+alff_mean cerebellar-hemisphere 69 
+
+reho_noGS_mean nucleus-accumbens 26 
+
+alff_mean nucleus-accumbens 83 
+
+reho_noGS_mean cerebellar-hemisphere 49 
+
+alff_mean cerebellar-hemisphere 73 
+
+connmean_noGS_mean nucleus-accumbens 93 
+
+reho_noGS_mean cerebellar-hemisphere 2 
+
+reho_noGS_mean cerebellar-hemisphere 60 
+
+reho_noGS_mean putamen 69 
+
+connmean_noGS_mean cerebellar-hemisphere 36 
+
+alff_mean cerebellar-hemisphere 1 
+
+connmean_noGS_mean cerebellar-hemisphere 40 
+
+reho_noGS_mean nucleus-accumbens 58 
+
+connmean_noGS_mean nucleus-accumbens 37 
+
+reho_noGS_mean cerebellar-hemisphere 65 
+
+reho_noGS_mean putamen 45 
+
+reho_noGS_mean cerebellar-hemisphere 56 
+
+connmean_noGS_mean putamen 2 
+
+connmean_noGS_mean nucleus-accumbens 73 
+
+alff_mean cerebellar-hemisphere 87 
+
+vol_mean caudate 15 
+
+reho_noGS_mean cerebellar-hemisphere 28 
+
+reho_noGS_mean cerebellar-hemisphere 72 
+
+connmean_noGS_mean cerebellar-hemisphere 68 
+
+connmean_noGS_mean cerebellar-hemisphere 20 
+
+reho_noGS_mean putamen 9 
+
+reho_noGS_mean nucleus-accumbens 49 
+
+vol_mean putamen 58 
+
+reho_noGS_mean putamen 73 
+
+vol_mean nucleus-accumbens 15 
+
+reho_noGS_mean nucleus-accumbens 74 
+
+reho_noGS_mean cerebellar-hemisphere 85 
+
+reho_noGS_mean cerebellar-hemisphere 81 
+
+vol_mean cerebellar-hemisphere 26 
+
+connmean_noGS_mean putamen 66 
+
+connmean_noGS_mean putamen 54 
+
+alff_mean cerebellar-hemisphere 97 
+
+alff_mean cerebellar-hemisphere 93 
+
+vol_mean cerebellar-hemisphere 11 
+
+alff_mean cerebellar-hemisphere 13 
+
+vol_mean cerebellar-hemisphere vol_mean31  
+cerebellar-hemisphere
+ 3 
+
+vol_mean caudate 31 
+
+vol_mean caudate 3 
+
+connmean_noGS_mean putamen 78 
+
+connmean_noGS_mean cerebellar-hemisphere 48 
+
+reho_noGS_mean cerebellar-hemisphere 14 
+
+reho_noGS_mean cerebellar-hemisphere 10 
+
+connmean_noGS_mean cerebellar-hemisphere 9 
+
+vol_mean putamen 74 
+
+alff_mean cerebellar-hemisphere 41 
+
+alff_mean putamen 7 
+
+alff_mean cerebellar-hemisphere 25 
+
+vol_mean caudate 67 
+
+vol_mean nucleus-accumbens 55 
+
+alff_mean nucleus-accumbens 2 
+
+alff_mean putamen 19 
+
+connmean_noGS_mean cerebellar-hemisphere 5 
+
+connmean_noGS_mean putamen 6 
+
+reho_noGS_mean nucleus-accumbens 82 
+
+reho_noGS_mean nucleus-accumbens 45 
+
+reho_noGS_mean nucleus-accumbens 9 
+
+reho_noGS_mean cerebellar-hemisphere 16 
+
+alff_mean alff_mean cerebellar-hemisphere cerebellar-hemisphere39  
+
+5 
+
+alff_mean nucleus-accumbens 85 
+
+vol_mean caudate 23 
+
+reho_noGS_mean cerebellar-hemisphere 42 
+
+vol_mean caudate 35 
+
+connmean_noGS_mean putamen 18 
+
+reho_noGS_mean cerebellar-hemisphere 36 
+
+connmean_noGS_mean cerebellar-hemisphere 64 
+
+reho_noGS_mean cerebellar-hemisphere 69 
+
+connmean_noGS_mean putamen 70 
+
+connmean_noGS_mean cerebellar-hemisphere 56 
+
+connmean_noGS_mean cerebellar-hemisphere 13 
+
+vol_mean cerebellar-hemisphere 38 
+
+alff_mean cerebellar-hemisphere 17 
+
+vol_mean caudate 47 
+
+reho_noGS_mean caudate 2 
+
+reho_noGS_mean cerebellar-hemisphere 24 
+
+connmean_noGS_mean putamen 90 
+
+reho_noGS_mean nucleus-accumbens 1 
+
+reho_noGS_mean putamen 31 
+
+connmean_noGS_mean cerebellar-hemisphere 60 
+
+reho_noGS_mean nucleus-accumbens 87 
+
+alff_mean nucleus-accumbens 73 
+
+reho_noGS_mean caudate 10 
+
+reho_noGS_mean cerebellar-hemisphere 32 
+
+alff_mean cerebellar-hemisphere 22 
+
+reho_noGS_mean cerebellar-hemisphere 3 
+
+reho_noGS_mean cerebellar-hemisphere 5 
+
+reho_noGS_mean nucleus-accumbens 53 
+
+vol_mean nucleus-accumbens 59 
+
+alff_mean putamen 31 
+
+reho_noGS_mean cerebellar-hemisphere 21 
+
+reho_noGS_mean nucleus-accumbens 89 
+
+alff_mean cerebellar-hemisphere 45 
+
+reho_noGS_mean nucleus-accumbens 21 
+
+reho_noGS_mean cerebellar-hemisphere 52 
+
+connmean_noGS_mean cerebellar-hemisphere 72 
+
+alff_mean cerebellar-hemisphere 77 
+
+connmean_noGS_mean putamen 98 
+
+vol_mean caudate 71 
+
+reho_noGS_mean cerebellar-hemisphere 50 
+
+alff_mean nucleus-accumbens 77 
+
+reho_noGS_mean nucleus-accumbens 99 
+
+connmean_noGS_mean cerebellar-hemisphere 69 
+
+vol_mean caudate 91 
+
+connmean_noGS_mean putamen 94 
+
+alff_mean cerebellar-hemisphere 34 
+
+connmean_noGS_mean cerebellar-hemisphere 88 
+
+alff_mean nucleus-accumbens 14 
+
+connmean_noGS_mean cerebellar-hemisphere 41 
+
+alff_mean cerebellar-hemisphere 53 
+
+reho_noGS_mean nucleus-accumbens 77 
+
+connmean_noGS_mean cerebellar-hemisphere 37 
+
+alff_mean putamen 79 
+
+alff_mean cerebellar-hemisphere 61 
+
+reho_noGS_mean cerebellar-hemisphere 66 
+
+alff_mean cerebellar-hemisphere 30 
+
+connmean_noGS_mean cerebellar-hemisphere 76 
+
+alff_mean cerebellar-hemisphere 8 
+
+alff_mean nucleus-accumbens 93 
+
+vol_mean cerebellar-hemisphere 98 
+
+alff_mean putamen 27 
+
+alff_mean cerebellar-hemisphere 89 
+
+vol_mean nucleus-accumbens 99 
+
+alff_mean nucleus-accumbens 18 
+
+alff_mean putamen 55 
+
+connmean_noGS_mean cerebellar-hemisphere 84 
+
+alff_mean nucleus-accumbens 10 
+
+vol_mean cerebellar-hemisphere 55 
+
+connmean_noGS_mean cerebellar-hemisphere 80 
+
+connmean_noGS_mean nucleus-accumbens 51 
+
+alff_mean nucleus-accumbens 42 
+
+vol_mean cerebellar-hemisphere 66 
+
+reho_noGS_mean caudate 46 
+
+reho_noGS_mean caudate 38 
+
+alff_mean cerebellar-hemisphere 56 
+
+connmean_noGS_mean nucleus-accumbens 59 
+
+connmean_noGS_mean nucleus-accumbens 9 
+
+reho_noGS_mean caudate 14 
+
+reho_noGS_mean cerebellar-hemisphere 86 
+
+alff_mean putamen 99 
+
+alff_mean cerebellar-hemisphere 70 
+
+alff_mean nucleus-accumbens 58 
+
+reho_noGS_mean cerebellar-hemisphere 15 
+
+reho_noGS_mean putamen 13 
+
+alff_mean putamen 11 
+
+alff_mean cerebellar-hemisphere 74 
+
+reho_noGS_mean caudate 58 
+
+reho_noGS_mean cerebellar-hemisphere 11 
+
+connmean_noGS_mean nucleus-accumbens 53 
+
+reho_noGS_mean cerebellar-hemisphere 82 
+
+vol_mean cerebellar-hemisphere 57 
+
+connmean_noGS_mean nucleus-accumbens 33 
+
+reho_noGS_mean cerebellar-hemisphere 44 
+
+alff_mean nucleus-accumbens 54 
+
+connmean_noGS_mean nucleus-accumbens 65 
+
+alff_mean putamen 23 
+
+reho_noGS_mean putamen 37 
+
+alff_mean putamen 3 
+
+connmean_noGS_mean cerebellar-hemisphere 6 
+
+reho_noGS_mean nucleus-accumbens 19 
+
+connmean_noGS_mean nucleus-accumbens 77 
+
+vol_mean nucleus-accumbens 91 
+
+connmean_noGS_mean cerebellar-hemisphere 10 
+
+reho_noGS_mean cerebellar-hemisphere 43 
+
+reho_noGS_mean cerebellar-hemisphere 61 
+
+reho_noGS_mean putamen 25 
+
+reho_noGS_mean putamen 63 
+
+reho_noGS_mean putamen 57 
+
+reho_noGS_mean caudate 30 
+
+alff_mean cerebellar-hemisphere 65 
+
+connmean_noGS_mean cerebellar-hemisphere 70 
+
+alff_mean nucleus-accumbens 22 
+
+alff_mean putamen 67 
+
+reho_noGS_mean putamen 41 
+
+alff_mean putamen 15 
+
+connmean_noGS_mean cerebellar-hemisphere 21 
+
+connmean_noGS_mean nucleus-accumbens 46 
+
+alff_mean cerebellar-hemisphere 2 
+
+connmean_noGS_mean cerebellar-hemisphere 89 
+
+alff_mean nucleus-accumbens 66 
+
+reho_noGS_mean nucleus-accumbens 35 
+
+alff_mean cerebellar-hemisphere 98 
+
+connmean_noGS_mean nucleus-accumbens 62 
+
+alff_mean putamen 43 
+
+reho_noGS_mean nucleus-accumbens 27 
+
+reho_noGS_mean putamen 5 
+
+connmean_noGS_mean cerebellar-hemisphere 65 
+
+connmean_noGS_mean cerebellar-hemisphere 14 
+
+alff_mean cerebellar-hemisphere 94 
+
+connmean_noGS_mean cerebellar-hemisphere 0 
+
+connmean_noGS_mean nucleus-accumbens 42 
+
+connmean_noGS_mean nucleus-accumbens 81 
+
+reho_noGS_mean cerebellar-hemisphere 70 
+
+alff_mean cerebellar-hemisphere 81 
+
+alff_mean nucleus-accumbens 30 
+
+alff_mean putamen 35 
+
+connmean_noGS_mean cerebellar-hemisphere 49 
+
+reho_noGS_mean cerebellar-hemisphere 57 
+
+reho_noGS_mean caudate 54 
+
+connmean_noGS_mean nucleus-accumbens 97 
+
+reho_noGS_mean caudate 42 
+
+reho_noGS_mean cerebellar-hemisphere 76 
+
+alff_mean putamen 71 
+
+connmean_noGS_mean nucleus-accumbens 90 
+
+alff_mean putamen 51 
+
+reho_noGS_mean putamen 93 
+
+connmean_noGS_mean cerebellar-hemisphere 16 
+
+reho_noGS_mean putamen 65 
+
+connmean_noGS_mean cerebellar-hemisphere 42 
+
+reho_noGS_mean cerebellar-hemisphere 51 
+
+reho_noGS_mean cerebellar-hemisphere 96 
+
+reho_noGS_mean caudate 82 
+
+reho_noGS_mean cerebellar-hemisphere 92 
+
+connmean_noGS_mean nucleus-accumbens 86 
+
+connmean_noGS_mean nucleus-accumbens 22 
+
+reho_noGS_mean cerebellar-hemisphere 67 
+
+alff_mean putamen 91 
+
+connmean_noGS_mean cerebellar-hemisphere 24 
+
+reho_noGS_mean cerebellar-hemisphere 88 
+
+reho_noGS_mean cerebellar-hemisphere 73 
+
+connmean_noGS_mean nucleus-accumbens 94 
+
+connmean_noGS_mean cerebellar-hemisphere 38 
+
+alff_mean cerebellar-hemisphere 35 
+
+alff_mean nucleus-accumbens 38 
+
+vol_mean putamen 55 
+
+connmean_noGS_mean cerebellar-hemisphere 73 
+
+vol_mean cerebellar-hemisphere 50 
+
+connmean_noGS_mean cerebellar-hemisphere 28 
+
+connmean_noGS_mean cerebellar-hemisphere 61 
+
+alff_mean cerebellar-hemisphere 23 
+
+reho_noGS_mean putamen 53 
+
+connmean_noGS_mean nucleus-accumbens 74 
+
+connmean_noGS_mean cerebellar-hemisphere 32 
+
+alff_mean putamen 95 
+
+connmean_noGS_mean cerebellar-hemisphere 96 
+
+reho_noGS_mean nucleus-accumbens 59 
+
+reho_noGS_mean caudate 74 
+
+alff_mean cerebellar-hemisphere 42 
+
+vol_mean cerebellar-hemisphere 27 
+
+vol_mean cerebellar-hemisphere 12 
+
+connmean_noGS_mean nucleus-accumbens 38 
+
+alff_mean cerebellar-hemisphere 26 
+
+reho_noGS_mean cerebellar-hemisphere 29 
+
+alff_mean cerebellar-hemisphere 14 
+
+connmean_noGS_mean cerebellar-hemisphere 52 
+
+connmean_noGS_mean cerebellar-hemisphere 71 
+
+connmean_noGS_mean cerebellar-hemisphere 57 
+
+connmean_noGS_mean cerebellar-hemisphere 77 
+
+vol_mean cerebellar-hemisphere 16 
+
+vol_mean cerebellar-hemisphere 4 
+
+vol_mean putamen 47 
+
+reho_noGS_mean nucleus-accumbens 75 
+
+connmean_noGS_mean cerebellar-hemisphere 44 
+
+vol_mean nucleus-accumbens 30 
+
+vol_mean nucleus-accumbens 2 
+
+reho_noGS_mean cerebellar-hemisphere 22 
+
+vol_mean putamen 63 
+
+reho_noGS_mean cerebellar-hemisphere 87 
+
+vol_mean nucleus-accumbens 10 
+
+vol_mean putamen 71 
+
+vol_mean cerebellar-hemisphere 32 
+
+vol_mean nucleus-accumbens 46 
+
+vol_mean nucleus-accumbens 38 
+
+alff_mean cerebellar-hemisphere 78 
+
+vol_mean cerebellar-hemisphere 44 
+
+vol_mean nucleus-accumbens 22 
+
+reho_noGS_mean caudate 98 
+
+connmean_noGS_mean cerebellar-hemisphere 90 
+
+connmean_noGS_mean putamen 51 
+
+vol_mean putamen 87 
+
+connmean_noGS_mean cerebellar-hemisphere 85 
+
+vol_mean nucleus-accumbens 18 
+
+vol_mean cerebellar-hemisphere 40 
+
+alff_mean cerebellar-hemisphere 6 
+
+alff_mean cerebellar-hemisphere 31 
+
+vol_mean cerebellar-hemisphere 20 
+
+vol_mean nucleus-accumbens 34 
+
+vol_mean cerebellar-hemisphere 99 
+
+vol_mean putamen 91 
+
+connmean_noGS_mean cerebellar-hemisphere 7 
+
+alff_mean cerebellar-hemisphere 46 
+
+reho_noGS_mean cerebellar-hemisphere 6 
+
+connmean_noGS_mean cerebellar-hemisphere 11 
+
+alff_mean cerebellar-hemisphere 75 
+
+reho_noGS_mean cerebellar-hemisphere 83 
+
+connmean_noGS_mean cerebellar-hemisphere 81 
+
+vol_mean putamen 67 
+
+alff_mean cerebellar-hemisphere 18 
+
+alff_mean cerebellar-hemisphere 90 
+
+vol_mean cerebellar-hemisphere 39 
+
+vol_mean putamen 95 
+
+vol_mean putamen 83 
+
+vol_mean nucleus-accumbens 74 
+
+vol_mean nucleus-accumbens 62 
+
+reho_noGS_mean caudate 66 
+
+vol_mean cerebellar-hemisphere 60 
+
+connmean_noGS_mean cerebellar-hemisphere 66 
+
+connmean_noGS_mean cerebellar-hemisphere 92 
+
+vol_mean nucleus-accumbens 70 
+
+connmean_noGS_mean cerebellar-hemisphere 22 
+
+vol_mean nucleus-accumbens 66 
+
+reho_noGS_mean cerebellar-hemisphere 71 
+
+reho_noGS_mean nucleus-accumbens 83 
+
+connmean_noGS_mean putamen 3 
+
+vol_mean nucleus-accumbens 42 
+
+vol_mean cerebellar-hemisphere 72 
+
+vol_mean nucleus-accumbens 78 
+
+alff_mean cerebellar-hemisphere 95 
+
+vol_mean putamen 79 
+
+connmean_noGS_mean putamen 55 
+
+alff_mean cerebellar-hemisphere 71 
+
+connmean_noGS_mean cerebellar-hemisphere 15 
+
+vol_mean cerebellar-hemisphere 68 
+
+alff_mean cerebellar-hemisphere 54 
+
+reho_noGS_mean cerebellar-hemisphere 62 
+
+connmean_noGS_mean putamen 79 
+
+connmean_noGS_mean putamen 67 
+
+reho_noGS_mean cerebellar-hemisphere 53 
+
+connmean_noGS_mean cerebellar-hemisphere 43 
+
+vol_mean cerebellar-hemisphere 76 
+
+vol_mean nucleus-accumbens 86 
+
+alff_mean cerebellar-hemisphere 99 
+
+connmean_noGS_mean cerebellar-hemisphere 50 
+
+alff_mean cerebellar-hemisphere 62 
+
+connmean_noGS_mean putamen 71 
+
+connmean_noGS_mean cerebellar-hemisphere 91 
+
+vol_mean cerebellar-hemisphere 80 
+
+vol_mean nucleus-accumbens 82 
+
+connmean_noGS_mean putamen 91 
+
+connmean_noGS_mean cerebellar-hemisphere 39 
+
+vol_mean nucleus-accumbens 94 
+
+reho_noGS_mean cerebellar-hemisphere 17 
+
+alff_mean cerebellar-hemisphere 3 
+
+connmean_noGS_mean putamen 95 
+
+connmean_noGS_mean cerebellar-hemisphere 74 
+
+connmean_noGS_mean putamen 7 
+
+reho_noGS_mean cerebellar-hemisphere 33 
+
+connmean_noGS_mean putamen 19 
+
+vol_mean cerebellar-hemisphere 84 
+
+connmean_noGS_mean nucleus-accumbens 47 
+
+vol_mean cerebellar-hemisphere 67 
+
+alff_mean nucleus-accumbens 3 
+
+reho_noGS_mean cerebellar-hemisphere 37 
+
+connmean_noGS_mean putamen 99 
+
+reho_noGS_mean cerebellar-hemisphere 58 
+
+connmean_noGS_mean cerebellar-hemisphere 62 
+
+reho_noGS_mean cerebellar-hemisphere 25 
+
+connmean_noGS_mean nucleus-accumbens 43 
+
+reho_noGS_mean nucleus-accumbens 50 
+
+reho_noGS_mean nucleus-accumbens 90 
+
+vol_mean cerebellar-hemisphere 88 
+
+alff_mean cerebellar-hemisphere 82 
+
+vol_mean cerebellar-hemisphere 92 
+
+connmean_noGS_mean cerebellar-hemisphere 78 
+
+alff_mean cerebellar-hemisphere 66 
+
+connmean_noGS_mean nucleus-accumbens 63 
+
+connmean_noGS_mean cerebellar-hemisphere 86 
+
+connmean_noGS_mean cerebellar-hemisphere 58 
+
+connmean_noGS_mean nucleus-accumbens 10 
+
+connmean_noGS_mean cerebellar-hemisphere 67 
+
+alff_mean cerebellar-hemisphere 79 
+
+vol_mean putamen 59 
+
+reho_noGS_mean nucleus-accumbens 54 
+
+alff_mean cerebellar-hemisphere 15 
+
+connmean_noGS_mean nucleus-accumbens 54 
+
+alff_mean cerebellar-hemisphere 43 
+
+connmean_noGS_mean cerebellar-hemisphere 97 
+
+vol_mean putamen 75 
+
+alff_mean cerebellar-hemisphere 27 
+
+reho_noGS_mean nucleus-accumbens 46 
+
+connmean_noGS_mean nucleus-accumbens 34 
+
+connmean_noGS_mean nucleus-accumbens 91 
+
+alff_mean cerebellar-hemisphere 9 
+
+reho_noGS_mean nucleus-accumbens 10 
+
+alff_mean nucleus-accumbens 15 
+
+alff_mean cerebellar-hemisphere 47 
+
+connmean_noGS_mean nucleus-accumbens 87 
+
+connmean_noGS_mean nucleus-accumbens 23 
+
+reho_noGS_mean cerebellar-hemisphere 74 
+
+reho_noGS_mean cerebellar-hemisphere 23 
+
+reho_noGS_mean nucleus-accumbens 2 
+
+connmean_noGS_mean nucleus-accumbens 66 
+
+alff_mean cerebellar-hemisphere 91 
+
+connmean_noGS_mean nucleus-accumbens 95 
+
+connmean_noGS_mean cerebellar-hemisphere 82 
+
+reho_noGS_mean cerebellar-hemisphere 30 
+
+connmean_noGS_mean nucleus-accumbens 78 
+
+alff_mean nucleus-accumbens 94 
+
+connmean_noGS_mean nucleus-accumbens 82 
+
+reho_noGS_mean nucleus-accumbens 22 
+
+connmean_noGS_mean nucleus-accumbens 39 
+
+alff_mean cerebellar-hemisphere 7 
+
+alff_mean nucleus-accumbens 43 
+
+alff_mean nucleus-accumbens 86 
+
+reho_noGS_mean cerebellar-hemisphere 7 
+
+connmean_noGS_mean nucleus-accumbens 75 
+
+alff_mean nucleus-accumbens 74 
+
+alff_mean nucleus-accumbens 19 
+
+connmean_noGS_mean cerebellar-hemisphere 23 
+
+reho_noGS_mean cerebellar-hemisphere 63 
+
+alff_mean cerebellar-hemisphere 57 
+
+connmean_noGS_mean cerebellar-hemisphere 75 
+
+vol_mean cerebellar-hemisphere 58 
+
+reho_noGS_mean putamen 46 
+
+alff_mean nucleus-accumbens 78 
+
+alff_mean cerebellar-hemisphere 19 
+
+alff_mean nucleus-accumbens 11 
+
+connmean_noGS_mean cerebellar-hemisphere 51 
+
+reho_noGS_mean nucleus-accumbens 93 
+
+reho_noGS_mean nucleus-accumbens 78 
+
+alff_mean nucleus-accumbens 59 
+
+alff_mean nucleus-accumbens 55 
+
+connmean_noGS_mean nucleus-accumbens 98 
+
+alff_mean cerebellar-hemisphere 55 
+
+vol_mean cerebellar-hemisphere 51 
+
+alff_mean nucleus-accumbens 67 
+
+reho_noGS_mean cerebellar-hemisphere 45 
+
+alff_mean nucleus-accumbens 23 
+
+connmean_noGS_mean cerebellar-hemisphere 17 
+
+connmean_noGS_mean cerebellar-hemisphere 1 
+
+connmean_noGS_mean cerebellar-hemisphere 25 
+
+alff_mean nucleus-accumbens 31 
+
+alff_mean cerebellar-hemisphere 63 
+
+connmean_noGS_mean cerebellar-hemisphere 63 
+
+reho_noGS_mean putamen 2 
+
+connmean_noGS_mean cerebellar-hemisphere 79 
+
+reho_noGS_mean putamen 18 
+
+reho_noGS_mean cerebellar-hemisphere 59 
+
+reho_noGS_mean cerebellar-hemisphere 54 
+
+connmean_noGS_mean cerebellar-hemisphere 93 
+
+reho_noGS_mean cerebellar-hemisphere 89 
+
+reho_noGS_mean putamen 34 
+
+reho_noGS_mean caudate 3 
+
+connmean_noGS_mean cerebellar-hemisphere 53 
+
+reho_noGS_mean cerebellar-hemisphere 97 
+
+connmean_noGS_mean cerebellar-hemisphere 59 
+
+alff_mean nucleus-accumbens 39 
+
+connmean_noGS_mean cerebellar-hemisphere 29 
+
+alff_mean cerebellar-hemisphere 83 
+
+vol_mean nucleus-accumbens 47 
+
+vol_mean nucleus-accumbens 11 
+
+connmean_noGS_mean cerebellar-hemisphere 98 
+
+reho_noGS_mean putamen 22 
+
+connmean_noGS_mean cerebellar-hemisphere 83 
+
+connmean_noGS_mean cerebellar-hemisphere 33 
+
+vol_mean nucleus-accumbens 39 
+
+reho_noGS_mean cerebellar-hemisphere 31 
+
+connmean_noGS_mean cerebellar-hemisphere 87 
+
+alff_mean cerebellar-hemisphere 67 
+
+reho_noGS_mean cerebellar-hemisphere 38 
+
+reho_noGS_mean cerebellar-hemisphere 93 
+
+reho_noGS_mean cerebellar-hemisphere 77 
+
+vol_mean nucleus-accumbens 63 
+
+reho_noGS_mean putamen 74 
+
+vol_mean nucleus-accumbens 31 
+
+reho_noGS_mean cerebellar-hemisphere 18 
+
+reho_noGS_mean caudate 11 
+reho_noGS_mean
+ cerebellar-hemisphere 75 
+
+reho_noGS_mean putamen 70 
+
+reho_noGS_mean cerebellar-hemisphere 34 
+
+reho_noGS_mean putamen 10 
+
+connmean_noGS_mean cerebellar-hemisphere 45 
+
+vol_mean nucleus-accumbens 3 
+
+reho_noGS_mean nucleus-accumbens 91 
+
+vol_mean nucleus-accumbens 43 
+
+vol_mean nucleus-accumbens 67 
+
+reho_noGS_mean caudate 59 
+
+reho_noGS_mean cerebellar-hemisphere 26 
+
+vol_mean nucleus-accumbens 35 
+
+vol_mean nucleus-accumbens 19 
+
+vol_mean nucleus-accumbens 23 
+
+reho_noGS_mean caudate 15 
+
+connmean_noGS_mean nucleus-accumbens 11 
+
+vol_mean nucleus-accumbens 87 
+
+vol_mean nucleus-accumbens 71 
+
+alff_mean nucleus-accumbens 95 
+
+connmean_noGS_mean nucleus-accumbens 55 
+
+vol_mean nucleus-accumbens 79 
+
+reho_noGS_mean nucleus-accumbens 51 
+
+vol_mean nucleus-accumbens 75 
+
+connmean_noGS_mean nucleus-accumbens 35 
+
+reho_noGS_mean caudate 39 
+
+reho_noGS_mean caudate 47 
+
+vol_mean nucleus-accumbens 83 
+
+connmean_noGS_mean cerebellar-hemisphere 18 
+
+reho_noGS_mean caudate 31 
+
+reho_noGS_mean nucleus-accumbens 55 
+
+connmean_noGS_mean cerebellar-hemisphere 26 
+
+connmean_noGS_mean nucleus-accumbens 67 
+
+connmean_noGS_mean cerebellar-hemisphere 99 
+
+reho_noGS_mean caudate 83 
+
+reho_noGS_mean nucleus-accumbens 23 
+
+reho_noGS_mean nucleus-accumbens 47 
+
+reho_noGS_mean cerebellar-hemisphere 55 
+
+reho_noGS_mean nucleus-accumbens 3 
+
+reho_noGS_mean caudate 55 
+
+vol_mean nucleus-accumbens 95 
+
+reho_noGS_mean putamen 38 
+
+connmean_noGS_mean cerebellar-hemisphere 2 
+
+reho_noGS_mean caudate 43 
+
+reho_noGS_mean nucleus-accumbens 79 
+
+connmean_noGS_mean nucleus-accumbens 79 
+
+connmean_noGS_mean nucleus-accumbens 83 
+
+connmean_noGS_mean cerebellar-hemisphere 94 
+
+reho_noGS_mean caudate 75 
+
+connmean_noGS_mean cerebellar-hemisphere 54 
+
+connmean_noGS_mean nucleus-accumbens 99 
+
+reho_noGS_mean putamen 6 
+
+reho_noGS_mean nucleus-accumbens 11 
+
+reho_noGS_mean cerebellar-hemisphere 39 
+
+reho_noGS_mean putamen 94 
+
+reho_noGS_mean putamen 58 
+
+reho_noGS_mean putamen 42 
+
+alff_mean cerebellar-hemisphere 10 
+
+reho_noGS_mean putamen 26 
+
+reho_noGS_mean cerebellar-hemisphere 90 
+
+reho_noGS_mean putamen 14 
+
+connmean_noGS_mean cerebellar-hemisphere 30 
+
+alff_mean nucleus-accumbens 79 
+
+connmean_noGS_mean cerebellar-hemisphere 34 
+
+reho_noGS_mean cerebellar-hemisphere 19 
+
+reho_noGS_mean cerebellar-hemisphere 46 
+
+reho_noGS_mean cerebellar-hemisphere 94 
+
+reho_noGS_mean cerebellar-hemisphere 98 
+
+connmean_noGS_mean cerebellar-hemisphere 46 
+
+reho_noGS_meanreho_noGS_mean  putamencerebellar-hemisphere  5478  
+
+
+
+alff_mean cerebellar-hemisphere 58 
+
+alff_mean nucleus-accumbens 75 
+
+reho_noGS_mean putamen 66 
+
+reho_noGS_mean nucleus-accumbens 94 
+
+reho_noGS_mean caudate 99 
+
+alff_mean nucleus-accumbens 87 
+
+reho_noGS_mean cerebellar-hemisphere 27 
+
+vol_mean cerebellar-hemisphere 17 
+
+reho_noGS_mean caudate 67 
+
+vol_mean cerebellar-hemisphere 33 
+
+reho_noGS_mean cerebellar-hemisphere 35 
+
+vol_mean cerebellar-hemisphere 59 
+
+vol_mean cerebellar-hemisphere 45 
+
+reho_noGS_mean putamen 47 
+
+vol_mean cerebellar-hemisphere 13 
+
+connmean_noGS_mean cerebellar-hemisphere 19 
+
+vol_mean cerebellar-hemisphere 41 
+
+connmean_noGS_mean cerebellar-hemisphere 27 
+
+vol_mean cerebellar-hemisphere 5 
+
+connmean_noGS_mean cerebellar-hemisphere 55 
+
+vol_mean cerebellar-hemisphere 77 
+
+connmean_noGS_mean cerebellar-hemisphere 95 
+
+vol_mean cerebellar-hemisphere 81 
+
+vol_mean cerebellar-hemisphere 73 
+
+vol_mean cerebellar-hemisphere 21 
+
+reho_noGS_mean cerebellar-hemisphere 91 
+
+connmean_noGS_mean cerebellar-hemisphere 31 
+
+vol_mean cerebellar-hemisphere 61 
+
+reho_noGS_mean putamen 11 
+
+reho_noGS_mean putamen 19 
+
+connmean_noGS_mean cerebellar-hemisphere 3 
+
+vol_mean cerebellar-hemisphere 85 
+
+connmean_noGS_mean cerebellar-hemisphere 35 
+
+reho_noGS_mean putamen 3 
+
+vol_mean cerebellar-hemisphere 89 
+
+reho_noGS_mean putamen 35 
+
+reho_noGS_mean putamen 23 
+
+vol_mean cerebellar-hemisphere 69 
+
+vol_mean cerebellar-hemisphere 93 
+
+reho_noGS_mean cerebellar-hemisphere 79 
+
+alff_mean cerebellar-hemisphere 11 
+
+reho_noGS_mean putamen 75 
+
+reho_noGS_mean cerebellar-hemisphere 95 
+
+reho_noGS_mean putamen 71 
+
+alff_mean cerebellar-hemisphere 59 
+
+connmean_noGS_mean cerebellar-hemisphere 47 
+
+reho_noGS_mean cerebellar-hemisphere 99 
+
+reho_noGS_mean putamen 95 
+
+reho_noGS_mean nucleus-accumbens 95 
+
+reho_noGS_mean putamen 27 
+
+reho_noGS_mean putamen 7 
+
+reho_noGS_mean putamen 43 
+
+vol_mean cerebellar-hemisphere 18 
+
+reho_noGS_mean putamen 59 
+
+reho_noGS_mean putamen 39 
+
+reho_noGS_mean cerebellar-hemisphere 47 
+
+vol_mean cerebellar-hemisphere 46 
+
+vol_mean cerebellar-hemisphere 82 
+
+vol_mean cerebellar-hemisphere 22 
+
+vol_mean cerebellar-hemisphere 14 
+
+reho_noGS_mean putamen 67 
+
+vol_mean cerebellar-hemisphere 78 
+
+vol_mean cerebellar-hemisphere 62 
+
+vol_mean cerebellar-hemisphere 90 
+
+reho_noGS_mean putamen 55 
+
+vol_mean cerebellar-hemisphere 94 
+
+vol_mean cerebellar-hemisphere 34 
+
+vol_mean cerebellar-hemisphere 74 
+
+reho_noGS_mean putamen 15 
+
+vol_mean cerebellar-hemisphere 86 
+
+vol_mean cerebellar-hemisphere 6 
+
+vol_mean cerebellar-hemisphere 19 
+
+vol_mean cerebellar-hemisphere 42 
+
+vol_mean cerebellar-hemisphere 70 
+
+vol_mean cerebellar-hemisphere 47 
+
+vol_mean cerebellar-hemisphere 83 
+
+vol_mean cerebellar-hemisphere 23 
+
+vol_mean cerebellar-hemisphere 91 
+
+vol_mean cerebellar-hemisphere 63 
+
+vol_mean cerebellar-hemisphere 35 
+
+vol_mean cerebellar-hemisphere 95 
+
+vol_mean cerebellar-hemisphere 75 
+
+vol_mean cerebellar-hemisphere 79 
+
+vol_mean cerebellar-hemisphere 15 
+
+vol_mean cerebellar-hemisphere 43 
+
+vol_mean cerebellar-hemisphere 71 
+
+vol_mean cerebellar-hemisphere 7 
+
+vol_mean cerebellar-hemisphere 87 
+
