@@ -1,0 +1,2722 @@
+[100] hippocampus
+[100] amygdala
+[100] caudate
+[100] nucleus-accumbens
+[100] putamen
+[100] cerebellar-hemisphere
+[100] anterior-cingulate
+[100] dlpfc
+[101] hippocampus
+[101] amygdala
+[101] caudate
+[101] nucleus-accumbens
+[101] putamen
+[101] cerebellar-hemisphere
+[101] anterior-cingulate
+[101] dlpfc
+[102] hippocampus
+[102] amygdala
+[102] caudate
+[102] nucleus-accumbens
+[102] putamen
+[102] cerebellar-hemisphere
+[102] anterior-cingulate
+[102] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 169.52896880498156 seconds
+[103] hippocampus
+[103] amygdala
+[103] caudate
+[103] nucleus-accumbens
+[103] putamen
+[103] cerebellar-hemisphere
+[103] anterior-cingulate
+[103] dlpfc
+[104] hippocampus
+[104] amygdala
+[104] caudate
+[104] nucleus-accumbens
+[104] putamen
+[104] cerebellar-hemisphere
+[104] anterior-cingulate
+[104] dlpfc
+[105] hippocampus
+[105] amygdala
+[105] caudate
+[105] nucleus-accumbens
+[105] putamen
+[105] cerebellar-hemisphere
+[105] anterior-cingulate
+[105] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 174.39791029004846 seconds
+[106] hippocampus
+[106] amygdala
+[106] caudate
+[106] nucleus-accumbens
+[106] putamen
+[106] cerebellar-hemisphere
+[106] anterior-cingulate
+[106] dlpfc
+[107] hippocampus
+[107] amygdala
+[107] caudate
+[107] nucleus-accumbens
+[107] putamen
+[107] cerebellar-hemisphere
+[107] anterior-cingulate
+[107] dlpfc
+[108] hippocampus
+[108] amygdala
+[108] caudate
+[108] nucleus-accumbens
+[108] putamen
+[108] cerebellar-hemisphere
+[108] anterior-cingulate
+[108] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 175.80437184497714 seconds
+[109] hippocampus
+[109] amygdala
+[109] caudate
+[109] nucleus-accumbens
+[109] putamen
+[109] cerebellar-hemisphere
+[109] anterior-cingulate
+[109] dlpfc
+[110] hippocampus
+[110] amygdala
+[110] caudate
+[110] nucleus-accumbens
+[110] putamen
+[110] cerebellar-hemisphere
+[110] anterior-cingulate
+[110] dlpfc
+[111] hippocampus
+[111] amygdala
+[111] caudate
+[111] nucleus-accumbens
+[111] putamen
+[111] cerebellar-hemisphere
+[111] anterior-cingulate
+[111] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 238.751082813018 seconds
+[112] hippocampus
+[112] amygdala
+[112] caudate
+[112] nucleus-accumbens
+[112] putamen
+[112] cerebellar-hemisphere
+[112] anterior-cingulate
+[112] dlpfc
+[113] hippocampus
+[113] amygdala
+[113] caudate
+[113] nucleus-accumbens
+[113] putamen
+[113] cerebellar-hemisphere
+[113] anterior-cingulate
+[113] dlpfc
+[114] hippocampus
+[114] amygdala
+[114] caudate
+[114] nucleus-accumbens
+[114] putamen
+[114] cerebellar-hemisphere
+[114] anterior-cingulate
+[114] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 201.6926099549746 seconds
+[115] hippocampus
+[115] amygdala
+[115] caudate
+[115] nucleus-accumbens
+[115] putamen
+[115] cerebellar-hemisphere
+[115] anterior-cingulate
+[115] dlpfc
+[116] hippocampus
+[116] amygdala
+[116] caudate
+[116] nucleus-accumbens
+[116] putamen
+[116] cerebellar-hemisphere
+[116] anterior-cingulate
+[116] dlpfc
+[117] hippocampus
+[117] amygdala
+[117] caudate
+[117] nucleus-accumbens
+[117] putamen
+[117] cerebellar-hemisphere
+[117] anterior-cingulate
+[117] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 210.40004012698773 seconds
+[118] hippocampus
+[118] amygdala
+[118] caudate
+[118] nucleus-accumbens
+[118] putamen
+[118] cerebellar-hemisphere
+[118] anterior-cingulate
+[118] dlpfc
+[119] hippocampus
+[119] amygdala
+[119] caudate
+[119] nucleus-accumbens
+[119] putamen
+[119] cerebellar-hemisphere
+[119] anterior-cingulate
+[119] dlpfc
+[120] hippocampus
+[120] amygdala
+[120] caudate
+[120] nucleus-accumbens
+[120] putamen
+[120] cerebellar-hemisphere
+[120] anterior-cingulate
+[120] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 231.24455058400054 seconds
+[121] hippocampus
+[121] amygdala
+[121] caudate
+[121] nucleus-accumbens
+[121] putamen
+[121] cerebellar-hemisphere
+[121] anterior-cingulate
+[121] dlpfc
+[122] hippocampus
+[122] amygdala
+[122] caudate
+[122] nucleus-accumbens
+[122] putamen
+[122] cerebellar-hemisphere
+[122] anterior-cingulate
+[122] dlpfc
+[123] hippocampus
+[123] amygdala
+[123] caudate
+[123] nucleus-accumbens
+[123] putamen
+[123] cerebellar-hemisphere
+[123] anterior-cingulate
+[123] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 256.0529559579445 seconds
+[124] hippocampus
+[124] amygdala
+[124] caudate
+[124] nucleus-accumbens
+[124] putamen
+[124] cerebellar-hemisphere
+[124] anterior-cingulate
+[124] dlpfc
+[125] hippocampus
+[125] amygdala
+[125] caudate
+[125] nucleus-accumbens
+[125] putamen
+[125] cerebellar-hemisphere
+[125] anterior-cingulate
+[125] dlpfc
+[126] hippocampus
+[126] amygdala
+[126] caudate
+[126] nucleus-accumbens
+[126] putamen
+[126] cerebellar-hemisphere
+[126] anterior-cingulate
+[126] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 218.11090387799777 seconds
+[127] hippocampus
+[127] amygdala
+[127] caudate
+[127] nucleus-accumbens
+[127] putamen
+[127] cerebellar-hemisphere
+[127] anterior-cingulate
+[127] dlpfc
+[128] hippocampus
+[128] amygdala
+[128] caudate
+[128] nucleus-accumbens
+[128] putamen
+[128] cerebellar-hemisphere
+[128] anterior-cingulate
+[128] dlpfc
+[129] hippocampus
+[129] amygdala
+[129] caudate
+[129] nucleus-accumbens
+[129] putamen
+[129] cerebellar-hemisphere
+[129] anterior-cingulate
+[129] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 247.63490841898602 seconds
+[130] hippocampus
+[130] amygdala
+[130] caudate
+[130] nucleus-accumbens
+[130] putamen
+[130] cerebellar-hemisphere
+[130] anterior-cingulate
+[130] dlpfc
+[131] hippocampus
+[131] amygdala
+[131] caudate
+[131] nucleus-accumbens
+[131] putamen
+[131] cerebellar-hemisphere
+[131] anterior-cingulate
+[131] dlpfc
+[132] hippocampus
+[132] amygdala
+[132] caudate
+[132] nucleus-accumbens
+[132] putamen
+[132] cerebellar-hemisphere
+[132] anterior-cingulate
+[132] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 240.99361539201345 seconds
+[133] hippocampus
+[133] amygdala
+[133] caudate
+[133] nucleus-accumbens
+[133] putamen
+[133] cerebellar-hemisphere
+[133] anterior-cingulate
+[133] dlpfc
+[134] hippocampus
+[134] amygdala
+[134] caudate
+[134] nucleus-accumbens
+[134] putamen
+[134] cerebellar-hemisphere
+[134] anterior-cingulate
+[134] dlpfc
+[135] hippocampus
+[135] amygdala
+[135] caudate
+[135] nucleus-accumbens
+[135] putamen
+[135] cerebellar-hemisphere
+[135] anterior-cingulate
+[135] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 205.65887615899555 seconds
+[136] hippocampus
+[136] amygdala
+[136] caudate
+[136] nucleus-accumbens
+[136] putamen
+[136] cerebellar-hemisphere
+[136] anterior-cingulate
+[136] dlpfc
+[137] hippocampus
+[137] amygdala
+[137] caudate
+[137] nucleus-accumbens
+[137] putamen
+[137] cerebellar-hemisphere
+[137] anterior-cingulate
+[137] dlpfc
+[138] hippocampus
+[138] amygdala
+[138] caudate
+[138] nucleus-accumbens
+[138] putamen
+[138] cerebellar-hemisphere
+[138] anterior-cingulate
+[138] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 210.37163534597494 seconds
+[139] hippocampus
+[139] amygdala
+[139] caudate
+[139] nucleus-accumbens
+[139] putamen
+[139] cerebellar-hemisphere
+[139] anterior-cingulate
+[139] dlpfc
+[140] hippocampus
+[140] amygdala
+[140] caudate
+[140] nucleus-accumbens
+[140] putamen
+[140] cerebellar-hemisphere
+[140] anterior-cingulate
+[140] dlpfc
+[141] hippocampus
+[141] amygdala
+[141] caudate
+[141] nucleus-accumbens
+[141] putamen
+[141] cerebellar-hemisphere
+[141] anterior-cingulate
+[141] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 247.58330042799935 seconds
+[142] hippocampus
+[142] amygdala
+[142] caudate
+[142] nucleus-accumbens
+[142] putamen
+[142] cerebellar-hemisphere
+[142] anterior-cingulate
+[142] dlpfc
+[143] hippocampus
+[143] amygdala
+[143] caudate
+[143] nucleus-accumbens
+[143] putamen
+[143] cerebellar-hemisphere
+[143] anterior-cingulate
+[143] dlpfc
+[144] hippocampus
+[144] amygdala
+[144] caudate
+[144] nucleus-accumbens
+[144] putamen
+[144] cerebellar-hemisphere
+[144] anterior-cingulate
+[144] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 191.13832144101616 seconds
+[145] hippocampus
+[145] amygdala
+[145] caudate
+[145] nucleus-accumbens
+[145] putamen
+[145] cerebellar-hemisphere
+[145] anterior-cingulate
+[145] dlpfc
+[146] hippocampus
+[146] amygdala
+[146] caudate
+[146] nucleus-accumbens
+[146] putamen
+[146] cerebellar-hemisphere
+[146] anterior-cingulate
+[146] dlpfc
+[147] hippocampus
+[147] amygdala
+[147] caudate
+[147] nucleus-accumbens
+[147] putamen
+[147] cerebellar-hemisphere
+[147] anterior-cingulate
+[147] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 239.21452368807513 seconds
+[148] hippocampus
+[148] amygdala
+[148] caudate
+[148] nucleus-accumbens
+[148] putamen
+[148] cerebellar-hemisphere
+[148] anterior-cingulate
+[148] dlpfc
+[149] hippocampus
+[149] amygdala
+[149] caudate
+[149] nucleus-accumbens
+[149] putamen
+[149] cerebellar-hemisphere
+[149] anterior-cingulate
+[149] dlpfc
+[150] hippocampus
+[150] amygdala
+[150] caudate
+[150] nucleus-accumbens
+[150] putamen
+[150] cerebellar-hemisphere
+[150] anterior-cingulate
+[150] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 241.13811439904384 seconds
+[151] hippocampus
+[151] amygdala
+[151] caudate
+[151] nucleus-accumbens
+[151] putamen
+[151] cerebellar-hemisphere
+[151] anterior-cingulate
+[151] dlpfc
+[152] hippocampus
+[152] amygdala
+[152] caudate
+[152] nucleus-accumbens
+[152] putamen
+[152] cerebellar-hemisphere
+[152] anterior-cingulate
+[152] dlpfc
+[153] hippocampus
+[153] amygdala
+[153] caudate
+[153] nucleus-accumbens
+[153] putamen
+[153] cerebellar-hemisphere
+[153] anterior-cingulate
+[153] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 204.63400025398005 seconds
+[154] hippocampus
+[154] amygdala
+[154] caudate
+[154] nucleus-accumbens
+[154] putamen
+[154] cerebellar-hemisphere
+[154] anterior-cingulate
+[154] dlpfc
+[155] hippocampus
+[155] amygdala
+[155] caudate
+[155] nucleus-accumbens
+[155] putamen
+[155] cerebellar-hemisphere
+[155] anterior-cingulate
+[155] dlpfc
+[156] hippocampus
+[156] amygdala
+[156] caudate
+[156] nucleus-accumbens
+[156] putamen
+[156] cerebellar-hemisphere
+[156] anterior-cingulate
+[156] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 251.63107060606126 seconds
+[157] hippocampus
+[157] amygdala
+[157] caudate
+[157] nucleus-accumbens
+[157] putamen
+[157] cerebellar-hemisphere
+[157] anterior-cingulate
+[157] dlpfc
+[158] hippocampus
+[158] amygdala
+[158] caudate
+[158] nucleus-accumbens
+[158] putamen
+[158] cerebellar-hemisphere
+[158] anterior-cingulate
+[158] dlpfc
+[159] hippocampus
+[159] amygdala
+[159] caudate
+[159] nucleus-accumbens
+[159] putamen
+[159] cerebellar-hemisphere
+[159] anterior-cingulate
+[159] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 196.17539337300695 seconds
+[160] hippocampus
+[160] amygdala
+[160] caudate
+[160] nucleus-accumbens
+[160] putamen
+[160] cerebellar-hemisphere
+[160] anterior-cingulate
+[160] dlpfc
+[161] hippocampus
+[161] amygdala
+[161] caudate
+[161] nucleus-accumbens
+[161] putamen
+[161] cerebellar-hemisphere
+[161] anterior-cingulate
+[161] dlpfc
+[162] hippocampus
+[162] amygdala
+[162] caudate
+[162] nucleus-accumbens
+[162] putamen
+[162] cerebellar-hemisphere
+[162] anterior-cingulate
+[162] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 208.54790301597677 seconds
+[163] hippocampus
+[163] amygdala
+[163] caudate
+[163] nucleus-accumbens
+[163] putamen
+[163] cerebellar-hemisphere
+[163] anterior-cingulate
+[163] dlpfc
+[164] hippocampus
+[164] amygdala
+[164] caudate
+[164] nucleus-accumbens
+[164] putamen
+[164] cerebellar-hemisphere
+[164] anterior-cingulate
+[164] dlpfc
+[165] hippocampus
+[165] amygdala
+[165] caudate
+[165] nucleus-accumbens
+[165] putamen
+[165] cerebellar-hemisphere
+[165] anterior-cingulate
+[165] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 206.41910655901302 seconds
+[166] hippocampus
+[166] amygdala
+[166] caudate
+[166] nucleus-accumbens
+[166] putamen
+[166] cerebellar-hemisphere
+[166] anterior-cingulate
+[166] dlpfc
+[167] hippocampus
+[167] amygdala
+[167] caudate
+[167] nucleus-accumbens
+[167] putamen
+[167] cerebellar-hemisphere
+[167] anterior-cingulate
+[167] dlpfc
+[168] hippocampus
+[168] amygdala
+[168] caudate
+[168] nucleus-accumbens
+[168] putamen
+[168] cerebellar-hemisphere
+[168] anterior-cingulate
+[168] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 232.44158698804677 seconds
+[169] hippocampus
+[169] amygdala
+[169] caudate
+[169] nucleus-accumbens
+[169] putamen
+[169] cerebellar-hemisphere
+[169] anterior-cingulate
+[169] dlpfc
+[170] hippocampus
+[170] amygdala
+[170] caudate
+[170] nucleus-accumbens
+[170] putamen
+[170] cerebellar-hemisphere
+[170] anterior-cingulate
+[170] dlpfc
+[171] hippocampus
+[171] amygdala
+[171] caudate
+[171] nucleus-accumbens
+[171] putamen
+[171] cerebellar-hemisphere
+[171] anterior-cingulate
+[171] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 215.98839622701053 seconds
+[172] hippocampus
+[172] amygdala
+[172] caudate
+[172] nucleus-accumbens
+[172] putamen
+[172] cerebellar-hemisphere
+[172] anterior-cingulate
+[172] dlpfc
+[173] hippocampus
+[173] amygdala
+[173] caudate
+[173] nucleus-accumbens
+[173] putamen
+[173] cerebellar-hemisphere
+[173] anterior-cingulate
+[173] dlpfc
+[174] hippocampus
+[174] amygdala
+[174] caudate
+[174] nucleus-accumbens
+[174] putamen
+[174] cerebellar-hemisphere
+[174] anterior-cingulate
+[174] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 211.16914391797036 seconds
+[175] hippocampus
+[175] amygdala
+[175] caudate
+[175] nucleus-accumbens
+[175] putamen
+[175] cerebellar-hemisphere
+[175] anterior-cingulate
+[175] dlpfc
+[176] hippocampus
+[176] amygdala
+[176] caudate
+[176] nucleus-accumbens
+[176] putamen
+[176] cerebellar-hemisphere
+[176] anterior-cingulate
+[176] dlpfc
+[177] hippocampus
+[177] amygdala
+[177] caudate
+[177] nucleus-accumbens
+[177] putamen
+[177] cerebellar-hemisphere
+[177] anterior-cingulate
+[177] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 248.87699886900373 seconds
+[178] hippocampus
+[178] amygdala
+[178] caudate
+[178] nucleus-accumbens
+[178] putamen
+[178] cerebellar-hemisphere
+[178] anterior-cingulate
+[178] dlpfc
+[179] hippocampus
+[179] amygdala
+[179] caudate
+[179] nucleus-accumbens
+[179] putamen
+[179] cerebellar-hemisphere
+[179] anterior-cingulate
+[179] dlpfc
+[180] hippocampus
+[180] amygdala
+[180] caudate
+[180] nucleus-accumbens
+[180] putamen
+[180] cerebellar-hemisphere
+[180] anterior-cingulate
+[180] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 206.46348766598385 seconds
+[181] hippocampus
+[181] amygdala
+[181] caudate
+[181] nucleus-accumbens
+[181] putamen
+[181] cerebellar-hemisphere
+[181] anterior-cingulate
+[181] dlpfc
+[182] hippocampus
+[182] amygdala
+[182] caudate
+[182] nucleus-accumbens
+[182] putamen
+[182] cerebellar-hemisphere
+[182] anterior-cingulate
+[182] dlpfc
+[183] hippocampus
+[183] amygdala
+[183] caudate
+[183] nucleus-accumbens
+[183] putamen
+[183] cerebellar-hemisphere
+[183] anterior-cingulate
+[183] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 247.48551555594895 seconds
+[184] hippocampus
+[184] amygdala
+[184] caudate
+[184] nucleus-accumbens
+[184] putamen
+[184] cerebellar-hemisphere
+[184] anterior-cingulate
+[184] dlpfc
+[185] hippocampus
+[185] amygdala
+[185] caudate
+[185] nucleus-accumbens
+[185] putamen
+[185] cerebellar-hemisphere
+[185] anterior-cingulate
+[185] dlpfc
+[186] hippocampus
+[186] amygdala
+[186] caudate
+[186] nucleus-accumbens
+[186] putamen
+[186] cerebellar-hemisphere
+[186] anterior-cingulate
+[186] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 209.83855873800348 seconds
+[187] hippocampus
+[187] amygdala
+[187] caudate
+[187] nucleus-accumbens
+[187] putamen
+[187] cerebellar-hemisphere
+[187] anterior-cingulate
+[187] dlpfc
+[188] hippocampus
+[188] amygdala
+[188] caudate
+[188] nucleus-accumbens
+[188] putamen
+[188] cerebellar-hemisphere
+[188] anterior-cingulate
+[188] dlpfc
+[189] hippocampus
+[189] amygdala
+[189] caudate
+[189] nucleus-accumbens
+[189] putamen
+[189] cerebellar-hemisphere
+[189] anterior-cingulate
+[189] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 254.5396661789855 seconds
+[190] hippocampus
+[190] amygdala
+[190] caudate
+[190] nucleus-accumbens
+[190] putamen
+[190] cerebellar-hemisphere
+[190] anterior-cingulate
+[190] dlpfc
+[191] hippocampus
+[191] amygdala
+[191] caudate
+[191] nucleus-accumbens
+[191] putamen
+[191] cerebellar-hemisphere
+[191] anterior-cingulate
+[191] dlpfc
+[192] hippocampus
+[192] amygdala
+[192] caudate
+[192] nucleus-accumbens
+[192] putamen
+[192] cerebellar-hemisphere
+[192] anterior-cingulate
+[192] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 259.0778267340502 seconds
+[193] hippocampus
+[193] amygdala
+[193] caudate
+[193] nucleus-accumbens
+[193] putamen
+[193] cerebellar-hemisphere
+[193] anterior-cingulate
+[193] dlpfc
+[194] hippocampus
+[194] amygdala
+[194] caudate
+[194] nucleus-accumbens
+[194] putamen
+[194] cerebellar-hemisphere
+[194] anterior-cingulate
+[194] dlpfc
+[195] hippocampus
+[195] amygdala
+[195] caudate
+[195] nucleus-accumbens
+[195] putamen
+[195] cerebellar-hemisphere
+[195] anterior-cingulate
+[195] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 245.10136258497369 seconds
+[196] hippocampus
+[196] amygdala
+[196] caudate
+[196] nucleus-accumbens
+[196] putamen
+[196] cerebellar-hemisphere
+[196] anterior-cingulate
+[196] dlpfc
+[197] hippocampus
+[197] amygdala
+[197] caudate
+[197] nucleus-accumbens
+[197] putamen
+[197] cerebellar-hemisphere
+[197] anterior-cingulate
+[197] dlpfc
+[198] hippocampus
+[198] amygdala
+[198] caudate
+[198] nucleus-accumbens
+[198] putamen
+[198] cerebellar-hemisphere
+[198] anterior-cingulate
+[198] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 236.42752171098255 seconds
+[199] hippocampus
+[199] amygdala
+[199] caudate
+[199] nucleus-accumbens
+[199] putamen
+[199] cerebellar-hemisphere
+[199] anterior-cingulate
+[199] dlpfc
+[200] hippocampus
+[200] amygdala
+[200] caudate
+[200] nucleus-accumbens
+[200] putamen
+[200] cerebellar-hemisphere
+[200] anterior-cingulate
+[200] dlpfc
+[201] hippocampus
+[201] amygdala
+[201] caudate
+[201] nucleus-accumbens
+[201] putamen
+[201] cerebellar-hemisphere
+[201] anterior-cingulate
+[201] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 216.44880791392643 seconds
+[202] hippocampus
+[202] amygdala
+[202] caudate
+[202] nucleus-accumbens
+[202] putamen
+[202] cerebellar-hemisphere
+[202] anterior-cingulate
+[202] dlpfc
+[203] hippocampus
+[203] amygdala
+[203] caudate
+[203] nucleus-accumbens
+[203] putamen
+[203] cerebellar-hemisphere
+[203] anterior-cingulate
+[203] dlpfc
+[204] hippocampus
+[204] amygdala
+[204] caudate
+[204] nucleus-accumbens
+[204] putamen
+[204] cerebellar-hemisphere
+[204] anterior-cingulate
+[204] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 220.46153202292044 seconds
+[205] hippocampus
+[205] amygdala
+[205] caudate
+[205] nucleus-accumbens
+[205] putamen
+[205] cerebellar-hemisphere
+[205] anterior-cingulate
+[205] dlpfc
+[206] hippocampus
+[206] amygdala
+[206] caudate
+[206] nucleus-accumbens
+[206] putamen
+[206] cerebellar-hemisphere
+[206] anterior-cingulate
+[206] dlpfc
+[207] hippocampus
+[207] amygdala
+[207] caudate
+[207] nucleus-accumbens
+[207] putamen
+[207] cerebellar-hemisphere
+[207] anterior-cingulate
+[207] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 213.43996396905277 seconds
+[208] hippocampus
+[208] amygdala
+[208] caudate
+[208] nucleus-accumbens
+[208] putamen
+[208] cerebellar-hemisphere
+[208] anterior-cingulate
+[208] dlpfc
+[209] hippocampus
+[209] amygdala
+[209] caudate
+[209] nucleus-accumbens
+[209] putamen
+[209] cerebellar-hemisphere
+[209] anterior-cingulate
+[209] dlpfc
+[210] hippocampus
+[210] amygdala
+[210] caudate
+[210] nucleus-accumbens
+[210] putamen
+[210] cerebellar-hemisphere
+[210] anterior-cingulate
+[210] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 233.84919047390576 seconds
+[211] hippocampus
+[211] amygdala
+[211] caudate
+[211] nucleus-accumbens
+[211] putamen
+[211] cerebellar-hemisphere
+[211] anterior-cingulate
+[211] dlpfc
+[212] hippocampus
+[212] amygdala
+[212] caudate
+[212] nucleus-accumbens
+[212] putamen
+[212] cerebellar-hemisphere
+[212] anterior-cingulate
+[212] dlpfc
+[213] hippocampus
+[213] amygdala
+[213] caudate
+[213] nucleus-accumbens
+[213] putamen
+[213] cerebellar-hemisphere
+[213] anterior-cingulate
+[213] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 255.11386270390358 seconds
+[214] hippocampus
+[214] amygdala
+[214] caudate
+[214] nucleus-accumbens
+[214] putamen
+[214] cerebellar-hemisphere
+[214] anterior-cingulate
+[214] dlpfc
+[215] hippocampus
+[215] amygdala
+[215] caudate
+[215] nucleus-accumbens
+[215] putamen
+[215] cerebellar-hemisphere
+[215] anterior-cingulate
+[215] dlpfc
+[216] hippocampus
+[216] amygdala
+[216] caudate
+[216] nucleus-accumbens
+[216] putamen
+[216] cerebellar-hemisphere
+[216] anterior-cingulate
+[216] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 249.8861603999976 seconds
+[217] hippocampus
+[217] amygdala
+[217] caudate
+[217] nucleus-accumbens
+[217] putamen
+[217] cerebellar-hemisphere
+[217] anterior-cingulate
+[217] dlpfc
+[218] hippocampus
+[218] amygdala
+[218] caudate
+[218] nucleus-accumbens
+[218] putamen
+[218] cerebellar-hemisphere
+[218] anterior-cingulate
+[218] dlpfc
+[219] hippocampus
+[219] amygdala
+[219] caudate
+[219] nucleus-accumbens
+[219] putamen
+[219] cerebellar-hemisphere
+[219] anterior-cingulate
+[219] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 221.0881937230006 seconds
+[220] hippocampus
+[220] amygdala
+[220] caudate
+[220] nucleus-accumbens
+[220] putamen
+[220] cerebellar-hemisphere
+[220] anterior-cingulate
+[220] dlpfc
+[221] hippocampus
+[221] amygdala
+[221] caudate
+[221] nucleus-accumbens
+[221] putamen
+[221] cerebellar-hemisphere
+[221] anterior-cingulate
+[221] dlpfc
+[222] hippocampus
+[222] amygdala
+[222] caudate
+[222] nucleus-accumbens
+[222] putamen
+[222] cerebellar-hemisphere
+[222] anterior-cingulate
+[222] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 176.00758755404968 seconds
+[223] hippocampus
+[223] amygdala
+[223] caudate
+[223] nucleus-accumbens
+[223] putamen
+[223] cerebellar-hemisphere
+[223] anterior-cingulate
+[223] dlpfc
+[224] hippocampus
+[224] amygdala
+[224] caudate
+[224] nucleus-accumbens
+[224] putamen
+[224] cerebellar-hemisphere
+[224] anterior-cingulate
+[224] dlpfc
+[225] hippocampus
+[225] amygdala
+[225] caudate
+[225] nucleus-accumbens
+[225] putamen
+[225] cerebellar-hemisphere
+[225] anterior-cingulate
+[225] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 225.5174490310019 seconds
+[226] hippocampus
+[226] amygdala
+[226] caudate
+[226] nucleus-accumbens
+[226] putamen
+[226] cerebellar-hemisphere
+[226] anterior-cingulate
+[226] dlpfc
+[227] hippocampus
+[227] amygdala
+[227] caudate
+[227] nucleus-accumbens
+[227] putamen
+[227] cerebellar-hemisphere
+[227] anterior-cingulate
+[227] dlpfc
+[228] hippocampus
+[228] amygdala
+[228] caudate
+[228] nucleus-accumbens
+[228] putamen
+[228] cerebellar-hemisphere
+[228] anterior-cingulate
+[228] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 181.25021113199182 seconds
+[229] hippocampus
+[229] amygdala
+[229] caudate
+[229] nucleus-accumbens
+[229] putamen
+[229] cerebellar-hemisphere
+[229] anterior-cingulate
+[229] dlpfc
+[230] hippocampus
+[230] amygdala
+[230] caudate
+[230] nucleus-accumbens
+[230] putamen
+[230] cerebellar-hemisphere
+[230] anterior-cingulate
+[230] dlpfc
+[231] hippocampus
+[231] amygdala
+[231] caudate
+[231] nucleus-accumbens
+[231] putamen
+[231] cerebellar-hemisphere
+[231] anterior-cingulate
+[231] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 178.67147228401154 seconds
+[232] hippocampus
+[232] amygdala
+[232] caudate
+[232] nucleus-accumbens
+[232] putamen
+[232] cerebellar-hemisphere
+[232] anterior-cingulate
+[232] dlpfc
+[233] hippocampus
+[233] amygdala
+[233] caudate
+[233] nucleus-accumbens
+[233] putamen
+[233] cerebellar-hemisphere
+[233] anterior-cingulate
+[233] dlpfc
+[234] hippocampus
+[234] amygdala
+[234] caudate
+[234] nucleus-accumbens
+[234] putamen
+[234] cerebellar-hemisphere
+[234] anterior-cingulate
+[234] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 188.4644836380612 seconds
+[235] hippocampus
+[235] amygdala
+[235] caudate
+[235] nucleus-accumbens
+[235] putamen
+[235] cerebellar-hemisphere
+[235] anterior-cingulate
+[235] dlpfc
+[236] hippocampus
+[236] amygdala
+[236] caudate
+[236] nucleus-accumbens
+[236] putamen
+[236] cerebellar-hemisphere
+[236] anterior-cingulate
+[236] dlpfc
+[237] hippocampus
+[237] amygdala
+[237] caudate
+[237] nucleus-accumbens
+[237] putamen
+[237] cerebellar-hemisphere
+[237] anterior-cingulate
+[237] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 233.77624384895898 seconds
+[238] hippocampus
+[238] amygdala
+[238] caudate
+[238] nucleus-accumbens
+[238] putamen
+[238] cerebellar-hemisphere
+[238] anterior-cingulate
+[238] dlpfc
+[239] hippocampus
+[239] amygdala
+[239] caudate
+[239] nucleus-accumbens
+[239] putamen
+[239] cerebellar-hemisphere
+[239] anterior-cingulate
+[239] dlpfc
+[240] hippocampus
+[240] amygdala
+[240] caudate
+[240] nucleus-accumbens
+[240] putamen
+[240] cerebellar-hemisphere
+[240] anterior-cingulate
+[240] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 173.04274518298917 seconds
+[241] hippocampus
+[241] amygdala
+[241] caudate
+[241] nucleus-accumbens
+[241] putamen
+[241] cerebellar-hemisphere
+[241] anterior-cingulate
+[241] dlpfc
+[242] hippocampus
+[242] amygdala
+[242] caudate
+[242] nucleus-accumbens
+[242] putamen
+[242] cerebellar-hemisphere
+[242] anterior-cingulate
+[242] dlpfc
+[243] hippocampus
+[243] amygdala
+[243] caudate
+[243] nucleus-accumbens
+[243] putamen
+[243] cerebellar-hemisphere
+[243] anterior-cingulate
+[243] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 240.8629620220745 seconds
+[244] hippocampus
+[244] amygdala
+[244] caudate
+[244] nucleus-accumbens
+[244] putamen
+[244] cerebellar-hemisphere
+[244] anterior-cingulate
+[244] dlpfc
+[245] hippocampus
+[245] amygdala
+[245] caudate
+[245] nucleus-accumbens
+[245] putamen
+[245] cerebellar-hemisphere
+[245] anterior-cingulate
+[245] dlpfc
+[246] hippocampus
+[246] amygdala
+[246] caudate
+[246] nucleus-accumbens
+[246] putamen
+[246] cerebellar-hemisphere
+[246] anterior-cingulate
+[246] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 232.09386193798855 seconds
+[247] hippocampus
+[247] amygdala
+[247] caudate
+[247] nucleus-accumbens
+[247] putamen
+[247] cerebellar-hemisphere
+[247] anterior-cingulate
+[247] dlpfc
+[248] hippocampus
+[248] amygdala
+[248] caudate
+[248] nucleus-accumbens
+[248] putamen
+[248] cerebellar-hemisphere
+[248] anterior-cingulate
+[248] dlpfc
+[249] hippocampus
+[249] amygdala
+[249] caudate
+[249] nucleus-accumbens
+[249] putamen
+[249] cerebellar-hemisphere
+[249] anterior-cingulate
+[249] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 223.2327365219826 seconds
+[250] hippocampus
+[250] amygdala
+[250] caudate
+[250] nucleus-accumbens
+[250] putamen
+[250] cerebellar-hemisphere
+[250] anterior-cingulate
+[250] dlpfc
+[251] hippocampus
+[251] amygdala
+[251] caudate
+[251] nucleus-accumbens
+[251] putamen
+[251] cerebellar-hemisphere
+[251] anterior-cingulate
+[251] dlpfc
+[252] hippocampus
+[252] amygdala
+[252] caudate
+[252] nucleus-accumbens
+[252] putamen
+[252] cerebellar-hemisphere
+[252] anterior-cingulate
+[252] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 201.21284608205315 seconds
+[253] hippocampus
+[253] amygdala
+[253] caudate
+[253] nucleus-accumbens
+[253] putamen
+[253] cerebellar-hemisphere
+[253] anterior-cingulate
+[253] dlpfc
+[254] hippocampus
+[254] amygdala
+[254] caudate
+[254] nucleus-accumbens
+[254] putamen
+[254] cerebellar-hemisphere
+[254] anterior-cingulate
+[254] dlpfc
+[255] hippocampus
+[255] amygdala
+[255] caudate
+[255] nucleus-accumbens
+[255] putamen
+[255] cerebellar-hemisphere
+[255] anterior-cingulate
+[255] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 218.8126257370459 seconds
+[256] hippocampus
+[256] amygdala
+[256] caudate
+[256] nucleus-accumbens
+[256] putamen
+[256] cerebellar-hemisphere
+[256] anterior-cingulate
+[256] dlpfc
+[257] hippocampus
+[257] amygdala
+[257] caudate
+[257] nucleus-accumbens
+[257] putamen
+[257] cerebellar-hemisphere
+[257] anterior-cingulate
+[257] dlpfc
+[258] hippocampus
+[258] amygdala
+[258] caudate
+[258] nucleus-accumbens
+[258] putamen
+[258] cerebellar-hemisphere
+[258] anterior-cingulate
+[258] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 231.86328588600736 seconds
+[259] hippocampus
+[259] amygdala
+[259] caudate
+[259] nucleus-accumbens
+[259] putamen
+[259] cerebellar-hemisphere
+[259] anterior-cingulate
+[259] dlpfc
+[260] hippocampus
+[260] amygdala
+[260] caudate
+[260] nucleus-accumbens
+[260] putamen
+[260] cerebellar-hemisphere
+[260] anterior-cingulate
+[260] dlpfc
+[261] hippocampus
+[261] amygdala
+[261] caudate
+[261] nucleus-accumbens
+[261] putamen
+[261] cerebellar-hemisphere
+[261] anterior-cingulate
+[261] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 210.69639702700078 seconds
+[262] hippocampus
+[262] amygdala
+[262] caudate
+[262] nucleus-accumbens
+[262] putamen
+[262] cerebellar-hemisphere
+[262] anterior-cingulate
+[262] dlpfc
+[263] hippocampus
+[263] amygdala
+[263] caudate
+[263] nucleus-accumbens
+[263] putamen
+[263] cerebellar-hemisphere
+[263] anterior-cingulate
+[263] dlpfc
+[264] hippocampus
+[264] amygdala
+[264] caudate
+[264] nucleus-accumbens
+[264] putamen
+[264] cerebellar-hemisphere
+[264] anterior-cingulate
+[264] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 175.71431696193758 seconds
+[265] hippocampus
+[265] amygdala
+[265] caudate
+[265] nucleus-accumbens
+[265] putamen
+[265] cerebellar-hemisphere
+[265] anterior-cingulate
+[265] dlpfc
+[266] hippocampus
+[266] amygdala
+[266] caudate
+[266] nucleus-accumbens
+[266] putamen
+[266] cerebellar-hemisphere
+[266] anterior-cingulate
+[266] dlpfc
+[267] hippocampus
+[267] amygdala
+[267] caudate
+[267] nucleus-accumbens
+[267] putamen
+[267] cerebellar-hemisphere
+[267] anterior-cingulate
+[267] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 236.35854819102678 seconds
+[268] hippocampus
+[268] amygdala
+[268] caudate
+[268] nucleus-accumbens
+[268] putamen
+[268] cerebellar-hemisphere
+[268] anterior-cingulate
+[268] dlpfc
+[269] hippocampus
+[269] amygdala
+[269] caudate
+[269] nucleus-accumbens
+[269] putamen
+[269] cerebellar-hemisphere
+[269] anterior-cingulate
+[269] dlpfc
+[270] hippocampus
+[270] amygdala
+[270] caudate
+[270] nucleus-accumbens
+[270] putamen
+[270] cerebellar-hemisphere
+[270] anterior-cingulate
+[270] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 232.71712543501053 seconds
+[271] hippocampus
+[271] amygdala
+[271] caudate
+[271] nucleus-accumbens
+[271] putamen
+[271] cerebellar-hemisphere
+[271] anterior-cingulate
+[271] dlpfc
+[272] hippocampus
+[272] amygdala
+[272] caudate
+[272] nucleus-accumbens
+[272] putamen
+[272] cerebellar-hemisphere
+[272] anterior-cingulate
+[272] dlpfc
+[273] hippocampus
+[273] amygdala
+[273] caudate
+[273] nucleus-accumbens
+[273] putamen
+[273] cerebellar-hemisphere
+[273] anterior-cingulate
+[273] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 190.87903401697986 seconds
+[274] hippocampus
+[274] amygdala
+[274] caudate
+[274] nucleus-accumbens
+[274] putamen
+[274] cerebellar-hemisphere
+[274] anterior-cingulate
+[274] dlpfc
+[275] hippocampus
+[275] amygdala
+[275] caudate
+[275] nucleus-accumbens
+[275] putamen
+[275] cerebellar-hemisphere
+[275] anterior-cingulate
+[275] dlpfc
+[276] hippocampus
+[276] amygdala
+[276] caudate
+[276] nucleus-accumbens
+[276] putamen
+[276] cerebellar-hemisphere
+[276] anterior-cingulate
+[276] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 206.57364516309462 seconds
+[277] hippocampus
+[277] amygdala
+[277] caudate
+[277] nucleus-accumbens
+[277] putamen
+[277] cerebellar-hemisphere
+[277] anterior-cingulate
+[277] dlpfc
+[278] hippocampus
+[278] amygdala
+[278] caudate
+[278] nucleus-accumbens
+[278] putamen
+[278] cerebellar-hemisphere
+[278] anterior-cingulate
+[278] dlpfc
+[279] hippocampus
+[279] amygdala
+[279] caudate
+[279] nucleus-accumbens
+[279] putamen
+[279] cerebellar-hemisphere
+[279] anterior-cingulate
+[279] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 211.31455684895627 seconds
+[280] hippocampus
+[280] amygdala
+[280] caudate
+[280] nucleus-accumbens
+[280] putamen
+[280] cerebellar-hemisphere
+[280] anterior-cingulate
+[280] dlpfc
+[281] hippocampus
+[281] amygdala
+[281] caudate
+[281] nucleus-accumbens
+[281] putamen
+[281] cerebellar-hemisphere
+[281] anterior-cingulate
+[281] dlpfc
+[282] hippocampus
+[282] amygdala
+[282] caudate
+[282] nucleus-accumbens
+[282] putamen
+[282] cerebellar-hemisphere
+[282] anterior-cingulate
+[282] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 177.7112491299631 seconds
+[283] hippocampus
+[283] amygdala
+[283] caudate
+[283] nucleus-accumbens
+[283] putamen
+[283] cerebellar-hemisphere
+[283] anterior-cingulate
+[283] dlpfc
+[284] hippocampus
+[284] amygdala
+[284] caudate
+[284] nucleus-accumbens
+[284] putamen
+[284] cerebellar-hemisphere
+[284] anterior-cingulate
+[284] dlpfc
+[285] hippocampus
+[285] amygdala
+[285] caudate
+[285] nucleus-accumbens
+[285] putamen
+[285] cerebellar-hemisphere
+[285] anterior-cingulate
+[285] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 207.46427291200962 seconds
+[286] hippocampus
+[286] amygdala
+[286] caudate
+[286] nucleus-accumbens
+[286] putamen
+[286] cerebellar-hemisphere
+[286] anterior-cingulate
+[286] dlpfc
+[287] hippocampus
+[287] amygdala
+[287] caudate
+[287] nucleus-accumbens
+[287] putamen
+[287] cerebellar-hemisphere
+[287] anterior-cingulate
+[287] dlpfc
+[288] hippocampus
+[288] amygdala
+[288] caudate
+[288] nucleus-accumbens
+[288] putamen
+[288] cerebellar-hemisphere
+[288] anterior-cingulate
+[288] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 181.25558774301317 seconds
+[289] hippocampus
+[289] amygdala
+[289] caudate
+[289] nucleus-accumbens
+[289] putamen
+[289] cerebellar-hemisphere
+[289] anterior-cingulate
+[289] dlpfc
+[290] hippocampus
+[290] amygdala
+[290] caudate
+[290] nucleus-accumbens
+[290] putamen
+[290] cerebellar-hemisphere
+[290] anterior-cingulate
+[290] dlpfc
+[291] hippocampus
+[291] amygdala
+[291] caudate
+[291] nucleus-accumbens
+[291] putamen
+[291] cerebellar-hemisphere
+[291] anterior-cingulate
+[291] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 184.83459117100574 seconds
+[292] hippocampus
+[292] amygdala
+[292] caudate
+[292] nucleus-accumbens
+[292] putamen
+[292] cerebellar-hemisphere
+[292] anterior-cingulate
+[292] dlpfc
+[293] hippocampus
+[293] amygdala
+[293] caudate
+[293] nucleus-accumbens
+[293] putamen
+[293] cerebellar-hemisphere
+[293] anterior-cingulate
+[293] dlpfc
+[294] hippocampus
+[294] amygdala
+[294] caudate
+[294] nucleus-accumbens
+[294] putamen
+[294] cerebellar-hemisphere
+[294] anterior-cingulate
+[294] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 190.16256441699807 seconds
+[295] hippocampus
+[295] amygdala
+[295] caudate
+[295] nucleus-accumbens
+[295] putamen
+[295] cerebellar-hemisphere
+[295] anterior-cingulate
+[295] dlpfc
+[296] hippocampus
+[296] amygdala
+[296] caudate
+[296] nucleus-accumbens
+[296] putamen
+[296] cerebellar-hemisphere
+[296] anterior-cingulate
+[296] dlpfc
+[297] hippocampus
+[297] amygdala
+[297] caudate
+[297] nucleus-accumbens
+[297] putamen
+[297] cerebellar-hemisphere
+[297] anterior-cingulate
+[297] dlpfc
+INFO - Preparing PrediXcan HDF5 context
+INFO - Acquiring HDF5 expression cache
+DEBUG - Creating converter from 3 to 5
+INFO - Accquiring phenotype
+INFO - Acquiring covariates
+INFO - Replacing phenotype with residuals
+INFO - 0 % of model's genes processed so far
+INFO - 10 % of model's genes processed so far
+INFO - 20 % of model's genes processed so far
+INFO - 30 % of model's genes processed so far
+INFO - 40 % of model's genes processed so far
+INFO - 50 % of model's genes processed so far
+INFO - 60 % of model's genes processed so far
+INFO - 70 % of model's genes processed so far
+INFO - 80 % of model's genes processed so far
+INFO - 90 % of model's genes processed so far
+INFO - Successfully ran predixcan associations in 183.98330253199674 seconds
+[298] hippocampus
+[298] amygdala
+[298] caudate
+[298] nucleus-accumbens
+[298] putamen
+[298] cerebellar-hemisphere
+[298] anterior-cingulate
+[298] dlpfc
+[299] hippocampus
+[299] amygdala
+[299] caudate
+[299] nucleus-accumbens
+[299] putamen
+[299] cerebellar-hemisphere
+[299] anterior-cingulate
+[299] dlpfc
