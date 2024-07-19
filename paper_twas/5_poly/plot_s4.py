@@ -1,7 +1,7 @@
 '''
 Plot S4 (observed vs predicted phenotypes for all reg phens).
 
-- Nhung, Feb 2024
+- Nhung, July 2024
 '''
 
 import matplotlib
@@ -14,15 +14,14 @@ import pandas as pd
 import h5py
 import sys
 
-from scipy.stats import spearmanr
+from scipy.stats import pearsonr
 from statsmodels.stats.multitest import multipletests as sm
 
 ## params 
-group = sys.argv[1] ## HCP, HCP/nonTwin, ... 
+group = 'HCP/nonTwin' #sys.argv[1] ## HCP, HCP/nonTwin, ... 
 
-regs = ['dlpfc', 'anterior-cingulate', \
-        'amygdala', 'hippocampus', 'caudate', 'putamen', \
-        'nucleus-accumbens', 'cerebellar-hemisphere']
+regs = ['dlpfc', 'anterior-cingulate', 'amygdala', 'hippocampus', \
+        'caudate', 'putamen', 'nucleus-accumbens', 'cerebellar-hemisphere']
 
 phens = ['vol_mean', 'alff_mean', 'reho_noGS_mean', 'connmean_noGS_mean']
 pnames = {p:n for p,n in zip(phens, ['volume', 'amplitude', 'homogeneity', 'coactivity'])}
@@ -34,9 +33,8 @@ main_path = f'/Users/nhunghoang/Desktop/remote_platypus/paper_twas'
 colr_path = f'{main_path}/aux_files/color_dict.txt'
 tick_path = f'{main_path}/aux_files/fig_s4_ticks.txt'
 
-data_path = f'{main_path}/outputs_{group}/polygenic_models/median_ytrue_ypred.hdf5'
-stat_path = f'{main_path}/outputs_{group}/polygenic_models/split_r2s.hdf5'
-plot_path = f'{main_path}/outputs_HCP/plots/fig_s4.pdf'
+data_path = f'{main_path}/outputs_{group}/poly_stats_observed.hdf5'
+plot_path = f'{main_path}/outputs_HCP/plots/fig_s4_nonTwin_updated.pdf'
 
 ## regional colors
 reg_color = pd.read_table(colr_path, index_col='label').to_dict()['hex']
@@ -44,30 +42,29 @@ reg_color = pd.read_table(colr_path, index_col='label').to_dict()['hex']
 ## axis ticks 
 ticks = pd.read_table(tick_path, index_col='regXphen')
 
+##############################################################################
+
+## load data 
+grex_sums = {} ## k: (reg, phen), v: (subj,)
+phen_arrs = {} ## k: (reg, phen), v: (subj,)
+corr_arrs = {} ## k: (reg, phen), v: ([pearson, pval])
+num_genes = {} ## k: (reg, phen), v: (1,)
+
+with h5py.File(data_path, 'r') as f:
+    for (reg,phen) in reg_phens:
+        grex_sums[(reg,phen)] = f[f'{reg}X{phen}Xgrex'][()]
+        phen_arrs[(reg,phen)] = f[f'{reg}X{phen}Xphen'][()]
+        corr_arrs[(reg,phen)] = f[f'{reg}X{phen}Xcorr'][()]
+        num_genes[(reg,phen)] = f[f'{reg}X{phen}Xgene'][()]
+
+##############################################################################
+
 ## func: square plots
 def square(ax):
     xleft, xright = ax.get_xlim()
     ybottom, ytop = ax.get_ylim()
     ax.set_aspect(abs((xright-xleft)/(ybottom-ytop)))
     return
-
-## load subject data for median multi-models
-median_data = {} ## k: (reg,phen), v: [observed, predicted] * subjs
-with h5py.File(data_path, 'r') as f: 
-    for key in f.keys(): 
-        data = f[key][()]
-        [reg, phen] = key.split('X')
-        median_data[(reg,phen)] = data 
-
-## load median r2s 
-med_r2s = {} 
-with h5py.File(stat_path, 'r') as f:
-    for key in f.keys(): 
-        [reg, phen] = key.split('X')
-        stats = f[key][()]
-
-        midx = np.argsort(stats)[321]
-        med_r2s[(reg,phen)] = stats[midx]
 
 ## init plot
 plt.ion()
@@ -78,38 +75,54 @@ for (reg, phen) in reg_phens:
     ax = axes[(reg,phen)]
 
     ## get data 
-    obsv = median_data[(reg,phen)][:,0]
-    pred = median_data[(reg,phen)][:,1]
+    obsv = grex_sums[(reg,phen)]
+    pred = phen_arrs[(reg,phen)]
 
-    sc = ax.scatter(obsv, pred, c=reg_color[reg], s=4, alpha=0.3, edgecolor='none')
-    ec = ax.scatter(obsv, pred, c='none', s=4, edgecolor=reg_color[reg], linewidth=0.5)
+    sc = ax.scatter(obsv, pred, c=reg_color[reg], s=3.5, alpha=0.1, edgecolor='none')
+    ec = ax.scatter(obsv, pred, c='none', s=3.5, alpha=0.5, edgecolor=reg_color[reg], linewidth=0.5)
 
     ## format ticks 
     key = f'{reg}X{phen}'
-    xt = ticks['xt'][key]
     yt = ticks['yt'][key]
 
-    ax.set_xticks([-xt, 0, xt])
-    ax.set_yticks([-yt, 0, yt])
+    print(ax.get_xlim())
 
-    flag = (reg == 'anterior-cingulate') and (phen == 'alff_mean')
-    if flag: 
-        ax.set_ylim([-1, 5.5])
-        ax.set_yticks([0, 2, 4])
+    if (reg == 'anterior-cingulate') and (phen == 'alff_mean'): 
+        ax.set_xticks([-1, 0, 5])
+    elif (reg == 'amygdala') and (phen == 'alff_mean'): 
+        ax.set_xticks([-2, 0, 1])
+    elif (reg == 'nucleus-accumbens') and (phen == 'connmean_noGS_mean'): 
+        ax.set_xticks([-2, 0, 1])
+    else: 
+        ax.set_xticks([-1, 0, 1])
+
+    if (reg == 'hippocampus') and (phen == 'vol_mean'): 
+        ax.set_yticks([-2000, 0, 1200])
+    elif (reg == 'putamen') and (phen == 'vol_mean'): 
+        ax.set_yticks([-1600, 0, 2200])
+    elif (reg == 'dlpfc') and (phen == 'alff_mean'): 
+        ax.set_yticks([-60, 0, 80])
+    elif (reg == 'dlpfc') and (phen == 'reho_noGS_mean'): 
+        ax.set_yticks([-0.01, 0, 0.03])
+    elif (reg == 'hippocampus') and (phen == 'reho_noGS_mean'): 
+        ax.set_yticks([-0.002, 0, 0.014])
+    elif (reg == 'caudate') and (phen == 'reho_noGS_mean'): 
+        ax.set_yticks([-0.005, 0, 0.01])
+    elif (reg == 'cerebellar-hemisphere') and (phen == 'reho_noGS_mean'): 
+        ax.set_yticks([-0.002, 0, 0.01])
+    else:
+        ax.set_yticks([-yt, 0, yt])
 
     ax.tick_params(size=2, labelsize=8)
-    #ax.set_xlabel('observed', size=8)
-    #ax.set_ylabel('predicted', size=8)
-
     square(ax)
 
     ## labels 
-    r2 = med_r2s[(reg, phen)]
-    rs = spearmanr(obsv, pred)[0]
+    [rho, pval] = corr_arrs[(reg,phen)] 
+    ngene = num_genes[(reg,phen)]
 
-    title = '$r^2$ = {:.2f} ($r_s$ = {:.2f})'.format(r2, rs)
-    if phen == 'vol_mean': 
-        title = f'{reg}\n{title}'
+    if pval == 0: pval = 1/10000
+
+    title = '$r_p$ = {:.2f} ($p$ = {:.4f})\n{} genes'.format(rho, pval, ngene)
     ax.set_title(title, size=8)
 
     if reg == 'dlpfc': 
